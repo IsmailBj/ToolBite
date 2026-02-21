@@ -3,7 +3,8 @@ const cors = require("cors");
 const path = require("path");
 const fs = require("fs");
 const aiRoutes = require("./routes/aiRoutes");
-const pdfRoutes = require("./routes/pdfRoutes");
+const officeRoutes = require("./routes/officeRoutes");
+const ImgCompressRoutes = require("./routes/imageCompressorRoutes");
 
 const app = express();
 const PORT = 8000;
@@ -19,7 +20,8 @@ app.use(express.json());
 
 // Register modular routes
 app.use("/api", aiRoutes);
-app.use("/api", pdfRoutes);
+app.use("/api", officeRoutes);
+app.use("/api", ImgCompressRoutes);
 
 app.get("/", (req, res) => res.send("ToolBite API is online"));
 

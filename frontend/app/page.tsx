@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { Wand2, FileText, Minimize, ArrowRight, Search } from "lucide-react";
+import { Wand2, FileType, Minimize, ArrowRight, Search } from "lucide-react";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -19,15 +19,15 @@ export default function Home() {
       href: "/tools/bg-remover",
     },
     {
-      id: "pdf-converter",
-      title: "PDF Converter",
+      id: "word-to-pdf",
+      title: "Word to PDF",
       description:
-        "Convert PDFs to Word, Excel, or images securely in seconds.",
-      icon: <FileText className="w-7 h-7 text-red-600 dark:text-red-400" />,
-      bgColor: "bg-red-100 dark:bg-red-900/30",
-      hoverBorder: "hover:border-red-300 dark:hover:border-red-700",
+        "Transform .docx and .doc files into professional PDF documents in seconds.",
+      icon: <FileType className="w-7 h-7 text-red-600" />,
+      bgColor: "bg-red-100",
+      hoverBorder: "hover:border-red-300",
       status: "Active",
-      href: "/tools/pdf-converter",
+      href: "/tools/word-to-pdf",
     },
     {
       id: "image-compressor",
@@ -39,8 +39,8 @@ export default function Home() {
       ),
       bgColor: "bg-emerald-100 dark:bg-emerald-900/30",
       hoverBorder: "hover:border-emerald-300 dark:hover:border-emerald-700",
-      status: "Coming Soon",
-      href: "#",
+      status: "Active",
+      href: "/tools/image-compressor",
     },
   ];
 
