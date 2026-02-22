@@ -19,6 +19,7 @@ export default function WordToPdfPage() {
   const [error, setError] = useState("");
   const [fileName, setFileName] = useState("");
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleDrag = (e: React.DragEvent) => {
@@ -66,7 +67,7 @@ export default function WordToPdfPage() {
 
     try {
       // Endpoint matches the backend logic we established
-      const response = await fetch("http://localhost:8000/api/word-to-pdf", {
+      const response = await fetch(`${API_URL}/api/word-to-pdf`, {
         method: "POST",
         body: formData,
       });

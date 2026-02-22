@@ -18,6 +18,7 @@ export default function BgRemoverPage() {
   const [resultImage, setResultImage] = useState<string | null>(null);
   const [error, setError] = useState("");
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleDrag = (e: React.DragEvent) => {
@@ -52,7 +53,7 @@ export default function BgRemoverPage() {
     formData.append("image", selectedFile);
 
     try {
-      const response = await fetch("http://localhost:8000/api/remove-bg", {
+      const response = await fetch(`${API_URL}/api/remove-bg`, {
         method: "POST",
         body: formData,
       });

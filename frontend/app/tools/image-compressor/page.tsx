@@ -30,6 +30,7 @@ export default function ImageCompressorPage() {
     compressed: number;
   } | null>(null);
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Clean up object URLs to prevent memory leaks
@@ -79,7 +80,7 @@ export default function ImageCompressorPage() {
     formData.append("quality", quality.toString());
 
     try {
-      const response = await fetch("http://localhost:8000/api/compress-image", {
+      const response = await fetch(`${API_URL}/api/compress-image`, {
         method: "POST",
         body: formData,
       });

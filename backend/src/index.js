@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
@@ -7,7 +8,12 @@ const officeRoutes = require("./routes/officeRoutes");
 const ImgCompressRoutes = require("./routes/imageCompressorRoutes");
 
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
+
+// --- MIDDLEWARE ---
+// Updated to allow your local frontend and prepare for production
+app.use(cors({ origin: "*" }));
+app.use(express.json());
 
 // Ensure 'uploads' exists
 const uploadDir = path.join(__dirname, "../uploads");
