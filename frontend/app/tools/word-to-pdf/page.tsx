@@ -103,31 +103,35 @@ export default function WordToPdfPage() {
       {/* Replaced Next.js Link with standard anchor for broader compatibility in current environment */}
       <a
         href="/"
-        className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-blue-600 mb-8 transition-colors group"
+        className="inline-flex items-center text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 mb-8 transition-colors group"
       >
         <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />
         Back to workspace
       </a>
 
       <div className="flex items-center space-x-4 mb-10">
-        <div className="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center shadow-sm">
-          <FileText className="w-7 h-7 text-red-600" />
+        <div className="w-14 h-14 bg-red-100 dark:bg-red-900/40 rounded-2xl flex items-center justify-center shadow-sm">
+          <FileText className="w-7 h-7 text-red-600 dark:text-red-400" />
         </div>
         <div>
-          <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Word to PDF
           </h1>
-          <p className="text-slate-500 mt-1 text-lg">
+          <p className="text-slate-500 dark:text-slate-400 mt-1 text-lg">
             Convert .docx and .doc files to high-quality PDF documents.
           </p>
         </div>
       </div>
 
-      <div className="bg-white rounded-[2.5rem] p-3 border border-slate-200 shadow-xl shadow-slate-200/50">
+      <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-3 border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-none">
         {!pdfUrl ? (
           <div
             className={`border-2 border-dashed rounded-[2rem] p-16 text-center transition-all duration-300 flex flex-col items-center justify-center min-h-[450px] 
-              ${dragActive ? "border-blue-500 bg-blue-50" : "border-slate-200 hover:border-red-400 hover:bg-slate-50"}
+              ${
+                dragActive
+                  ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
+                  : "border-slate-200 dark:border-slate-700 hover:border-red-400 dark:hover:border-red-500 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+              }
             `}
             onDragEnter={handleDrag}
             onDragLeave={handleDrag}
@@ -145,32 +149,32 @@ export default function WordToPdfPage() {
             {isProcessing ? (
               <div className="flex flex-col items-center">
                 <div className="relative mb-8">
-                  <div className="w-20 h-20 border-4 border-red-100 border-t-red-600 rounded-full animate-spin"></div>
-                  <FileText className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 text-red-600" />
+                  <div className="w-20 h-20 border-4 border-red-100 dark:border-red-900/30 border-t-red-600 dark:border-t-red-500 rounded-full animate-spin"></div>
+                  <FileText className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 text-red-600 dark:text-red-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
                   Converting your document...
                 </h3>
-                <p className="text-slate-500 max-w-sm">
+                <p className="text-slate-500 dark:text-slate-400 max-w-sm">
                   We're rendering your Word file into a pixel-perfect PDF. This
                   usually takes 3-5 seconds.
                 </p>
               </div>
             ) : (
               <div className="flex flex-col items-center">
-                <div className="w-24 h-24 bg-slate-50 border border-slate-100 rounded-3xl flex items-center justify-center mb-8 shadow-inner">
-                  <UploadCloud className="w-12 h-12 text-slate-300" />
+                <div className="w-24 h-24 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-3xl flex items-center justify-center mb-8 shadow-inner">
+                  <UploadCloud className="w-12 h-12 text-slate-300 dark:text-slate-500" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">
                   Drop your Word document here
                 </h3>
-                <p className="text-slate-500 mb-10 max-w-xs leading-relaxed">
+                <p className="text-slate-500 dark:text-slate-400 mb-10 max-w-xs leading-relaxed">
                   Fast, secure, and private. Your data is processed and
                   instantly deleted.
                 </p>
                 <button
                   onClick={() => inputRef.current?.click()}
-                  className="px-10 py-4 bg-slate-900 hover:bg-black text-white font-bold rounded-2xl shadow-lg shadow-slate-200 transition-all transform hover:scale-105 active:scale-95"
+                  className="px-10 py-4 bg-slate-900 dark:bg-slate-50 hover:bg-black dark:hover:bg-slate-200 text-white dark:text-slate-900 font-bold rounded-2xl shadow-lg shadow-slate-200 dark:shadow-none transition-all transform hover:scale-105 active:scale-95"
                 >
                   Select Word File
                 </button>
@@ -179,29 +183,31 @@ export default function WordToPdfPage() {
           </div>
         ) : (
           <div className="p-10 flex flex-col items-center animate-in zoom-in-95 duration-500">
-            <div className="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6 shadow-sm ring-8 ring-green-50">
+            <div className="w-24 h-24 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-6 shadow-sm ring-8 ring-green-50 dark:ring-green-900/10">
               <FileCheck2 size={40} />
             </div>
-            <h2 className="text-3xl font-extrabold text-slate-900 mb-2">
+            <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
               Ready for Download!
             </h2>
-            <p className="text-slate-500 mb-10 font-medium">
+            <p className="text-slate-500 dark:text-slate-400 mb-10 font-medium">
               Your PDF for{" "}
-              <span className="text-slate-900 font-bold">"{fileName}"</span> is
-              generated.
+              <span className="text-slate-900 dark:text-white font-bold">
+                "{fileName}"
+              </span>{" "}
+              is generated.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
               <a
                 href={pdfUrl}
                 download={fileName.replace(/\.[^/.]+$/, "") + ".pdf"}
-                className="flex-1 flex items-center justify-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-2xl shadow-xl shadow-red-100 transition-all transform hover:scale-[1.02] active:scale-95"
+                className="flex-1 flex items-center justify-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-2xl shadow-xl shadow-red-100 dark:shadow-none transition-all transform hover:scale-[1.02] active:scale-95"
               >
                 <Download className="w-5 h-5 mr-2" /> Download PDF
               </a>
               <button
                 onClick={reset}
-                className="flex-1 flex items-center justify-center px-8 py-4 bg-slate-100 text-slate-700 font-bold rounded-2xl hover:bg-slate-200 transition-all"
+                className="flex-1 flex items-center justify-center px-8 py-4 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold rounded-2xl hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
               >
                 <RefreshCw className="w-4 h-4 mr-2" /> Convert Another
               </button>
@@ -211,7 +217,7 @@ export default function WordToPdfPage() {
       </div>
 
       {error && (
-        <div className="mt-8 p-5 bg-red-50 text-red-700 rounded-2xl flex items-start space-x-3 border border-red-100 animate-in slide-in-from-top-2">
+        <div className="mt-8 p-5 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 rounded-2xl flex items-start space-x-3 border border-red-100 dark:border-red-900/50 animate-in slide-in-from-top-2">
           <AlertCircle className="w-6 h-6 flex-shrink-0 mt-0.5" />
           <div>
             <p className="font-bold">Conversion Error</p>
@@ -220,7 +226,7 @@ export default function WordToPdfPage() {
         </div>
       )}
 
-      <footer className="mt-12 text-center text-slate-400 text-sm">
+      <footer className="mt-12 text-center text-slate-400 dark:text-slate-500 text-sm">
         <p>Supports .docx and .doc formats. Privacy-focused conversion.</p>
       </footer>
     </main>

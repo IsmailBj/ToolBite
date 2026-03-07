@@ -12,6 +12,8 @@ import {
   Settings2,
   Image as ImageIcon,
 } from "lucide-react";
+// Import your new clean logic (adjust path if your lib folder is located elsewhere)
+import { compressImageLocally } from "../../../utils/compressor-util";
 
 export default function ImageCompressorPage() {
   const [dragActive, setDragActive] = useState(false);
@@ -30,7 +32,6 @@ export default function ImageCompressorPage() {
     compressed: number;
   } | null>(null);
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Clean up object URLs to prevent memory leaks
@@ -75,33 +76,19 @@ export default function ImageCompressorPage() {
     setIsProcessing(true);
     setError("");
 
-    const formData = new FormData();
-    formData.append("image", selectedFile);
-    formData.append("quality", quality.toString());
-
     try {
-      const response = await fetch(`${API_URL}/api/compress-image`, {
-        method: "POST",
-        body: formData,
-      });
+      // 1. Compress the image locally using the user's browser CPU
+      const compressedFile = await compressImageLocally(selectedFile, quality);
 
-      if (!response.ok) {
-        throw new Error("Compression failed. Check backend logs.");
-      }
+      // 2. Read the file sizes locally (no headers needed!)
+      const originalSize = selectedFile.size;
+      const compressedSize = compressedFile.size;
 
-      // Read custom headers set by our backend Controller
-      const originalSize = parseInt(
-        response.headers.get("X-Original-Size") || "0",
-      );
-      const compressedSize = parseInt(
-        response.headers.get("X-Compressed-Size") || "0",
-      );
-
-      const blob = await response.blob();
-      setCompressedUrl(URL.createObjectURL(blob));
+      // 3. Create a URL for the compressed file and update UI
+      setCompressedUrl(URL.createObjectURL(compressedFile));
       setStats({ original: originalSize, compressed: compressedSize });
     } catch (err: any) {
-      setError(err.message || "Error connecting to server.");
+      setError(err.message || "Error processing image.");
     } finally {
       setIsProcessing(false);
     }
@@ -128,32 +115,36 @@ export default function ImageCompressorPage() {
     <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
       <a
         href="/"
-        className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-emerald-600 mb-8 transition-colors group"
+        className="inline-flex items-center text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 mb-8 transition-colors group"
       >
         <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />
         Back to workspace
       </a>
 
       <div className="flex items-center space-x-4 mb-10">
-        <div className="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center shadow-sm">
-          <Minimize className="w-7 h-7 text-emerald-600" />
+        <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/40 rounded-2xl flex items-center justify-center shadow-sm">
+          <Minimize className="w-7 h-7 text-emerald-600 dark:text-emerald-400" />
         </div>
         <div>
-          <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Image Compressor
           </h1>
-          <p className="text-slate-500 mt-1 text-lg">
+          <p className="text-slate-500 dark:text-slate-400 mt-1 text-lg">
             Shrink JPEGs, PNGs, and WEBPs with zero visual quality loss.
           </p>
         </div>
       </div>
 
-      <div className="bg-white rounded-[2.5rem] p-3 border border-slate-200 shadow-xl shadow-slate-200/50">
+      <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-3 border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-none">
         {/* Step 1: Upload */}
         {!selectedFile && (
           <div
             className={`border-2 border-dashed rounded-[2rem] p-16 text-center transition-all duration-300 flex flex-col items-center justify-center min-h-[450px] 
-              ${dragActive ? "border-emerald-500 bg-emerald-50" : "border-slate-200 hover:border-emerald-400 hover:bg-slate-50"}
+              ${
+                dragActive
+                  ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20"
+                  : "border-slate-200 dark:border-slate-700 hover:border-emerald-400 dark:hover:border-emerald-500 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+              }
             `}
             onDragEnter={handleDrag}
             onDragLeave={handleDrag}
@@ -170,18 +161,18 @@ export default function ImageCompressorPage() {
               }
             />
 
-            <div className="w-24 h-24 bg-slate-50 border border-slate-100 rounded-3xl flex items-center justify-center mb-8 shadow-inner">
-              <ImageIcon className="w-12 h-12 text-slate-300" />
+            <div className="w-24 h-24 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-3xl flex items-center justify-center mb-8 shadow-inner">
+              <ImageIcon className="w-12 h-12 text-slate-300 dark:text-slate-500" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">
               Drop your Image here
             </h3>
-            <p className="text-slate-500 mb-10 max-w-xs leading-relaxed">
+            <p className="text-slate-500 dark:text-slate-400 mb-10 max-w-xs leading-relaxed">
               Supports JPG, PNG, and WEBP up to 15MB.
             </p>
             <button
               onClick={() => inputRef.current?.click()}
-              className="px-10 py-4 bg-slate-900 hover:bg-black text-white font-bold rounded-2xl shadow-lg transition-all transform hover:scale-105"
+              className="px-10 py-4 bg-slate-900 dark:bg-emerald-600 hover:bg-black dark:hover:bg-emerald-500 text-white font-bold rounded-2xl shadow-lg transition-all transform hover:scale-105"
             >
               Select Image
             </button>
@@ -192,7 +183,7 @@ export default function ImageCompressorPage() {
         {selectedFile && !compressedUrl && (
           <div className="p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 flex justify-center items-center aspect-square shadow-inner">
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 flex justify-center items-center aspect-square shadow-inner">
                 {previewUrl && (
                   <img
                     src={previewUrl}
@@ -203,22 +194,22 @@ export default function ImageCompressorPage() {
               </div>
 
               <div className="flex flex-col">
-                <h3 className="text-2xl font-bold mb-2">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
                   Compression Settings
                 </h3>
-                <p className="text-slate-500 mb-8 font-medium">
+                <p className="text-slate-500 dark:text-slate-400 mb-8 font-medium">
                   Original size:{" "}
-                  <span className="text-slate-900 font-bold">
+                  <span className="text-slate-900 dark:text-white font-bold">
                     {formatBytes(selectedFile.size)}
                   </span>
                 </p>
 
-                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mb-8">
+                <div className="bg-slate-50 dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 mb-8">
                   <div className="flex justify-between items-center mb-4">
-                    <span className="font-bold flex items-center text-slate-700">
+                    <span className="font-bold flex items-center text-slate-700 dark:text-slate-200">
                       <Settings2 className="w-5 h-5 mr-2" /> Image Quality
                     </span>
-                    <span className="font-bold text-emerald-600 bg-emerald-100 px-3 py-1 rounded-full">
+                    <span className="font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-900/40 px-3 py-1 rounded-full">
                       {quality}%
                     </span>
                   </div>
@@ -228,9 +219,9 @@ export default function ImageCompressorPage() {
                     max="100"
                     value={quality}
                     onChange={(e) => setQuality(parseInt(e.target.value))}
-                    className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
+                    className="w-full h-2 bg-slate-200 dark:bg-slate-600 rounded-lg appearance-none cursor-pointer accent-emerald-600 dark:accent-emerald-500"
                   />
-                  <div className="flex justify-between text-xs text-slate-400 mt-2 font-medium">
+                  <div className="flex justify-between text-xs text-slate-400 dark:text-slate-500 mt-2 font-medium">
                     <span>Smallest File</span>
                     <span>Best Quality</span>
                   </div>
@@ -240,7 +231,7 @@ export default function ImageCompressorPage() {
                   <button
                     onClick={handleCompress}
                     disabled={isProcessing}
-                    className="flex-1 px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-lg shadow-emerald-200 transition-all flex justify-center items-center disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="flex-1 px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-lg shadow-emerald-200 dark:shadow-none transition-all flex justify-center items-center disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isProcessing ? (
                       <>
@@ -253,7 +244,7 @@ export default function ImageCompressorPage() {
                   </button>
                   <button
                     onClick={reset}
-                    className="px-6 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-2xl transition-all"
+                    className="px-6 py-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded-2xl transition-all"
                   >
                     Cancel
                   </button>
@@ -266,35 +257,35 @@ export default function ImageCompressorPage() {
         {/* Step 3: Result */}
         {compressedUrl && stats && (
           <div className="p-8 md:p-12 text-center animate-in zoom-in-95 duration-500">
-            <h2 className="text-3xl font-extrabold text-slate-900 mb-8">
+            <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-8">
               Compression Complete! 🎉
             </h2>
 
             <div className="flex flex-wrap justify-center gap-6 mb-12">
-              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 w-48 shadow-sm">
-                <p className="text-slate-500 text-sm font-semibold mb-1">
+              <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 w-48 shadow-sm">
+                <p className="text-slate-500 dark:text-slate-400 text-sm font-semibold mb-1">
                   Original Size
                 </p>
-                <p className="text-2xl font-bold text-slate-900">
+                <p className="text-2xl font-bold text-slate-900 dark:text-white">
                   {formatBytes(stats.original)}
                 </p>
               </div>
-              <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 w-48 shadow-sm relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-emerald-200 text-emerald-800 text-[10px] font-black px-2 py-1 rounded-bl-lg">
+              <div className="bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800/50 rounded-2xl p-6 w-48 shadow-sm relative overflow-hidden">
+                <div className="absolute top-0 right-0 bg-emerald-200 dark:bg-emerald-800 text-emerald-800 dark:text-emerald-100 text-[10px] font-black px-2 py-1 rounded-bl-lg">
                   NEW
                 </div>
-                <p className="text-emerald-700 text-sm font-semibold mb-1">
+                <p className="text-emerald-700 dark:text-emerald-400 text-sm font-semibold mb-1">
                   Compressed Size
                 </p>
-                <p className="text-2xl font-bold text-emerald-700">
+                <p className="text-2xl font-bold text-emerald-700 dark:text-emerald-500">
                   {formatBytes(stats.compressed)}
                 </p>
               </div>
-              <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 w-48 shadow-sm">
-                <p className="text-blue-700 text-sm font-semibold mb-1">
+              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800/50 rounded-2xl p-6 w-48 shadow-sm">
+                <p className="text-blue-700 dark:text-blue-400 text-sm font-semibold mb-1">
                   Total Saved
                 </p>
-                <p className="text-2xl font-bold text-blue-700">
+                <p className="text-2xl font-bold text-blue-700 dark:text-blue-500">
                   {Math.round((1 - stats.compressed / stats.original) * 100)}%
                 </p>
               </div>
@@ -304,13 +295,13 @@ export default function ImageCompressorPage() {
               <a
                 href={compressedUrl}
                 download={`compressed_${selectedFile?.name}`}
-                className="flex items-center justify-center px-10 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-xl shadow-emerald-100 transition-all transform hover:scale-[1.02]"
+                className="flex items-center justify-center px-10 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-xl shadow-emerald-100 dark:shadow-none transition-all transform hover:scale-[1.02]"
               >
                 <Download className="w-5 h-5 mr-2" /> Download Image
               </a>
               <button
                 onClick={reset}
-                className="flex items-center justify-center px-10 py-4 bg-slate-100 text-slate-700 font-bold rounded-2xl hover:bg-slate-200 transition-all"
+                className="flex items-center justify-center px-10 py-4 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold rounded-2xl hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
               >
                 <RefreshCw className="w-4 h-4 mr-2" /> Compress Another
               </button>
@@ -320,7 +311,7 @@ export default function ImageCompressorPage() {
       </div>
 
       {error && (
-        <div className="mt-8 p-5 bg-red-50 text-red-700 rounded-2xl flex items-start space-x-3 border border-red-100 animate-in slide-in-from-top-2">
+        <div className="mt-8 p-5 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 rounded-2xl flex items-start space-x-3 border border-red-100 dark:border-red-900/50 animate-in slide-in-from-top-2">
           <AlertCircle className="w-6 h-6 flex-shrink-0 mt-0.5" />
           <div>
             <p className="font-bold">Compression Error</p>
