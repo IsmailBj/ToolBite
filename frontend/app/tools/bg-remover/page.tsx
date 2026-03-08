@@ -4,14 +4,11 @@ import React, { useState, useRef, useEffect } from "react";
 import {
   ArrowLeft,
   UploadCloud,
-  Loader2,
   Download,
   RefreshCw,
   Scissors,
   AlertCircle,
-  Image as ImageIcon,
 } from "lucide-react";
-// Import our new logic file
 import { removeBackgroundLocally } from "../../../utils/bgremover-util";
 
 export default function BgRemoverPage() {
@@ -20,16 +17,12 @@ export default function BgRemoverPage() {
   const [progressText, setProgressText] = useState("Waking up AI...");
   const [error, setError] = useState("");
 
-  // File state
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-
-  // Result state
   const [resultUrl, setResultUrl] = useState<string | null>(null);
 
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Clean up object URLs to prevent memory leaks
   useEffect(() => {
     return () => {
       if (previewUrl) URL.revokeObjectURL(previewUrl);
@@ -72,13 +65,13 @@ export default function BgRemoverPage() {
     setProgressText("Waking up AI model...");
 
     try {
-      // Run the local AI, passing our setProgressText to update the UI
       const resultBlob = await removeBackgroundLocally(selectedFile, (text) => {
         setProgressText(text);
       });
 
       setResultUrl(URL.createObjectURL(resultBlob));
     } catch (err: any) {
+      console.error(err);
       setError(err.message || "Error processing image.");
     } finally {
       setIsProcessing(false);
@@ -118,16 +111,13 @@ export default function BgRemoverPage() {
       </div>
 
       <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-3 border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-none">
-        {/* Step 1: Upload */}
         {!selectedFile && (
           <div
-            className={`border-2 border-dashed rounded-[2rem] p-16 text-center transition-all duration-300 flex flex-col items-center justify-center min-h-[450px] 
-              ${
-                dragActive
-                  ? "border-purple-500 bg-purple-50 dark:bg-purple-900/20"
-                  : "border-slate-200 dark:border-slate-700 hover:border-purple-400 dark:hover:border-purple-500 hover:bg-slate-50 dark:hover:bg-slate-800/50"
-              }
-            `}
+            className={`border-2 border-dashed rounded-[2rem] p-16 text-center transition-all duration-300 flex flex-col items-center justify-center min-h-[450px] ${
+              dragActive
+                ? "border-purple-500 bg-purple-50 dark:bg-purple-900/20"
+                : "border-slate-200 dark:border-slate-700 hover:border-purple-400 dark:hover:border-purple-500 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+            }`}
             onDragEnter={handleDrag}
             onDragLeave={handleDrag}
             onDragOver={handleDrag}
@@ -142,7 +132,6 @@ export default function BgRemoverPage() {
                 e.target.files?.[0] && handleFileSelect(e.target.files[0])
               }
             />
-
             <div className="w-24 h-24 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-3xl flex items-center justify-center mb-8 shadow-inner">
               <UploadCloud className="w-12 h-12 text-slate-300 dark:text-slate-500" />
             </div>
@@ -161,7 +150,6 @@ export default function BgRemoverPage() {
           </div>
         )}
 
-        {/* Step 2: Processing / Preview */}
         {selectedFile && !resultUrl && (
           <div className="p-8 md:p-12 flex flex-col items-center">
             <div className="relative w-full max-w-lg rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 flex justify-center items-center aspect-video shadow-inner mb-8">
@@ -172,8 +160,6 @@ export default function BgRemoverPage() {
                   className={`max-w-full max-h-full object-contain p-4 transition-opacity duration-300 ${isProcessing ? "opacity-30" : "opacity-100"}`}
                 />
               )}
-
-              {/* Overlay loading state directly on the image */}
               {isProcessing && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="w-16 h-16 border-4 border-purple-100 dark:border-purple-900/30 border-t-purple-600 dark:border-t-purple-500 rounded-full animate-spin mb-4"></div>
@@ -186,7 +172,6 @@ export default function BgRemoverPage() {
                 </div>
               )}
             </div>
-
             {!isProcessing && (
               <div className="flex space-x-4 w-full max-w-lg">
                 <button
@@ -206,14 +191,11 @@ export default function BgRemoverPage() {
           </div>
         )}
 
-        {/* Step 3: Result */}
         {resultUrl && (
           <div className="p-8 md:p-12 text-center animate-in zoom-in-95 duration-500">
             <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-8">
               Subject Extracted! ✨
             </h2>
-
-            {/* Checkered background to show transparency */}
             <div
               className="w-full max-w-lg mx-auto rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 mb-8"
               style={{
@@ -223,7 +205,6 @@ export default function BgRemoverPage() {
                 backgroundSize: "20px 20px",
               }}
             >
-              {/* In dark mode, dim the checkerboard slightly by applying a blend mask or keeping it light so transparency is obvious */}
               <div className="dark:bg-slate-800/40 w-full h-full flex justify-center items-center aspect-square p-4">
                 <img
                   src={resultUrl}
@@ -232,7 +213,6 @@ export default function BgRemoverPage() {
                 />
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
                 href={resultUrl}
