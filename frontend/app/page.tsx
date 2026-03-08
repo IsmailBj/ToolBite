@@ -8,6 +8,7 @@ import {
   Search,
   Film,
   ShieldCheck,
+  Mic,
 } from "lucide-react";
 
 export default function Home() {
@@ -61,6 +62,17 @@ export default function Home() {
       hoverBorder: "hover:border-blue-300 dark:hover:border-blue-700",
       status: "Active",
       href: "/tools/secret-shield",
+    },
+    {
+      id: "voice-notes",
+      title: "Voice Notes",
+      description:
+        "Convert speech to text instantly using OpenAI's Whisper AI running locally.",
+      icon: <Mic className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
+      bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
+      hoverBorder: "hover:border-indigo-300 dark:hover:border-indigo-700",
+      status: "Active",
+      href: "/tools/voice-notes",
     },
   ];
 
