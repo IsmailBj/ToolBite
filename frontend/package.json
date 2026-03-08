@@ -18,6 +18,7 @@
     "lucide-react": "^0.575.0",
     "next": "16.1.6",
     "onnxruntime-web": "1.16.3",
+    "pdf-lib": "^1.17.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },

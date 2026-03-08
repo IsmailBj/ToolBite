@@ -9,82 +9,42 @@ import {
   Film,
   ShieldCheck,
   Mic,
+  LayoutGrid,
+  Code,
+  Palette,
+  Shield,
+  Video,
+  Scissors,
 } from "lucide-react";
+import { tools } from "../config/tools";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [activeCategory, setActiveCategory] = useState("All");
 
-  const tools = [
-    {
-      id: "bg-remover",
-      title: "Background Remover",
-      description:
-        "Instantly strip backgrounds from any image using high-speed AI.",
-      icon: <Wand2 className="w-7 h-7 text-blue-600 dark:text-blue-400" />,
-      bgColor: "bg-blue-100 dark:bg-blue-900/30",
-      hoverBorder: "hover:border-blue-300 dark:hover:border-blue-700",
-      status: "Active",
-      href: "/tools/bg-remover",
-    },
-    {
-      id: "video-to-gif",
-      title: "Video to GIF",
-      description:
-        "Convert video clips into high-quality, shareable animated GIFs.",
-      icon: <Film className="w-7 h-7 text-purple-600 dark:text-purple-400" />,
-      bgColor: "bg-purple-100 dark:bg-purple-900/30",
-      hoverBorder: "hover:border-purple-300 dark:hover:border-purple-700",
-      status: "Active",
-      href: "/tools/video-to-gif",
-    },
-    {
-      id: "image-compressor",
-      title: "Image Compressor",
-      description:
-        "Shrink image file sizes by up to 80% without losing visual quality.",
-      icon: (
-        <Minimize className="w-7 h-7 text-emerald-600 dark:text-emerald-400" />
-      ),
-      bgColor: "bg-emerald-100 dark:bg-emerald-900/30",
-      hoverBorder: "hover:border-emerald-300 dark:hover:border-emerald-700",
-      status: "Active",
-      href: "/tools/image-compressor",
-    },
-    {
-      id: "secret-shield",
-      title: "Secret Shield",
-      description:
-        "Military-grade AES-256 encryption. Secure any file with a private password locally.",
-      icon: (
-        <ShieldCheck className="w-7 h-7 text-blue-600 dark:text-blue-400" />
-      ),
-      bgColor: "bg-blue-100 dark:bg-blue-900/30",
-      hoverBorder: "hover:border-blue-300 dark:hover:border-blue-700",
-      status: "Active",
-      href: "/tools/secret-shield",
-    },
-    {
-      id: "voice-notes",
-      title: "Voice Notes",
-      description:
-        "Convert speech to text instantly using OpenAI's Whisper AI running locally.",
-      icon: <Mic className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
-      bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
-      hoverBorder: "hover:border-indigo-300 dark:hover:border-indigo-700",
-      status: "Active",
-      href: "/tools/voice-notes",
-    },
+  const categories = [
+    { name: "All", icon: <LayoutGrid className="w-4 h-4" /> },
+    { name: "Design", icon: <Palette className="w-4 h-4" /> },
+    { name: "Developer", icon: <Code className="w-4 h-4" /> },
+    { name: "Video", icon: <Video className="w-4 h-4" /> },
+    { name: "Security", icon: <Shield className="w-4 h-4" /> },
   ];
 
-  const filteredTools = tools.filter(
-    (tool) =>
+  const filteredTools = tools.filter((tool) => {
+    const matchesSearch =
       tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      tool.description.toLowerCase().includes(searchQuery.toLowerCase()),
-  );
+      tool.description.toLowerCase().includes(searchQuery.toLowerCase());
+
+    const matchesCategory =
+      activeCategory === "All" || tool.category === activeCategory;
+
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 animate-in fade-in duration-500">
-      <div className="text-center max-w-2xl mx-auto mb-16">
+      {/* Header Section */}
+      <div className="text-center max-w-2xl mx-auto mb-12">
         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6">
           Your all-in-one <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
@@ -92,57 +52,88 @@ export default function Home() {
           </span>
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
-          Fast, secure, and running directly in your browser. Select a tool to
-          get started.
+          Fast, secure, and running directly in your browser.
         </p>
 
-        <div className="relative max-w-md mx-auto group">
+        {/* Search Bar */}
+        <div className="relative max-w-md mx-auto group mb-8">
           <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-            <Search className="h-5 w-5 text-slate-400 dark:text-slate-500 group-focus-within:text-blue-500 dark:group-focus-within:text-blue-400 transition-colors" />
+            <Search className="h-5 w-5 text-slate-400 dark:text-slate-500 group-focus-within:text-blue-500 transition-colors" />
           </div>
           <input
             type="text"
-            className="block w-full pl-11 pr-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 shadow-sm transition-colors"
+            className="block w-full pl-11 pr-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm transition-all"
             placeholder="Search for tools..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
+
+        {/* Categories Section */}
+        <div className="flex flex-wrap justify-center gap-2">
+          {categories.map((cat) => (
+            <button
+              key={cat.name}
+              onClick={() => setActiveCategory(cat.name)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 border ${
+                activeCategory === cat.name
+                  ? "bg-slate-900 text-white border-slate-900 dark:bg-blue-600 dark:border-blue-600"
+                  : "bg-white text-slate-600 border-slate-200 hover:border-slate-300 dark:bg-slate-900 dark:text-slate-400 dark:border-slate-800 dark:hover:border-slate-700"
+              }`}
+            >
+              {cat.icon}
+              {cat.name}
+            </button>
+          ))}
+        </div>
       </div>
 
+      {/* Grid Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredTools.map((tool) => (
-          <Link
-            href={tool.href}
-            key={tool.id}
-            className={`group relative bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full ${tool.hoverBorder} ${tool.status === "Coming Soon" ? "pointer-events-none opacity-80" : ""}`}
-          >
-            {tool.status === "Coming Soon" && (
-              <div className="absolute top-6 right-6 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-semibold rounded-full">
-                Coming Soon
+        {filteredTools.length > 0 ? (
+          filteredTools.map((tool) => (
+            <Link
+              href={tool.href}
+              key={tool.id}
+              className={`group relative bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full ${tool.hoverBorder}`}
+            >
+              <div className="absolute top-6 right-6">
+                <span className="px-2.5 py-1 rounded-md bg-slate-50 dark:bg-slate-800 text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 border border-slate-100 dark:border-slate-700">
+                  {tool.category}
+                </span>
               </div>
-            )}
-            <div
-              className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 ${tool.bgColor}`}
-            >
-              {tool.icon}
-            </div>
-            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-              {tool.title}
-            </h3>
-            <p className="text-slate-500 dark:text-slate-400 flex-grow leading-relaxed">
-              {tool.description}
+              <div
+                className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 ${tool.bgColor}`}
+              >
+                {tool.icon}
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                {tool.title}
+              </h3>
+              <p className="text-slate-500 dark:text-slate-400 flex-grow leading-relaxed">
+                {tool.description}
+              </p>
+              <div className="mt-6 flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                Launch Tool <ArrowRight className="ml-1 w-4 h-4" />
+              </div>
+            </Link>
+          ))
+        ) : (
+          <div className="col-span-full py-20 text-center">
+            <p className="text-slate-500 dark:text-slate-400 text-lg font-medium">
+              No tools found matching your criteria.
             </p>
-            <div
-              className={`mt-6 flex items-center text-sm font-semibold transition-opacity duration-300 ${tool.status === "Coming Soon" ? "text-slate-400 dark:text-slate-500" : "text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100"}`}
+            <button
+              onClick={() => {
+                setSearchQuery("");
+                setActiveCategory("All");
+              }}
+              className="mt-4 text-blue-600 font-bold hover:underline"
             >
-              {tool.status === "Coming Soon" ? "In Development" : "Launch Tool"}{" "}
-              {tool.status !== "Coming Soon" && (
-                <ArrowRight className="ml-1 w-4 h-4" />
-              )}
-            </div>
-          </Link>
-        ))}
+              Reset filters
+            </button>
+          </div>
+        )}
       </div>
     </main>
   );
