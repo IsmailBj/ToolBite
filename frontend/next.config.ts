@@ -1,17 +1,26 @@
-// import type { NextConfig } from "next";
+import type { NextConfig } from "next";
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  webpack: (config: any) => {
-    // Completely disable local Node bundling for the ONNX engine
+const nextConfig: NextConfig = {
+  webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
       "onnxruntime-node": false,
     };
     return config;
   },
-  // Adding this empty object satisfies Next.js 16 Turbopack requirements
   turbopack: {},
+  // Add this headers configuration for FFmpeg WebAssembly isolation
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+          { key: "Cross-Origin-Embedder-Policy", value: "require-corp" },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

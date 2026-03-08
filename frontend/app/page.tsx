@@ -1,7 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { Wand2, FileType, Minimize, ArrowRight, Search } from "lucide-react";
+import {
+  Wand2,
+  Minimize,
+  ArrowRight,
+  Search,
+  Film,
+  ShieldCheck,
+} from "lucide-react";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -19,15 +26,15 @@ export default function Home() {
       href: "/tools/bg-remover",
     },
     {
-      id: "word-to-pdf",
-      title: "Word to PDF",
+      id: "video-to-gif",
+      title: "Video to GIF",
       description:
-        "Transform .docx and .doc files into professional PDF documents in seconds.",
-      icon: <FileType className="w-7 h-7 text-red-600" />,
-      bgColor: "bg-red-100",
-      hoverBorder: "hover:border-red-300",
+        "Convert video clips into high-quality, shareable animated GIFs.",
+      icon: <Film className="w-7 h-7 text-purple-600 dark:text-purple-400" />,
+      bgColor: "bg-purple-100 dark:bg-purple-900/30",
+      hoverBorder: "hover:border-purple-300 dark:hover:border-purple-700",
       status: "Active",
-      href: "/tools/word-to-pdf",
+      href: "/tools/video-to-gif",
     },
     {
       id: "image-compressor",
@@ -41,6 +48,19 @@ export default function Home() {
       hoverBorder: "hover:border-emerald-300 dark:hover:border-emerald-700",
       status: "Active",
       href: "/tools/image-compressor",
+    },
+    {
+      id: "secret-shield",
+      title: "Secret Shield",
+      description:
+        "Military-grade AES-256 encryption. Secure any file with a private password locally.",
+      icon: (
+        <ShieldCheck className="w-7 h-7 text-blue-600 dark:text-blue-400" />
+      ),
+      bgColor: "bg-blue-100 dark:bg-blue-900/30",
+      hoverBorder: "hover:border-blue-300 dark:hover:border-blue-700",
+      status: "Active",
+      href: "/tools/secret-shield",
     },
   ];
 
