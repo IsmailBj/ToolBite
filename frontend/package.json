@@ -15,16 +15,21 @@
     "@vercel/analytics": "^1.6.1",
     "@xenova/transformers": "^2.17.2",
     "browser-image-compression": "^2.0.2",
+    "cronstrue": "^3.13.0",
     "docx": "^9.6.0",
+    "dompurify": "^3.3.2",
     "lucide-react": "^0.575.0",
+    "marked": "^17.0.4",
     "next": "16.1.6",
     "onnxruntime-web": "1.16.3",
     "pdf-lib": "^1.17.1",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "ua-parser-js": "^2.0.9"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/dompurify": "^3.0.5",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

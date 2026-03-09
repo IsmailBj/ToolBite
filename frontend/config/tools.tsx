@@ -9,6 +9,12 @@ import {
   Palette,
   ArrowRightLeft,
   Globe,
+  Clock,
+  FileEdit,
+  Lock,
+  Shapes,
+  Search,
+  Box,
 } from "lucide-react";
 
 export interface Tool {
@@ -49,6 +55,18 @@ export const tools: Tool[] = [
     href: "/tools/video-to-gif",
   },
   {
+    id: "blob-generator",
+    title: "Blob Shape Generator",
+    category: "Design",
+    description:
+      "Generate fluid, organic SVG blob shapes for modern web layouts and backgrounds.",
+    icon: <Shapes className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
+    bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
+    hoverBorder: "hover:border-indigo-300 dark:hover:border-indigo-700",
+    status: "Active",
+    href: "/tools/blob-generator",
+  },
+  {
     id: "social-previewer",
     title: "Social Previewer",
     category: "Design",
@@ -59,6 +77,54 @@ export const tools: Tool[] = [
     hoverBorder: "hover:border-blue-300 dark:hover:border-blue-700",
     status: "Active",
     href: "/tools/social-previewer",
+  },
+  {
+    id: "ua-inspector",
+    title: "UA Inspector",
+    category: "Developer",
+    description:
+      "Detect and parse User-Agent strings to identify browsers, OS, and hardware details.",
+    icon: <Search className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
+    bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
+    hoverBorder: "hover:border-indigo-300 dark:hover:border-indigo-700",
+    status: "Active",
+    href: "/tools/ua-inspector",
+  },
+  {
+    id: "shadow-generator",
+    title: "Shadow Palette Generator",
+    category: "Design",
+    description:
+      "Create smooth, multi-layered CSS shadows for natural-looking UI elements.",
+    icon: <Box className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
+    bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
+    hoverBorder: "hover:border-indigo-300 dark:hover:border-indigo-700",
+    status: "Active",
+    href: "/tools/shadow-generator",
+  },
+  {
+    id: "safe-link",
+    title: "Safe-Link Encoder",
+    category: "Security",
+    description:
+      "Obfuscate links to hide them from bots and scrapers using browser-native encoding.",
+    icon: <Lock className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
+    bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
+    hoverBorder: "hover:border-indigo-300 dark:hover:border-indigo-700",
+    status: "Active",
+    href: "/tools/safe-link",
+  },
+  {
+    id: "markdown-lab",
+    title: "Markdown Lab",
+    category: "Developer",
+    description:
+      "Real-time Markdown editor with live HTML preview and sanitization.",
+    icon: <FileEdit className="w-7 h-7 text-orange-600 dark:text-orange-400" />,
+    bgColor: "bg-orange-100 dark:bg-orange-900/30",
+    hoverBorder: "hover:border-orange-300 dark:hover:border-orange-700",
+    status: "Active",
+    href: "/tools/markdown-lab",
   },
   {
     id: "image-compressor",
@@ -133,5 +199,17 @@ export const tools: Tool[] = [
     hoverBorder: "hover:border-pink-300 dark:hover:border-pink-700",
     status: "Active",
     href: "/tools/color-palette",
+  },
+  {
+    id: "cron-visualizer",
+    title: "Cron Visualizer",
+    category: "Developer",
+    description:
+      "Convert cryptic cron expressions into human-readable sentences and schedules.",
+    icon: <Clock className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
+    bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
+    hoverBorder: "hover:border-indigo-300 dark:hover:border-indigo-700",
+    status: "Active",
+    href: "/tools/cron-visualizer",
   },
 ];
