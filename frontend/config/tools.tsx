@@ -15,6 +15,11 @@ import {
   Shapes,
   Search,
   Box,
+  LayoutGrid,
+  Crop,
+  Layers,
+  SlidersVertical,
+  TableProperties,
 } from "lucide-react";
 
 export interface Tool {
@@ -43,6 +48,46 @@ export const tools: Tool[] = [
     href: "/tools/bg-remover",
   },
   {
+    id: "neumorphism-generator",
+    title: "Neumorphism Generator",
+    category: "Design",
+    description:
+      "Generate soft UI hex codes and complex shadow CSS based on a single base color.",
+    icon: <Layers className="w-7 h-7 text-blue-600 dark:text-blue-400" />,
+    bgColor: "bg-blue-100 dark:bg-blue-900/30",
+    hoverBorder: "hover:border-blue-300 dark:hover:border-blue-700",
+    status: "Active",
+    href: "/tools/neumorphism-generator",
+  },
+  {
+    id: "csv-converter",
+    title: "CSV to JSON",
+    category: "Developer",
+    description:
+      "Parse local CSV data into formatted JSON arrays and visual HTML tables.",
+    icon: (
+      <TableProperties className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />
+    ),
+    bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
+    hoverBorder: "hover:border-indigo-300 dark:hover:border-indigo-700",
+    status: "Active",
+    href: "/tools/csv-converter",
+  },
+  {
+    id: "scrollbar-generator",
+    title: "Custom Scrollbar",
+    category: "Design",
+    description:
+      "Visual editor to style Webkit scrollbars including track, thumb, and hover states.",
+    icon: (
+      <SlidersVertical className="w-7 h-7 text-emerald-600 dark:text-emerald-400" />
+    ),
+    bgColor: "bg-emerald-100 dark:bg-emerald-900/30",
+    hoverBorder: "hover:border-emerald-300 dark:hover:border-emerald-700",
+    status: "Active",
+    href: "/tools/scrollbar-generator",
+  },
+  {
     id: "video-to-gif",
     title: "Video to GIF",
     category: "Video",
@@ -53,6 +98,30 @@ export const tools: Tool[] = [
     hoverBorder: "hover:border-purple-300 dark:hover:border-purple-700",
     status: "Active",
     href: "/tools/video-to-gif",
+  },
+  {
+    id: "clip-path-maker",
+    title: "CSS Clip-Path Maker",
+    category: "Design",
+    description:
+      "Drag polygon points to create custom shapes and output the clip-path CSS property.",
+    icon: <Crop className="w-7 h-7 text-orange-600 dark:text-orange-400" />,
+    bgColor: "bg-orange-100 dark:bg-orange-900/30",
+    hoverBorder: "hover:border-orange-300 dark:hover:border-orange-700",
+    status: "Active",
+    href: "/tools/clip-path-maker",
+  },
+  {
+    id: "grid-builder",
+    title: "CSS Grid Builder",
+    category: "Design",
+    description:
+      "Visual interface to define columns, rows, and gaps, instantly exporting CSS grid code.",
+    icon: <LayoutGrid className="w-7 h-7 text-pink-600 dark:text-pink-400" />,
+    bgColor: "bg-pink-100 dark:bg-pink-900/30",
+    hoverBorder: "hover:border-pink-300 dark:hover:border-pink-700",
+    status: "Active",
+    href: "/tools/grid-builder",
   },
   {
     id: "blob-generator",
