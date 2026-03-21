@@ -1,6 +1,8 @@
 import React from "react";
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import { Settings, User, Zap } from "lucide-react";
+// 1. Import the LanguageSwitcher
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   return (
@@ -18,7 +20,11 @@ export default function Navbar() {
               Tool<span className="text-blue-600 dark:text-blue-500">Bite</span>
             </span>
           </Link>
+
           <div className="flex items-center space-x-4 text-slate-500 dark:text-slate-400">
+            {/* 2. Drop the LanguageSwitcher right here */}
+            <LanguageSwitcher />
+
             <button className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
               <Settings className="w-5 h-5" />
             </button>

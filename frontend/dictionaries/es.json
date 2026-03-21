@@ -1,0 +1,126 @@
+{
+  "common": {
+    "backToWorkspace": "Volver al espacio de trabajo",
+    "copy": "Copiar resultado",
+    "download": "Descargar archivo"
+  },
+  "home": {
+    "title1": "Tu espacio de trabajo",
+    "title2": "todo en uno.",
+    "subtitle": "Rápido, seguro y funcionando directamente en tu navegador.",
+    "search": "Buscar herramientas...",
+    "launch": "Abrir herramienta",
+    "noTools": "No se encontraron herramientas con esos criterios.",
+    "reset": "Restablecer filtros",
+    "categories": {
+      "All": "Todo",
+      "Design": "Diseño",
+      "Developer": "Desarrollador",
+      "Video": "Vídeo",
+      "Security": "Seguridad"
+    }
+  },
+  "tools": {
+    "bgRemover": {
+      "title": "Eliminador de Fondos",
+      "description": "Elimina instantáneamente los fondos de cualquier imagen usando IA de alta velocidad.",
+      "page": {
+        "title": "Eliminador de Fondos",
+        "subtitle": "Extrae sujetos de imágenes al instante usando IA local en el dispositivo.",
+        "dropzoneLabel": "Arrastra tu imagen aquí",
+        "uploadHint": "Funciona mejor con sujetos claros (personas, productos, animales).",
+        "selectBtn": "Seleccionar Imagen",
+        "initialDownloadNotice": "La primera ejecución descarga la IA (toma un momento).",
+        "removeBgBtn": "Eliminar Fondo",
+        "cancelBtn": "Cancelar",
+        "successMessage": "¡Sujeto Extraído! ✨",
+        "downloadBtn": "Descargar PNG",
+        "startOverBtn": "Empezar de nuevo",
+        "errorMessage": "Error",
+        "imageValidationError": "Por favor, sube un archivo de imagen válido (JPEG, PNG, WEBP).",
+        "wakingModel": "Iniciando modelo de IA...",
+        "processingError": "Error al procesar la imagen."
+      },
+      "seo": {
+        "title": "Eliminar Fondo de Imagen Gratis | ToolBite",
+        "description": "Usa nuestra IA de alta velocidad para eliminar fondos de cualquier imagen al instante desde tu navegador. 100% gratis y seguro."
+      }
+    },
+    "neumorphism": {
+      "title": "Generador de Neumorfismo",
+      "description": "Genera códigos hexadecimales de UI suave y CSS de sombras complejas basados en un solo color base."
+    },
+    "csvConverter": {
+      "title": "CSV a JSON",
+      "description": "Analiza datos CSV locales en matrices JSON formateadas y tablas HTML visuales."
+    },
+    "scrollbar": {
+      "title": "Scrollbar Personalizado",
+      "description": "Editor visual para diseñar barras de desplazamiento Webkit, incluyendo la pista, el pulgar y los estados al pasar el cursor."
+    },
+    "videoToGif": {
+      "title": "Video a GIF",
+      "description": "Convierte clips de video en GIFs animados de alta calidad listos para compartir."
+    },
+    "clipPathMaker": {
+      "title": "Creador de Clip-Path CSS",
+      "description": "Arrastra puntos poligonales para crear formas personalizadas y generar la propiedad CSS clip-path."
+    },
+    "gridBuilder": {
+      "title": "Constructor de Grid CSS",
+      "description": "Interfaz visual para definir columnas, filas y huecos, exportando código CSS grid al instante."
+    },
+    "blobGenerator": {
+      "title": "Generador de Formas Blob",
+      "description": "Genera formas blob SVG fluidas y orgánicas para fondos y diseños web modernos."
+    },
+    "socialPreviewer": {
+      "title": "Previsualizador Social",
+      "description": "Previsualiza en vivo y genera Metaetiquetas para tarjetas de Twitter, Facebook y LinkedIn."
+    },
+    "uaInspector": {
+      "title": "Inspector de UA",
+      "description": "Detecta y analiza cadenas de User-Agent (Agente de Usuario) para identificar navegadores, sistemas operativos y detalles de hardware."
+    },
+    "shadowGenerator": {
+      "title": "Generador de Sombras",
+      "description": "Crea sombras CSS suaves y de múltiples capas para elementos de interfaz de usuario de aspecto natural."
+    },
+    "safeLink": {
+      "title": "Codificador de Enlaces Seguros",
+      "description": "Ofusca enlaces para ocultarlos de bots y scrapers utilizando codificación nativa del navegador."
+    },
+    "markdownLab": {
+      "title": "Laboratorio Markdown",
+      "description": "Editor de Markdown en tiempo real con vista previa HTML en vivo y sanitización."
+    },
+    "imageCompressor": {
+      "title": "Compresor de Imágenes",
+      "description": "Reduce el tamaño de los archivos de imagen hasta en un 80% sin perder calidad visual."
+    },
+    "unitPro": {
+      "title": "Convertidor de Unidades Pro",
+      "description": "Conversión avanzada para unidades web (PX/REM), almacenamiento digital y longitud física."
+    },
+    "pdfSurgeon": {
+      "title": "Cirujano PDF",
+      "description": "Combina múltiples documentos o extrae páginas específicas con precisión milimétrica."
+    },
+    "secretShield": {
+      "title": "Escudo Secreto",
+      "description": "Cifrado AES-256 de grado militar. Protege cualquier archivo localmente."
+    },
+    "voiceNotes": {
+      "title": "Notas de Voz",
+      "description": "Convierte voz a texto instantáneamente utilizando Whisper AI de OpenAI."
+    },
+    "colorPalette": {
+      "title": "Paleta de Colores",
+      "description": "Extrae los colores más dominantes y hermosos de cualquier fotografía."
+    },
+    "cronVisualizer": {
+      "title": "Visualizador de Cron",
+      "description": "Convierte expresiones crípticas de cron en oraciones y horarios legibles por humanos."
+    }
+  }
+}

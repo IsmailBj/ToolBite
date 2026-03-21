@@ -34,12 +34,13 @@ export interface Tool {
   href: string;
 }
 
-export const tools: Tool[] = [
+export const getTools = (dict: any): Tool[] => [
   {
     id: "bg-remover",
-    title: "Background Remover",
+    title: dict.tools?.bgRemover?.title || "Background Remover",
     category: "Design",
     description:
+      dict.tools?.bgRemover?.description ||
       "Instantly strip backgrounds from any image using high-speed AI.",
     icon: <Wand2 className="w-7 h-7 text-blue-600 dark:text-blue-400" />,
     bgColor: "bg-blue-100 dark:bg-blue-900/30",
@@ -49,9 +50,10 @@ export const tools: Tool[] = [
   },
   {
     id: "neumorphism-generator",
-    title: "Neumorphism Generator",
+    title: dict.tools?.neumorphism?.title || "Neumorphism Generator",
     category: "Design",
     description:
+      dict.tools?.neumorphism?.description ||
       "Generate soft UI hex codes and complex shadow CSS based on a single base color.",
     icon: <Layers className="w-7 h-7 text-blue-600 dark:text-blue-400" />,
     bgColor: "bg-blue-100 dark:bg-blue-900/30",
@@ -61,9 +63,10 @@ export const tools: Tool[] = [
   },
   {
     id: "csv-converter",
-    title: "CSV to JSON",
+    title: dict.tools?.csvConverter?.title || "CSV to JSON",
     category: "Developer",
     description:
+      dict.tools?.csvConverter?.description ||
       "Parse local CSV data into formatted JSON arrays and visual HTML tables.",
     icon: (
       <TableProperties className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />
@@ -75,9 +78,10 @@ export const tools: Tool[] = [
   },
   {
     id: "scrollbar-generator",
-    title: "Custom Scrollbar",
+    title: dict.tools?.scrollbar?.title || "Custom Scrollbar",
     category: "Design",
     description:
+      dict.tools?.scrollbar?.description ||
       "Visual editor to style Webkit scrollbars including track, thumb, and hover states.",
     icon: (
       <SlidersVertical className="w-7 h-7 text-emerald-600 dark:text-emerald-400" />
@@ -89,9 +93,10 @@ export const tools: Tool[] = [
   },
   {
     id: "video-to-gif",
-    title: "Video to GIF",
+    title: dict.tools?.videoToGif?.title || "Video to GIF",
     category: "Video",
     description:
+      dict.tools?.videoToGif?.description ||
       "Convert video clips into high-quality, shareable animated GIFs.",
     icon: <Film className="w-7 h-7 text-purple-600 dark:text-purple-400" />,
     bgColor: "bg-purple-100 dark:bg-purple-900/30",
@@ -101,9 +106,10 @@ export const tools: Tool[] = [
   },
   {
     id: "clip-path-maker",
-    title: "CSS Clip-Path Maker",
+    title: dict.tools?.clipPathMaker?.title || "CSS Clip-Path Maker",
     category: "Design",
     description:
+      dict.tools?.clipPathMaker?.description ||
       "Drag polygon points to create custom shapes and output the clip-path CSS property.",
     icon: <Crop className="w-7 h-7 text-orange-600 dark:text-orange-400" />,
     bgColor: "bg-orange-100 dark:bg-orange-900/30",
@@ -113,9 +119,10 @@ export const tools: Tool[] = [
   },
   {
     id: "grid-builder",
-    title: "CSS Grid Builder",
+    title: dict.tools?.gridBuilder?.title || "CSS Grid Builder",
     category: "Design",
     description:
+      dict.tools?.gridBuilder?.description ||
       "Visual interface to define columns, rows, and gaps, instantly exporting CSS grid code.",
     icon: <LayoutGrid className="w-7 h-7 text-pink-600 dark:text-pink-400" />,
     bgColor: "bg-pink-100 dark:bg-pink-900/30",
@@ -125,9 +132,10 @@ export const tools: Tool[] = [
   },
   {
     id: "blob-generator",
-    title: "Blob Shape Generator",
+    title: dict.tools?.blobGenerator?.title || "Blob Shape Generator",
     category: "Design",
     description:
+      dict.tools?.blobGenerator?.description ||
       "Generate fluid, organic SVG blob shapes for modern web layouts and backgrounds.",
     icon: <Shapes className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
     bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
@@ -137,9 +145,10 @@ export const tools: Tool[] = [
   },
   {
     id: "social-previewer",
-    title: "Social Previewer",
+    title: dict.tools?.socialPreviewer?.title || "Social Previewer",
     category: "Design",
     description:
+      dict.tools?.socialPreviewer?.description ||
       "Live preview and generate Meta Tags for Twitter, Facebook, and LinkedIn cards.",
     icon: <Globe className="w-7 h-7 text-blue-600 dark:text-blue-400" />,
     bgColor: "bg-blue-100 dark:bg-blue-900/30",
@@ -149,9 +158,10 @@ export const tools: Tool[] = [
   },
   {
     id: "ua-inspector",
-    title: "UA Inspector",
+    title: dict.tools?.uaInspector?.title || "UA Inspector",
     category: "Developer",
     description:
+      dict.tools?.uaInspector?.description ||
       "Detect and parse User-Agent strings to identify browsers, OS, and hardware details.",
     icon: <Search className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
     bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
@@ -161,9 +171,10 @@ export const tools: Tool[] = [
   },
   {
     id: "shadow-generator",
-    title: "Shadow Palette Generator",
+    title: dict.tools?.shadowGenerator?.title || "Shadow Palette Generator",
     category: "Design",
     description:
+      dict.tools?.shadowGenerator?.description ||
       "Create smooth, multi-layered CSS shadows for natural-looking UI elements.",
     icon: <Box className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
     bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
@@ -173,9 +184,10 @@ export const tools: Tool[] = [
   },
   {
     id: "safe-link",
-    title: "Safe-Link Encoder",
+    title: dict.tools?.safeLink?.title || "Safe-Link Encoder",
     category: "Security",
     description:
+      dict.tools?.safeLink?.description ||
       "Obfuscate links to hide them from bots and scrapers using browser-native encoding.",
     icon: <Lock className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
     bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
@@ -185,9 +197,10 @@ export const tools: Tool[] = [
   },
   {
     id: "markdown-lab",
-    title: "Markdown Lab",
+    title: dict.tools?.markdownLab?.title || "Markdown Lab",
     category: "Developer",
     description:
+      dict.tools?.markdownLab?.description ||
       "Real-time Markdown editor with live HTML preview and sanitization.",
     icon: <FileEdit className="w-7 h-7 text-orange-600 dark:text-orange-400" />,
     bgColor: "bg-orange-100 dark:bg-orange-900/30",
@@ -197,9 +210,10 @@ export const tools: Tool[] = [
   },
   {
     id: "image-compressor",
-    title: "Image Compressor",
+    title: dict.tools?.imageCompressor?.title || "Image Compressor",
     category: "Design",
     description:
+      dict.tools?.imageCompressor?.description ||
       "Shrink image file sizes by up to 80% without losing visual quality.",
     icon: (
       <Minimize className="w-7 h-7 text-emerald-600 dark:text-emerald-400" />
@@ -211,9 +225,10 @@ export const tools: Tool[] = [
   },
   {
     id: "unit-pro",
-    title: "Unit Converter Pro",
+    title: dict.tools?.unitPro?.title || "Unit Converter Pro",
     category: "Developer",
     description:
+      dict.tools?.unitPro?.description ||
       "Advanced conversion for web units (PX/REM), digital storage, and physical length.",
     icon: (
       <ArrowRightLeft className="w-7 h-7 text-emerald-600 dark:text-emerald-400" />
@@ -225,9 +240,10 @@ export const tools: Tool[] = [
   },
   {
     id: "pdf-surgeon",
-    title: "PDF Surgeon",
+    title: dict.tools?.pdfSurgeon?.title || "PDF Surgeon",
     category: "Developer",
     description:
+      dict.tools?.pdfSurgeon?.description ||
       "Merge multiple documents or extract specific pages with pinpoint precision.",
     icon: <Scissors className="w-7 h-7 text-red-600 dark:text-red-400" />,
     bgColor: "bg-red-100 dark:bg-red-900/30",
@@ -237,9 +253,11 @@ export const tools: Tool[] = [
   },
   {
     id: "secret-shield",
-    title: "Secret Shield",
+    title: dict.tools?.secretShield?.title || "Secret Shield",
     category: "Security",
-    description: "Military-grade AES-256 encryption. Secure any file locally.",
+    description:
+      dict.tools?.secretShield?.description ||
+      "Military-grade AES-256 encryption. Secure any file locally.",
     icon: <ShieldCheck className="w-7 h-7 text-cyan-600 dark:text-cyan-400" />,
     bgColor: "bg-cyan-100 dark:bg-cyan-900/30",
     hoverBorder: "hover:border-cyan-300 dark:hover:border-cyan-700",
@@ -248,9 +266,11 @@ export const tools: Tool[] = [
   },
   {
     id: "voice-notes",
-    title: "Voice Notes",
+    title: dict.tools?.voiceNotes?.title || "Voice Notes",
     category: "Developer",
-    description: "Convert speech to text instantly using OpenAI's Whisper AI.",
+    description:
+      dict.tools?.voiceNotes?.description ||
+      "Convert speech to text instantly using OpenAI's Whisper AI.",
     icon: <Mic className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
     bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
     hoverBorder: "hover:border-indigo-300 dark:hover:border-indigo-700",
@@ -259,9 +279,10 @@ export const tools: Tool[] = [
   },
   {
     id: "color-palette",
-    title: "Color Palette",
+    title: dict.tools?.colorPalette?.title || "Color Palette",
     category: "Design",
     description:
+      dict.tools?.colorPalette?.description ||
       "Extract the most dominant and beautiful colors from any photograph.",
     icon: <Palette className="w-7 h-7 text-pink-600 dark:text-pink-400" />,
     bgColor: "bg-pink-100 dark:bg-pink-900/30",
@@ -271,9 +292,10 @@ export const tools: Tool[] = [
   },
   {
     id: "cron-visualizer",
-    title: "Cron Visualizer",
+    title: dict.tools?.cronVisualizer?.title || "Cron Visualizer",
     category: "Developer",
     description:
+      dict.tools?.cronVisualizer?.description ||
       "Convert cryptic cron expressions into human-readable sentences and schedules.",
     icon: <Clock className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
     bgColor: "bg-indigo-100 dark:bg-indigo-900/30",

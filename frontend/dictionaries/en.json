@@ -1,0 +1,126 @@
+{
+  "common": {
+    "backToWorkspace": "Back to workspace",
+    "copy": "Copy Output",
+    "download": "Download File"
+  },
+  "home": {
+    "title1": "Your all-in-one",
+    "title2": "utility workspace.",
+    "subtitle": "Fast, secure, and running directly in your browser.",
+    "search": "Search for tools...",
+    "launch": "Launch Tool",
+    "noTools": "No tools found matching your criteria.",
+    "reset": "Reset filters",
+    "categories": {
+      "All": "All",
+      "Design": "Design",
+      "Developer": "Developer",
+      "Video": "Video",
+      "Security": "Security"
+    }
+  },
+  "tools": {
+    "bgRemover": {
+      "title": "Background Remover",
+      "description": "Instantly strip backgrounds from any image using high-speed AI.",
+      "page": {
+        "title": "Background Remover",
+        "subtitle": "Instantly extract subjects from images using on-device AI.",
+        "dropzoneLabel": "Drop your Image here",
+        "uploadHint": "Works best with clear subjects (people, products, animals).",
+        "selectBtn": "Select Image",
+        "initialDownloadNotice": "First run downloads the AI (takes a moment).",
+        "removeBgBtn": "Remove Background",
+        "cancelBtn": "Cancel",
+        "successMessage": "Subject Extracted! ✨",
+        "downloadBtn": "Download PNG",
+        "startOverBtn": "Start Over",
+        "errorMessage": "Error",
+        "imageValidationError": "Please upload a valid image file (JPEG, PNG, WEBP).",
+        "wakingModel": "Waking up AI model...",
+        "processingError": "Error processing image."
+      },
+      "seo": {
+        "title": "Remove Background from Image Free | ToolBite",
+        "description": "Use our high-speed AI to remove backgrounds from any image instantly right in your browser. 100% free and secure."
+      }
+    },
+    "neumorphism": {
+      "title": "Neumorphism Generator",
+      "description": "Generate soft UI hex codes and complex shadow CSS based on a single base color."
+    },
+    "csvConverter": {
+      "title": "CSV to JSON",
+      "description": "Parse local CSV data into formatted JSON arrays and visual HTML tables."
+    },
+    "scrollbar": {
+      "title": "Custom Scrollbar",
+      "description": "Visual editor to style Webkit scrollbars including track, thumb, and hover states."
+    },
+    "videoToGif": {
+      "title": "Video to GIF",
+      "description": "Convert video clips into high-quality, shareable animated GIFs."
+    },
+    "clipPathMaker": {
+      "title": "CSS Clip-Path Maker",
+      "description": "Drag polygon points to create custom shapes and output the clip-path CSS property."
+    },
+    "gridBuilder": {
+      "title": "CSS Grid Builder",
+      "description": "Visual interface to define columns, rows, and gaps, instantly exporting CSS grid code."
+    },
+    "blobGenerator": {
+      "title": "Blob Shape Generator",
+      "description": "Generate fluid, organic SVG blob shapes for modern web layouts and backgrounds."
+    },
+    "socialPreviewer": {
+      "title": "Social Previewer",
+      "description": "Live preview and generate Meta Tags for Twitter, Facebook, and LinkedIn cards."
+    },
+    "uaInspector": {
+      "title": "UA Inspector",
+      "description": "Detect and parse User-Agent strings to identify browsers, OS, and hardware details."
+    },
+    "shadowGenerator": {
+      "title": "Shadow Palette Generator",
+      "description": "Create smooth, multi-layered CSS shadows for natural-looking UI elements."
+    },
+    "safeLink": {
+      "title": "Safe-Link Encoder",
+      "description": "Obfuscate links to hide them from bots and scrapers using browser-native encoding."
+    },
+    "markdownLab": {
+      "title": "Markdown Lab",
+      "description": "Real-time Markdown editor with live HTML preview and sanitization."
+    },
+    "imageCompressor": {
+      "title": "Image Compressor",
+      "description": "Shrink image file sizes by up to 80% without losing visual quality."
+    },
+    "unitPro": {
+      "title": "Unit Converter Pro",
+      "description": "Advanced conversion for web units (PX/REM), digital storage, and physical length."
+    },
+    "pdfSurgeon": {
+      "title": "PDF Surgeon",
+      "description": "Merge multiple documents or extract specific pages with pinpoint precision."
+    },
+    "secretShield": {
+      "title": "Secret Shield",
+      "description": "Military-grade AES-256 encryption. Secure any file locally."
+    },
+    "voiceNotes": {
+      "title": "Voice Notes",
+      "description": "Convert speech to text instantly using OpenAI's Whisper AI."
+    },
+    "colorPalette": {
+      "title": "Color Palette",
+      "description": "Extract the most dominant and beautiful colors from any photograph."
+    },
+    "cronVisualizer": {
+      "title": "Cron Visualizer",
+      "description": "Convert cryptic cron expressions into human-readable sentences and schedules."
+    }
+  }
+}
