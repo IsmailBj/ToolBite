@@ -8,6 +8,8 @@ import {
   ShapeType,
   presetShapes,
 } from "../../../../utils/clip-path-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function ClipPathMakerPage() {
   const [state, setState] = useState<ClipState>({
@@ -32,6 +34,9 @@ export default function ClipPathMakerPage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const cssCode = generateClipPathCss(state);
+
+  const dict = useDictionary();
+  const ui = dict.tools?.clipPathMaker?.page;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(cssCode);
@@ -84,13 +89,7 @@ export default function ClipPathMakerPage() {
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-12">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 hover:text-orange-600 mb-8 group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center justify-between mb-10">
         <div className="flex items-center space-x-4">
@@ -99,10 +98,11 @@ export default function ClipPathMakerPage() {
           </div>
           <div>
             <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-              CSS Clip-Path Maker
+              {ui?.title || "CSS Clip-Path Maker"}
             </h1>
             <p className="text-slate-500 dark:text-slate-400">
-              Advanced generator with drag controls and image preview.
+              {ui?.subtitle ||
+                "Advanced generator with drag controls and image preview."}
             </p>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function ClipPathMakerPage() {
           <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
             <div>
               <label className="text-xs font-bold uppercase text-slate-400 block mb-2">
-                Shape Type
+                {ui?.shapeTypeLabel || "Shape Type"}
               </label>
               <select
                 value={state.type}
@@ -132,7 +132,7 @@ export default function ClipPathMakerPage() {
             {state.type === "polygon" && (
               <div>
                 <label className="text-xs font-bold uppercase text-slate-400 block mb-2">
-                  Presets
+                  {ui?.presetsLabel || "Presets"}
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {Object.keys(presetShapes).map((preset) => (
@@ -155,12 +155,12 @@ export default function ClipPathMakerPage() {
 
             <div>
               <label className="text-xs font-bold uppercase text-slate-400 block mb-2">
-                Custom Image
+                {ui?.customImageLabel || "Custom Image"}
               </label>
               <label className="flex items-center justify-center w-full p-3 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-xl cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
                 <ImageIcon className="w-5 h-5 text-slate-400 mr-2" />
                 <span className="text-sm font-bold text-slate-600 dark:text-slate-300">
-                  Upload Image
+                  {ui?.uploadButtonLabel || "Upload Image"}
                 </span>
                 <input
                   type="file"
@@ -174,7 +174,7 @@ export default function ClipPathMakerPage() {
             <div className="pt-4 border-t border-slate-100 dark:border-slate-800">
               <div className="flex justify-between items-center mb-2">
                 <span className="text-xs font-bold uppercase text-slate-400">
-                  CSS Output
+                  {ui?.cssOutputLabel || "CSS Output"}
                 </span>
                 <button
                   onClick={handleCopy}

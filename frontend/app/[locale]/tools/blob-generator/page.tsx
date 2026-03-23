@@ -11,6 +11,8 @@ import {
   Settings2,
 } from "lucide-react";
 import { generateBlobPath } from "../../../../utils/blob-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function BlobGeneratorPage() {
   const [edges, setEdges] = useState(6);
@@ -18,6 +20,9 @@ export default function BlobGeneratorPage() {
   const [seed, setSeed] = useState(123);
   const [color, setColor] = useState("#4F46E5");
   const [copied, setCopied] = useState(false);
+
+  const dict = useDictionary();
+  const ui = dict.tools?.blobGenerator?.page;
 
   const size = 400;
   const path = useMemo(
@@ -44,13 +49,7 @@ export default function BlobGeneratorPage() {
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 mb-8 transition-colors group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/40 rounded-2xl flex items-center justify-center">
@@ -58,10 +57,11 @@ export default function BlobGeneratorPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            Blob Shape Generator
+            {ui?.blobTitle || "Blob Shape Generator"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Create organic SVG shapes for your web designs.
+            {ui?.blobSubtitle ||
+              "Create organic SVG shapes for your web designs."}
           </p>
         </div>
       </div>
@@ -70,12 +70,12 @@ export default function BlobGeneratorPage() {
         {/* Controls */}
         <div className="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 shadow-xl space-y-8">
           <div className="flex items-center gap-2 mb-2 text-indigo-600 dark:text-indigo-400 font-bold uppercase text-xs tracking-widest">
-            <Settings2 className="w-4 h-4" /> Parameters
+            <Settings2 className="w-4 h-4" /> {ui?.parameters || "Parameters"}
           </div>
 
           <div className="space-y-4">
             <div className="flex justify-between text-sm font-bold dark:text-white">
-              <span>Edges (Complexity)</span>
+              <span>{ui?.edgesLabel || "Edges (Complexity)"}</span>
               <span>{edges}</span>
             </div>
             <input
@@ -90,7 +90,7 @@ export default function BlobGeneratorPage() {
 
           <div className="space-y-4">
             <div className="flex justify-between text-sm font-bold dark:text-white">
-              <span>Growth (Randomness)</span>
+              <span>{ui?.growthLabel || "Growth (Randomness)"}</span>
               <span>{growth}px</span>
             </div>
             <input
@@ -120,7 +120,8 @@ export default function BlobGeneratorPage() {
               onClick={() => setSeed(Math.random())}
               className="flex-grow flex items-center justify-center gap-2 py-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-2xl font-bold transition-all"
             >
-              <RefreshCw className="w-4 h-4" /> Randomize
+              <RefreshCw className="w-4 h-4" />{" "}
+              {ui?.randomizeButton || "Randomize"}
             </button>
           </div>
         </div>

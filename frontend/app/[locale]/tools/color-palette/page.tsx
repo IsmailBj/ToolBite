@@ -11,6 +11,8 @@ import {
   Image as ImageIcon,
 } from "lucide-react";
 import { extractPalette, ColorResult } from "../../../../utils/color-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function ColorPalettePage() {
   const [isProcessing, setIsProcessing] = useState(false);
@@ -18,6 +20,9 @@ export default function ColorPalettePage() {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const dict = useDictionary();
+  const ui = dict.tools?.colorPalette?.page;
 
   const handleFileSelect = async (file: File) => {
     setIsProcessing(true);
@@ -40,13 +45,7 @@ export default function ColorPalettePage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400 hover:text-pink-600 mb-8 transition-colors group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-pink-100 dark:bg-pink-900/40 rounded-2xl flex items-center justify-center shadow-sm">
@@ -54,10 +53,11 @@ export default function ColorPalettePage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            Color Palette
+            {ui?.title || "Color Palette"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Extract dominant colors from any image instantly.
+            {ui?.subtitle ||
+              "Extract dominant colors from any image instantly."}
           </p>
         </div>
       </div>
@@ -79,7 +79,7 @@ export default function ColorPalettePage() {
             />
             <ImageIcon className="w-12 h-12 text-slate-300 dark:text-slate-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-              Drop image to sample colors
+              {ui?.dropImageLabel || "Drop image to sample colors"}
             </h3>
           </div>
         ) : (
@@ -135,7 +135,8 @@ export default function ColorPalettePage() {
               }}
               className="flex items-center mx-auto text-slate-500 hover:text-pink-600 font-bold transition-colors"
             >
-              <RefreshCw className="w-4 h-4 mr-2" /> Upload New Image
+              <RefreshCw className="w-4 h-4 mr-2" />{" "}
+              {ui?.uploadNewImageButton || "Upload New Image"}
             </button>
           </div>
         )}

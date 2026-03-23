@@ -15,6 +15,8 @@ import {
   AlignLeft,
 } from "lucide-react";
 import { parseCSV, ParsedCSV, ParseOptions } from "../../../../utils/csv-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 type TabType = "table" | "json" | "html" | "markdown";
 
@@ -36,6 +38,9 @@ export default function CsvConverterPage() {
     delimiter: ",",
     hasHeaders: true,
   });
+
+  const dict = useDictionary();
+  const ui = dict.tools?.csvConverter?.page;
 
   useEffect(() => {
     try {
@@ -101,13 +106,7 @@ export default function CsvConverterPage() {
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-12">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 hover:text-indigo-600 mb-8 group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/40 rounded-2xl flex items-center justify-center">
@@ -115,11 +114,11 @@ export default function CsvConverterPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            CSV to JSON Converter
+            {ui?.title || "CSV to JSON Converter"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Robust parser with custom delimiters, JSON, HTML, and Markdown
-            export.
+            {ui?.subtitle ||
+              "Robust parser with custom delimiters, JSON, HTML, and Markdown export."}
           </p>
         </div>
       </div>
@@ -129,12 +128,13 @@ export default function CsvConverterPage() {
         <div className="lg:col-span-4 flex flex-col space-y-4">
           <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
             <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center mb-2">
-              <Settings className="w-4 h-4 mr-2" /> Configuration
+              <Settings className="w-4 h-4 mr-2" />{" "}
+              {ui?.configurationLabel || "Configuration"}
             </h3>
 
             <div>
               <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1">
-                Delimiter
+                {ui?.delimiterLabel || "Delimiter"}
               </label>
               <select
                 value={options.delimiter}
@@ -143,10 +143,14 @@ export default function CsvConverterPage() {
                 }
                 className="w-full p-2 text-sm rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800"
               >
-                <option value=",">Comma (,)</option>
-                <option value=";">Semicolon (;)</option>
-                <option value="\t">Tab</option>
-                <option value="|">Pipe (|)</option>
+                <option value=",">
+                  {ui?.delimiters?.comma || "Comma (,)"}
+                </option>
+                <option value=";">
+                  {ui?.delimiters?.semicolon || "Semicolon (;)"}
+                </option>
+                <option value="\t">{ui?.delimiters?.tab || "Tab"}</option>
+                <option value="|">{ui?.delimiters?.pipe || "Pipe (|)"}</option>
               </select>
             </div>
 
@@ -160,7 +164,7 @@ export default function CsvConverterPage() {
                 className="rounded text-indigo-600 focus:ring-indigo-500"
               />
               <span className="text-sm font-bold text-slate-700 dark:text-slate-300">
-                First row contains headers
+                {ui?.firstRowHeadersLabel || "First row contains headers"}
               </span>
             </label>
           </div>
@@ -168,10 +172,11 @@ export default function CsvConverterPage() {
           <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm flex-1 flex flex-col h-[400px]">
             <div className="flex justify-between items-center mb-4">
               <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                Raw Data Input
+                {ui?.rawInputLabel || "Raw Data Input"}
               </label>
               <label className="flex items-center text-xs font-bold text-indigo-600 bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1.5 rounded-lg cursor-pointer hover:bg-indigo-100 transition-colors">
-                <FileText className="w-3 h-3 mr-1" /> Upload
+                <FileText className="w-3 h-3 mr-1" />{" "}
+                {ui?.uploadButtonLabel || "Upload"}
                 <input
                   type="file"
                   accept=".csv,.txt"
@@ -271,7 +276,7 @@ export default function CsvConverterPage() {
                           colSpan={Math.max(1, parsedData.headers.length)}
                           className="px-4 py-8 text-center text-slate-500"
                         >
-                          No valid data provided.
+                          {ui?.noValidDataError || "No valid data provided."}
                         </td>
                       </tr>
                     )}

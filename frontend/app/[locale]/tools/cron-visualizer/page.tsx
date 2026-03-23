@@ -11,12 +11,17 @@ import {
   Check,
 } from "lucide-react";
 import { getCronDescription } from "../../../../utils/cron-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function CronVisualizerPage() {
   const [expression, setExpression] = useState("*/5 * * * *");
   const [description, setDescription] = useState("");
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
+
+  const dict = useDictionary();
+  const ui = dict.tools?.cronVisualizer?.page;
 
   useEffect(() => {
     try {
@@ -29,7 +34,9 @@ export default function CronVisualizerPage() {
       setDescription(desc);
       setError("");
     } catch (err: any) {
-      setError("Invalid Cron expression. Please check the format.");
+      setError(
+        ui?.invalidError || "Invalid Cron expression. Please check the format.",
+      );
       setDescription("");
     }
   }, [expression]);
@@ -41,21 +48,18 @@ export default function CronVisualizerPage() {
   };
 
   const examples = [
-    { label: "Every 5 mins", val: "*/5 * * * *" },
-    { label: "Every hour", val: "0 * * * *" },
-    { label: "Midnight daily", val: "0 0 * * *" },
-    { label: "Every Monday", val: "0 0 * * 1" },
+    { label: ui?.examples?.every5Mins || "Every 5 mins", val: "*/5 * * * *" },
+    { label: ui?.examples?.everyHour || "Every hour", val: "0 * * * *" },
+    {
+      label: ui?.examples?.midnightDaily || "Midnight daily",
+      val: "0 0 * * *",
+    },
+    { label: ui?.examples?.everyMonday || "Every Monday", val: "0 0 * * 1" },
   ];
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 mb-8 transition-colors group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/40 rounded-2xl flex items-center justify-center">
@@ -63,10 +67,11 @@ export default function CronVisualizerPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            Cron Visualizer
+            {ui?.title || "Cron Visualizer"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Decode cron expressions into plain English schedules.
+            {ui?.subtitle ||
+              "Decode cron expressions into plain English schedules."}
           </p>
         </div>
       </div>
@@ -75,7 +80,7 @@ export default function CronVisualizerPage() {
         <div className="space-y-6">
           <div>
             <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-3 ml-1">
-              Cron Expression
+              {ui?.inputLabel || "Cron Expression"}
             </label>
             <div className="relative">
               <input
@@ -122,7 +127,7 @@ export default function CronVisualizerPage() {
                   <Info className="w-6 h-6 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="text-sm font-bold text-indigo-900 dark:text-indigo-300 uppercase tracking-wider mb-1">
-                      Schedule Description
+                      {ui?.scheduleDescriptionLabel || "Schedule Description"}
                     </h3>
                     <p className="text-xl font-medium text-slate-900 dark:text-white leading-relaxed">
                       “{description}”

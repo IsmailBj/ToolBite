@@ -52,7 +52,27 @@
     },
     "csvConverter": {
       "title": "CSV to JSON",
-      "description": "Parse local CSV data into formatted JSON arrays and visual HTML tables."
+      "description": "Parse local CSV data into formatted JSON arrays and visual HTML tables.",
+      "page": {
+        "title": "CSV to JSON Converter",
+        "subtitle": "Robust parser with custom delimiters, JSON, HTML, and Markdown export.",
+        "configurationLabel": "Configuration",
+        "delimiterLabel": "Delimiter",
+        "delimiters": {
+          "comma": "Comma (,)",
+          "semicolon": "Semicolon (;)",
+          "tab": "Tab",
+          "pipe": "Pipe (|)"
+        },
+        "firstRowHeadersLabel": "First row contains headers",
+        "rawInputLabel": "Raw Data Input",
+        "uploadButtonLabel": "Upload",
+        "noValidDataError": "No valid data provided."
+      },
+      "seo": {
+        "title": "CSV to JSON Converter | ToolBite",
+        "description": "Parse local CSV data into formatted JSON arrays and visual HTML tables instantly in your browser."
+      }
     },
     "scrollbar": {
       "title": "Custom Scrollbar",
@@ -64,7 +84,20 @@
     },
     "clipPathMaker": {
       "title": "CSS Clip-Path Maker",
-      "description": "Drag polygon points to create custom shapes and output the clip-path CSS property."
+      "description": "Drag polygon points to create custom shapes and output the clip-path CSS property.",
+      "page": {
+        "title": "CSS Clip-Path Maker",
+        "subtitle": "Advanced generator with drag controls and image preview.",
+        "shapeTypeLabel": "Shape Type",
+        "presetsLabel": "Presets",
+        "customImageLabel": "Custom Image",
+        "uploadButtonLabel": "Upload Image",
+        "cssOutputLabel": "CSS Output"
+      },
+      "seo": {
+        "title": "CSS Clip-Path Maker | ToolBite",
+        "description": "Drag polygon points to create custom shapes and output the clip-path CSS property."
+      }
     },
     "gridBuilder": {
       "title": "CSS Grid Builder",
@@ -72,7 +105,19 @@
     },
     "blobGenerator": {
       "title": "Blob Shape Generator",
-      "description": "Generate fluid, organic SVG blob shapes for modern web layouts and backgrounds."
+      "description": "Generate fluid, organic SVG blob shapes for modern web layouts and backgrounds.",
+      "page": {
+        "blobTitle": "Blob Shape Generator",
+        "blobSubtitle": "Create organic SVG shapes for your web designs.",
+        "parameters": "Parameters",
+        "edgesLabel": "Edges (Complexity)",
+        "growthLabel": "Growth (Randomness)",
+        "randomizeButton": "Randomize"
+      },
+      "seo": {
+        "title": "Blob Shape Generator | ToolBite",
+        "description": "Generate fluid, organic SVG blob shapes for modern web layouts and backgrounds."
+      }
     },
     "socialPreviewer": {
       "title": "Social Previewer",
@@ -116,11 +161,38 @@
     },
     "colorPalette": {
       "title": "Color Palette",
-      "description": "Extract the most dominant and beautiful colors from any photograph."
+      "description": "Extract the most dominant and beautiful colors from any photograph.",
+      "page": {
+        "title": "Color Palette",
+        "subtitle": "Extract dominant colors from any image instantly.",
+        "dropImageLabel": "Drop image to sample colors",
+        "uploadNewImageButton": "Upload New Image"
+      },
+      "seo": {
+        "title": "Color Palette | ToolBite",
+        "description": "Extract the most dominant and beautiful colors from any photograph."
+      }
     },
     "cronVisualizer": {
       "title": "Cron Visualizer",
-      "description": "Convert cryptic cron expressions into human-readable sentences and schedules."
+      "description": "Convert cryptic cron expressions into human-readable sentences and schedules.",
+      "page": {
+        "title": "Cron Visualizer",
+        "subtitle": "Decode cron expressions into plain English schedules.",
+        "inputLabel": "Cron Expression",
+        "scheduleDescriptionLabel": "Schedule Description",
+        "invalidError": "Invalid Cron expression. Please check the format.",
+        "examples": {
+          "every5Mins": "Every 5 mins",
+          "everyHour": "Every hour",
+          "midnightDaily": "Midnight daily",
+          "everyMonday": "Every Monday"
+        }
+      },
+      "seo": {
+        "title": "Cron Visualizer | ToolBite",
+        "description": "Convert cryptic cron expressions into human-readable sentences and schedules."
+      }
     }
   }
 }

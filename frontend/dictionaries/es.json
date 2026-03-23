@@ -52,7 +52,27 @@
     },
     "csvConverter": {
       "title": "CSV a JSON",
-      "description": "Analiza datos CSV locales en matrices JSON formateadas y tablas HTML visuales."
+      "description": "Analiza datos CSV locales en matrices JSON formateadas y tablas HTML visuales.",
+      "page": {
+        "title": "Convertidor de CSV a JSON",
+        "subtitle": "Analizador robusto con delimitadores personalizados y exportación a JSON, HTML y Markdown.",
+        "configurationLabel": "Configuración",
+        "delimiterLabel": "Delimitador",
+        "delimiters": {
+          "comma": "Coma (,)",
+          "semicolon": "Punto y coma (;)",
+          "tab": "Tabulación",
+          "pipe": "Tubería (|)"
+        },
+        "firstRowHeadersLabel": "La primera fila contiene encabezados",
+        "rawInputLabel": "Entrada de Datos Brutos",
+        "uploadButtonLabel": "Subir",
+        "noValidDataError": "No se han proporcionado datos válidos."
+      },
+      "seo": {
+        "title": "Convertidor de CSV a JSON | ToolBite",
+        "description": "Analiza datos CSV locales en arreglos JSON formateados y tablas HTML visuales al instante."
+      }
     },
     "scrollbar": {
       "title": "Scrollbar Personalizado",
@@ -64,7 +84,20 @@
     },
     "clipPathMaker": {
       "title": "Creador de Clip-Path CSS",
-      "description": "Arrastra puntos poligonales para crear formas personalizadas y generar la propiedad CSS clip-path."
+      "description": "Arrastra puntos poligonales para crear formas personalizadas y generar la propiedad CSS clip-path.",
+      "page": {
+        "title": "Generador de CSS Clip-Path",
+        "subtitle": "Generador avanzado con controles de arrastre y vista previa de imagen.",
+        "shapeTypeLabel": "Tipo de Forma",
+        "presetsLabel": "Preajustes",
+        "customImageLabel": "Imagen Personalizada",
+        "uploadButtonLabel": "Subir Imagen",
+        "cssOutputLabel": "Resultado CSS"
+      },
+      "seo": {
+        "title": "Generador de CSS Clip-Path | ToolBite",
+        "description": "Arrastra los puntos del polígono para crear formas personalizadas y obtener la propiedad CSS clip-path."
+      }
     },
     "gridBuilder": {
       "title": "Constructor de Grid CSS",
@@ -72,7 +105,19 @@
     },
     "blobGenerator": {
       "title": "Generador de Formas Blob",
-      "description": "Genera formas blob SVG fluidas y orgánicas para fondos y diseños web modernos."
+      "description": "Genera formas blob SVG fluidas y orgánicas para fondos y diseños web modernos.",
+      "page": {
+        "blobTitle": "Generador de Formas Orgánicas",
+        "blobSubtitle": "Crea formas SVG orgánicas para tus diseños web.",
+        "parameters": "Parámetros",
+        "edgesLabel": "Bordes (Complejidad)",
+        "growthLabel": "Crecimiento (Aleatoriedad)",
+        "randomizeButton": "Aleatorizar"
+      },
+      "seo": {
+        "title": "Generador de Formas Orgánicas | ToolBite",
+        "description": "Genera formas fluidas y orgánicas en SVG para diseños web modernos y fondos."
+      }
     },
     "socialPreviewer": {
       "title": "Previsualizador Social",
@@ -116,11 +161,38 @@
     },
     "colorPalette": {
       "title": "Paleta de Colores",
-      "description": "Extrae los colores más dominantes y hermosos de cualquier fotografía."
+      "description": "Extrae los colores más dominantes y hermosos de cualquier fotografía.",
+      "page": {
+        "title": "Paleta de Colores",
+        "subtitle": "Extrae colores dominantes de cualquier imagen al instante.",
+        "dropImageLabel": "Suelta una imagen para extraer colores",
+        "uploadNewImageButton": "Subir Nueva Imagen"
+      },
+      "seo": {
+        "title": "Paleta de Colores | ToolBite",
+        "description": "Extrae los colores más dominantes y hermosos de cualquier fotografía."
+      }
     },
     "cronVisualizer": {
       "title": "Visualizador de Cron",
-      "description": "Convierte expresiones crípticas de cron en oraciones y horarios legibles por humanos."
+      "description": "Convierte expresiones crípticas de cron en oraciones y horarios legibles por humanos.",
+      "page": {
+        "title": "Visualizador de Cron",
+        "subtitle": "Decodifica expresiones cron en horarios entendibles.",
+        "inputLabel": "Expresión Cron",
+        "scheduleDescriptionLabel": "Descripción del Horario",
+        "invalidError": "Expresión Cron inválida. Por favor, revisa el formato.",
+        "examples": {
+          "every5Mins": "Cada 5 minutos",
+          "everyHour": "Cada hora",
+          "midnightDaily": "Diario a medianoche",
+          "everyMonday": "Cada lunes"
+        }
+      },
+      "seo": {
+        "title": "Visualizador de Cron | ToolBite",
+        "description": "Convierte expresiones cron crípticas en frases y horarios fáciles de leer."
+      }
     }
   }
 }
