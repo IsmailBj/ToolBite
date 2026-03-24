@@ -13,6 +13,8 @@ import {
   generateScrollbarCss,
   ScrollbarConfig,
 } from "../../../../utils/scrollbar-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function ScrollbarGeneratorPage() {
   const [config, setConfig] = useState<ScrollbarConfig>({
@@ -29,6 +31,9 @@ export default function ScrollbarGeneratorPage() {
 
   const cssCode = generateScrollbarCss(config);
 
+  const dict = useDictionary();
+  const ui = dict.tools?.scrollbar?.page;
+
   const handleCopy = () => {
     navigator.clipboard.writeText(cssCode);
     setCopied(true);
@@ -44,13 +49,7 @@ export default function ScrollbarGeneratorPage() {
       {/* Scope the generated CSS directly to the preview box so it functions live */}
       <style dangerouslySetInnerHTML={{ __html: cssCode }} />
 
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 hover:text-emerald-600 mb-8 group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/40 rounded-2xl flex items-center justify-center">
@@ -58,10 +57,11 @@ export default function ScrollbarGeneratorPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            Custom Scrollbar
+            {ui?.title || "Custom Scrollbar"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Cross-browser visual editor for Webkit and Firefox scrollbars.
+            {ui?.subtitle ||
+              "Cross-browser visual editor for Webkit and Firefox scrollbars."}
           </p>
         </div>
       </div>
@@ -71,7 +71,7 @@ export default function ScrollbarGeneratorPage() {
           <div className="space-y-5">
             <div>
               <label className="flex justify-between text-xs font-bold uppercase text-slate-400 mb-2">
-                <span>Width / Height</span>
+                <span>{ui?.dimensionsLabel || "Width / Height"}</span>
                 <span className="text-emerald-600">{config.width}px</span>
               </label>
               <input
@@ -86,7 +86,7 @@ export default function ScrollbarGeneratorPage() {
 
             <div>
               <label className="flex justify-between text-xs font-bold uppercase text-slate-400 mb-2">
-                <span>Padding (Floating Effect)</span>
+                <span>{ui?.paddingLabel || "Padding (Floating Effect)"}</span>
                 <span className="text-emerald-600">{config.padding}px</span>
               </label>
               <input
@@ -103,7 +103,7 @@ export default function ScrollbarGeneratorPage() {
 
             <div>
               <label className="flex justify-between text-xs font-bold uppercase text-slate-400 mb-2">
-                <span>Border Radius</span>
+                <span>{ui?.borderRadiusLabel || "Border Radius"}</span>
                 <span className="text-emerald-600">
                   {config.borderRadius}px
                 </span>
@@ -124,7 +124,7 @@ export default function ScrollbarGeneratorPage() {
           <div className="space-y-4 pt-4 border-t border-slate-100 dark:border-slate-800">
             <div>
               <label className="text-xs font-bold uppercase text-slate-400 block mb-2">
-                Track Color
+                {ui?.trackColorLabel || "Track Color"}
               </label>
               <div className="flex items-center space-x-3">
                 <input
@@ -144,7 +144,7 @@ export default function ScrollbarGeneratorPage() {
 
             <div>
               <label className="text-xs font-bold uppercase text-slate-400 block mb-2">
-                Thumb Color
+                {ui?.thumbColorLabel || "Thumb Color"}
               </label>
               <div className="flex items-center space-x-3">
                 <input
@@ -164,7 +164,7 @@ export default function ScrollbarGeneratorPage() {
 
             <div>
               <label className="text-xs font-bold uppercase text-slate-400 block mb-2">
-                Thumb Hover
+                {ui?.thumbHoverLabel || "Thumb Hover"}
               </label>
               <div className="flex items-center space-x-3">
                 <input
@@ -190,7 +190,7 @@ export default function ScrollbarGeneratorPage() {
           <div className="pt-4 border-t border-slate-100 dark:border-slate-800">
             <div className="flex justify-between items-center mb-2">
               <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                CSS Output
+                {ui?.cssOutputLabel || "CSS Output"}
               </span>
               <button
                 onClick={handleCopy}
@@ -221,7 +221,9 @@ export default function ScrollbarGeneratorPage() {
             <div
               className={`p-4 border-b flex justify-between items-center ${previewTheme === "dark" ? "border-slate-800" : "border-slate-100"}`}
             >
-              <h3 className="font-bold">Live Preview</h3>
+              <h3 className="font-bold">
+                {ui?.livePreviewLabel || "Live Preview"}
+              </h3>
               <div className="flex space-x-2 bg-slate-100 dark:bg-slate-800 p-1 rounded-lg">
                 <button
                   onClick={() => setPreviewTheme("light")}
@@ -242,7 +244,8 @@ export default function ScrollbarGeneratorPage() {
             <div className="custom-scroll p-6 overflow-auto flex-1">
               <div className="w-[150%] space-y-6 pb-6">
                 <h4 className="font-bold text-lg mb-4">
-                  Vertical & Horizontal Scroll Content
+                  {ui?.scrollContentLabel ||
+                    "Vertical & Horizontal Scroll Content"}
                 </h4>
                 {Array.from({ length: 12 }).map((_, i) => (
                   <div

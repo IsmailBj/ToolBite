@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { ArrowLeft, LayoutGrid, Copy, Check, Plus, Minus } from "lucide-react";
 import { generateGridCss, GridItemConfig } from "../../../../utils/grid-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function GridBuilderPage() {
   const [columns, setColumns] = useState(4);
@@ -14,6 +16,10 @@ export default function GridBuilderPage() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
   // Initialize grid items on first load
+
+  const dict = useDictionary();
+  const ui = dict.tools?.gridBuilder?.page;
+
   useEffect(() => {
     const initialItems = Array.from({ length: 8 }).map((_, i) => ({
       id: `div-${i + 1}`,
@@ -61,13 +67,7 @@ export default function GridBuilderPage() {
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-12">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 hover:text-pink-600 mb-8 group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-pink-100 dark:bg-pink-900/40 rounded-2xl flex items-center justify-center">
@@ -75,11 +75,11 @@ export default function GridBuilderPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            CSS Grid Builder
+            {ui?.title || "CSS Grid Builder"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Visually define columns, rows, spans, and gaps to generate grid
-            code.
+            {ui?.subtitle ||
+              "Visually define columns, rows, spans, and gaps to generate grid code."}
           </p>
         </div>
       </div>
@@ -90,12 +90,12 @@ export default function GridBuilderPage() {
           {/* Container Controls */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 pb-2 border-b border-slate-100 dark:border-slate-800">
-              Container
+              {ui?.containerLabel || "Container"}
             </h3>
             <div className="space-y-4">
               <div>
                 <label className="flex justify-between text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">
-                  <span>Columns</span>
+                  <span>{ui?.columnsLabel || "Columns"}</span>
                   <span className="text-pink-600">{columns}</span>
                 </label>
                 <input
@@ -109,7 +109,7 @@ export default function GridBuilderPage() {
               </div>
               <div>
                 <label className="flex justify-between text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">
-                  <span>Rows</span>
+                  <span>{ui?.rowsLabel || "Rows"}</span>
                   <span className="text-pink-600">{rows}</span>
                 </label>
                 <input
@@ -123,7 +123,7 @@ export default function GridBuilderPage() {
               </div>
               <div>
                 <label className="flex justify-between text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">
-                  <span>Gap (px)</span>
+                  <span>{ui?.gapLabel || "Gap"} (px)</span>
                   <span className="text-pink-600">{gap}px</span>
                 </label>
                 <input
@@ -141,12 +141,12 @@ export default function GridBuilderPage() {
           {/* Item Controls */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 pb-2 border-b border-slate-100 dark:border-slate-800">
-              Selected Item: {selectedItem?.id}
+              {ui?.selectedItemLabel || "Selected Item"}: {selectedItem?.id}
             </h3>
             <div className="space-y-4">
               <div className="flex items-center justify-between bg-slate-50 dark:bg-slate-800 p-2 rounded-lg border border-slate-200 dark:border-slate-700">
                 <span className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-2">
-                  Column Span
+                  {ui?.columnSpanLabel || "Column Span"}
                 </span>
                 <div className="flex items-center gap-3">
                   <button
@@ -168,7 +168,7 @@ export default function GridBuilderPage() {
               </div>
               <div className="flex items-center justify-between bg-slate-50 dark:bg-slate-800 p-2 rounded-lg border border-slate-200 dark:border-slate-700">
                 <span className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-2">
-                  Row Span
+                  {ui?.rowSpanLabel || "Row Span"}
                 </span>
                 <div className="flex items-center gap-3">
                   <button
@@ -194,13 +194,13 @@ export default function GridBuilderPage() {
                 onClick={addItem}
                 className="flex-1 py-2 bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 font-bold rounded-lg hover:bg-pink-200 transition-colors text-sm"
               >
-                Add Block
+                {ui?.addBlockButton || "Add Block"}
               </button>
               <button
                 onClick={removeItem}
                 className="flex-1 py-2 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold rounded-lg hover:bg-slate-200 transition-colors text-sm"
               >
-                Remove Block
+                {ui?.removeBlockButton || "Remove Block"}
               </button>
             </div>
           </div>
@@ -208,7 +208,7 @@ export default function GridBuilderPage() {
           <div className="pt-4 border-t border-slate-100 dark:border-slate-800">
             <div className="flex justify-between items-center mb-2">
               <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                CSS Output
+                {ui?.cssOutputLabel || "CSS Output"}
               </span>
               <button
                 onClick={handleCopy}

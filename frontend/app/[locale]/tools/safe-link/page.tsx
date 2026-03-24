@@ -16,6 +16,8 @@ import {
   decodeUrl,
   isValidUrl,
 } from "../../../../utils/encoding-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function SafeLinkPage() {
   const [input, setInput] = useState("");
@@ -23,6 +25,9 @@ export default function SafeLinkPage() {
   const [mode, setMode] = useState<"encode" | "decode">("encode");
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState("");
+
+  const dict = useDictionary();
+  const ui = dict.tools?.safeLink?.page;
 
   const handleProcess = () => {
     setError("");
@@ -32,7 +37,8 @@ export default function SafeLinkPage() {
       if (mode === "encode") {
         if (!isValidUrl(input)) {
           setError(
-            "Warning: This doesn't look like a valid URL, but I will encode it anyway.",
+            ui?.invalidUrlWarning ||
+              "Warning: This doesn't look like a valid URL, but I will encode it anyway.",
           );
         }
         setOutput(encodeUrl(input));
@@ -53,13 +59,7 @@ export default function SafeLinkPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 mb-8 transition-colors group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/40 rounded-2xl flex items-center justify-center">
@@ -67,10 +67,11 @@ export default function SafeLinkPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            Safe-Link Encoder
+            {ui?.title || "Safe-Link Encoder"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Obfuscate URLs to protect them from scrapers and bots.
+            {ui?.subtitle ||
+              "Obfuscate URLs to protect them from scrapers and bots."}
           </p>
         </div>
       </div>
@@ -87,7 +88,7 @@ export default function SafeLinkPage() {
             }}
             className={`px-6 py-2 rounded-lg font-bold transition-all flex items-center gap-2 ${mode === "encode" ? "bg-white dark:bg-slate-700 shadow-sm text-indigo-600" : "text-slate-500"}`}
           >
-            <Lock className="w-4 h-4" /> Encode
+            <Lock className="w-4 h-4" /> {ui?.encodeButton || "Encode"}
           </button>
           <button
             onClick={() => {
@@ -98,7 +99,7 @@ export default function SafeLinkPage() {
             }}
             className={`px-6 py-2 rounded-lg font-bold transition-all flex items-center gap-2 ${mode === "decode" ? "bg-white dark:bg-slate-700 shadow-sm text-indigo-600" : "text-slate-500"}`}
           >
-            <Unlock className="w-4 h-4" /> Decode
+            <Unlock className="w-4 h-4" /> {ui?.decodeButton || "Decode"}
           </button>
         </div>
 
@@ -136,7 +137,7 @@ export default function SafeLinkPage() {
           {output && (
             <div className="pt-6 border-t border-slate-100 dark:border-slate-800 animate-in fade-in slide-in-from-top-2">
               <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-3 ml-1">
-                Result
+                {ui?.resultLabel || "Result"}
               </label>
               <div className="group relative">
                 <div className="w-full p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-2xl border border-indigo-100 dark:border-indigo-800/50 font-mono text-sm text-indigo-700 dark:text-indigo-300 break-all">

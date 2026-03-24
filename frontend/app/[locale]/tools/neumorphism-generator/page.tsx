@@ -7,6 +7,8 @@ import {
   NeumorphismConfig,
   NeumorphismShape,
 } from "../../../../utils/neumorphism-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function NeumorphismGeneratorPage() {
   const [config, setConfig] = useState<NeumorphismConfig>({
@@ -31,6 +33,9 @@ export default function NeumorphismGeneratorPage() {
     borderRadius: "50px",
   };
 
+  const dict = useDictionary();
+  const ui = dict.tools?.neumorphism?.page;
+
   const handleCopy = () => {
     navigator.clipboard.writeText(cssCode);
     setCopied(true);
@@ -43,13 +48,7 @@ export default function NeumorphismGeneratorPage() {
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-12">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 hover:text-blue-600 mb-8 group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/40 rounded-2xl flex items-center justify-center">
@@ -57,10 +56,11 @@ export default function NeumorphismGeneratorPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            Neumorphism Generator
+            {ui?.title || "Neumorphism Generator"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Generate soft UI CSS code based on a single base color.
+            {ui?.subtitle ||
+              "Generate soft UI CSS code based on a single base color."}
           </p>
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function NeumorphismGeneratorPage() {
         <div className="lg:col-span-4 bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
           <div>
             <label className="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-2">
-              Base Color
+              {ui?.baseColorLabel || "Base Color"}
             </label>
             <div className="flex items-center space-x-3">
               <input
@@ -89,7 +89,7 @@ export default function NeumorphismGeneratorPage() {
 
           <div>
             <label className="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-3">
-              Shape
+              {ui?.shapeLabel || "Shape"}
             </label>
             <div className="grid grid-cols-2 gap-2">
               {(
@@ -113,7 +113,7 @@ export default function NeumorphismGeneratorPage() {
           <div className="space-y-4">
             <div>
               <label className="flex justify-between text-xs font-bold text-slate-500 mb-1">
-                <span>Distance</span>
+                <span>{ui?.distanceLabel || "Distance"}</span>
                 <span className="text-blue-600">{config.distance}px</span>
               </label>
               <input
@@ -129,7 +129,7 @@ export default function NeumorphismGeneratorPage() {
             </div>
             <div>
               <label className="flex justify-between text-xs font-bold text-slate-500 mb-1">
-                <span>Blur</span>
+                <span>{ui?.blurLabel || "Blur"}</span>
                 <span className="text-blue-600">{config.blur}px</span>
               </label>
               <input
@@ -143,7 +143,7 @@ export default function NeumorphismGeneratorPage() {
             </div>
             <div>
               <label className="flex justify-between text-xs font-bold text-slate-500 mb-1">
-                <span>Intensity</span>
+                <span>{ui?.intensityLabel || "Intensity"}</span>
                 <span className="text-blue-600">{config.intensity}</span>
               </label>
               <input
@@ -162,7 +162,7 @@ export default function NeumorphismGeneratorPage() {
           <div className="pt-4 border-t border-slate-100 dark:border-slate-800">
             <div className="flex justify-between items-center mb-2">
               <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                CSS Output
+                {ui?.cssOutputLabel || "CSS Output"}
               </span>
               <button
                 onClick={handleCopy}

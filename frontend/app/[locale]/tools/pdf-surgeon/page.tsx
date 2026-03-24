@@ -13,6 +13,8 @@ import {
   RefreshCw,
 } from "lucide-react";
 import { mergeFiles, splitFile } from "../../../../utils/pdf-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function PdfSurgeonPage() {
   const [mode, setMode] = useState<"merge" | "split">("merge");
@@ -22,6 +24,9 @@ export default function PdfSurgeonPage() {
   const [error, setError] = useState("");
   const [splitRange, setSplitRange] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const dict = useDictionary();
+  const ui = dict.tools?.pdfSurgeon?.page;
 
   const handleFileSelect = (newFiles: FileList | null) => {
     if (!newFiles) return;
@@ -45,11 +50,15 @@ export default function PdfSurgeonPage() {
       let blob: Blob;
       if (mode === "merge") {
         if (files.length < 2)
-          throw new Error("Please add at least 2 PDFs to merge.");
+          throw new Error(
+            ui?.minFilesError || "Please add at least 2 PDFs to merge.",
+          );
         blob = await mergeFiles(files);
       } else {
         if (files.length === 0)
-          throw new Error("Please upload a PDF to split.");
+          throw new Error(
+            ui?.uploadSplitError || "Please upload a PDF to split.",
+          );
         // Simple range parser: "1-3, 5" -> [0, 1, 2, 4]
         const indices = splitRange
           .split(",")
@@ -79,13 +88,7 @@ export default function PdfSurgeonPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400 hover:text-red-600 mb-8 transition-colors group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-red-100 dark:bg-red-900/40 rounded-2xl flex items-center justify-center">
@@ -93,10 +96,11 @@ export default function PdfSurgeonPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            PDF Surgeon
+            {ui?.title || "PDF Surgeon"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Merge or split PDF documents instantly in your browser.
+            {ui?.subtitle ||
+              "Merge or split PDF documents instantly in your browser."}
           </p>
         </div>
       </div>
@@ -112,7 +116,7 @@ export default function PdfSurgeonPage() {
             }}
             className={`px-6 py-2 rounded-lg font-bold transition-all flex items-center gap-2 ${mode === "merge" ? "bg-white dark:bg-slate-700 shadow-sm text-red-600" : "text-slate-500"}`}
           >
-            <Combine className="w-4 h-4" /> Merge
+            <Combine className="w-4 h-4" /> {ui?.mergeTabLabel || "Merge"}
           </button>
           <button
             onClick={() => {
@@ -122,7 +126,7 @@ export default function PdfSurgeonPage() {
             }}
             className={`px-6 py-2 rounded-lg font-bold transition-all flex items-center gap-2 ${mode === "split" ? "bg-white dark:bg-slate-700 shadow-sm text-red-600" : "text-slate-500"}`}
           >
-            <Scissors className="w-4 h-4" /> Split
+            <Scissors className="w-4 h-4" /> {ui?.splitTabLabel || "Split"}
           </button>
         </div>
 
@@ -170,7 +174,7 @@ export default function PdfSurgeonPage() {
         {mode === "split" && files.length > 0 && (
           <div className="mb-8">
             <label className="block text-sm font-bold mb-2 dark:text-slate-300 ml-1">
-              Page Range (e.g. 1-3, 5)
+              {ui?.pageRangeLabel || "Page Range"} (e.g. 1-3, 5)
             </label>
             <input
               type="text"
@@ -205,14 +209,15 @@ export default function PdfSurgeonPage() {
               <Download className="w-10 h-10 text-green-600 dark:text-green-400" />
             </div>
             <h2 className="text-2xl font-bold mb-6 dark:text-white">
-              PDF Ready!
+              {ui?.pdfReadyLabel || "PDF Ready!"}
             </h2>
             <a
               href={resultUrl}
               download={`processed_${new Date().getTime()}.pdf`}
               className="inline-flex items-center px-10 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-2xl hover:scale-105 transition-transform"
             >
-              <Download className="mr-2 w-5 h-5" /> Download Result
+              <Download className="mr-2 w-5 h-5" />{" "}
+              {ui?.downloadResultButton || "Download Result"}
             </a>
           </div>
         )}

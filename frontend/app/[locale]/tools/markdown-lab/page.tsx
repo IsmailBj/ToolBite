@@ -17,6 +17,8 @@ import {
   Heading2,
 } from "lucide-react";
 import { parseMarkdown, downloadAsHtml } from "../../../../utils/markdown-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function MarkdownLabPage() {
   const [markdown, setMarkdown] = useState(
@@ -25,6 +27,9 @@ export default function MarkdownLabPage() {
   const [html, setHtml] = useState("");
   const [copied, setCopied] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  const dict = useDictionary();
+  const ui = dict.tools?.markdownLab?.page;
 
   useEffect(() => {
     const updatePreview = async () => {
@@ -105,13 +110,7 @@ export default function MarkdownLabPage() {
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400 hover:text-orange-600 mb-8 transition-colors group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center justify-between mb-10">
         <div className="flex items-center space-x-4">
@@ -120,10 +119,11 @@ export default function MarkdownLabPage() {
           </div>
           <div>
             <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-              Markdown Lab
+              {ui?.title || "Markdown Lab"}
             </h1>
             <p className="text-slate-500 dark:text-slate-400">
-              Write with snippets and preview styled HTML in real-time.
+              {ui?.subtitle ||
+                "Write with snippets and preview styled HTML in real-time."}
             </p>
           </div>
         </div>
@@ -138,13 +138,14 @@ export default function MarkdownLabPage() {
             ) : (
               <Copy className="w-4 h-4 mr-2" />
             )}
-            Copy MD
+            {ui?.copyMdButton || "Copy MD"}
           </button>
           <button
             onClick={() => downloadAsHtml(html)}
             className="flex items-center px-4 py-2 bg-orange-600 text-white rounded-xl font-bold text-sm hover:bg-orange-700 transition-all shadow-md"
           >
-            <Download className="w-4 h-4 mr-2" /> Download HTML
+            <Download className="w-4 h-4 mr-2" />{" "}
+            {ui?.downloadHtmlButton || "Download HTML"}
           </button>
         </div>
       </div>
@@ -180,7 +181,7 @@ export default function MarkdownLabPage() {
           <div className="px-6 py-3 border-b border-slate-100 dark:border-slate-800 flex items-center">
             <Eye className="w-3 h-3 mr-2 text-slate-400" />
             <span className="text-xs font-bold uppercase tracking-widest text-slate-400">
-              Live Preview
+              {ui?.livePreviewLabel || "Live Preview"}
             </span>
           </div>
           <div

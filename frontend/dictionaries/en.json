@@ -48,7 +48,28 @@
     },
     "neumorphism": {
       "title": "Neumorphism Generator",
-      "description": "Generate soft UI hex codes and complex shadow CSS based on a single base color."
+      "description": "Generate soft UI hex codes and complex shadow CSS based on a single base color.",
+      "page": {
+        "title": "Neumorphism Generator",
+        "subtitle": "Generate soft UI CSS code based on a single base color.",
+        "baseColorLabel": "Base Color",
+        "shapeLabel": "Shape",
+        "distanceLabel": "Distance",
+        "blurLabel": "Blur",
+        "intensityLabel": "Intensity",
+        "cssOutputLabel": "CSS Output",
+        "copyButton": "Copy CSS",
+        "shapes": {
+          "flat": "Flat",
+          "concave": "Concave",
+          "convex": "Convex",
+          "pressed": "Pressed"
+        }
+      },
+      "seo": {
+        "title": "Neumorphism Generator | ToolBite",
+        "description": "Generate soft UI hex codes and complex shadow CSS based on a single base color."
+      }
     },
     "csvConverter": {
       "title": "CSV to JSON",
@@ -76,7 +97,27 @@
     },
     "scrollbar": {
       "title": "Custom Scrollbar",
-      "description": "Visual editor to style Webkit scrollbars including track, thumb, and hover states."
+      "description": "Visual editor to style Webkit scrollbars including track, thumb, and hover states.",
+      "page": {
+        "title": "Custom Scrollbar",
+        "subtitle": "Cross-browser visual editor for Webkit and Firefox scrollbars.",
+        "dimensionsLabel": "Width / Height",
+        "paddingLabel": "Padding (Floating Effect)",
+        "borderRadiusLabel": "Border Radius",
+        "trackColorLabel": "Track Color",
+        "thumbColorLabel": "Thumb Color",
+        "thumbHoverLabel": "Thumb Hover",
+        "cssOutputLabel": "CSS Output",
+        "livePreviewLabel": "Live Preview",
+        "scrollContentLabel": "Vertical & Horizontal Scroll Content",
+        "copyButton": "Copy CSS",
+        "resetButton": "Reset Defaults",
+        "copiedMessage": "Copied to clipboard!"
+      },
+      "seo": {
+        "title": "Custom Scrollbar Generator | ToolBite",
+        "description": "Visual editor to style Webkit scrollbars including track, thumb, and hover states."
+      }
     },
     "videoToGif": {
       "title": "Video to GIF",
@@ -101,7 +142,25 @@
     },
     "gridBuilder": {
       "title": "CSS Grid Builder",
-      "description": "Visual interface to define columns, rows, and gaps, instantly exporting CSS grid code."
+      "description": "Visual interface to define columns, rows, and gaps, instantly exporting CSS grid code.",
+      "page": {
+        "title": "CSS Grid Builder",
+        "subtitle": "Visually define columns, rows, spans, and gaps to generate grid code.",
+        "containerLabel": "Container",
+        "columnsLabel": "Columns",
+        "rowsLabel": "Rows",
+        "gapLabel": "Gap",
+        "selectedItemLabel": "Selected Item",
+        "columnSpanLabel": "Column Span",
+        "rowSpanLabel": "Row Span",
+        "addBlockButton": "Add Block",
+        "removeBlockButton": "Remove Block",
+        "cssOutputLabel": "CSS Output"
+      },
+      "seo": {
+        "title": "CSS Grid Builder | ToolBite",
+        "description": "Visual interface to define columns, rows, and gaps, instantly exporting CSS grid code."
+      }
     },
     "blobGenerator": {
       "title": "Blob Shape Generator",
@@ -133,15 +192,74 @@
     },
     "safeLink": {
       "title": "Safe-Link Encoder",
-      "description": "Obfuscate links to hide them from bots and scrapers using browser-native encoding."
+      "description": "Obfuscate links to hide them from bots and scrapers using browser-native encoding.",
+      "page": {
+        "title": "Safe-Link Encoder",
+        "subtitle": "Obfuscate URLs to protect them from scrapers and bots.",
+        "invalidUrlWarning": "Warning: This doesn't look like a valid URL, but I will encode it anyway.",
+        "encodeButton": "Encode",
+        "decodeButton": "Decode",
+        "resultLabel": "Result",
+        "copyButton": "Copy to Clipboard",
+        "urlPlaceholder": "Enter URL or code here...",
+        "clearButton": "Clear"
+      },
+      "seo": {
+        "title": "Safe-Link Encoder | ToolBite",
+        "description": "Obfuscate links to hide them from bots and scrapers using browser-native encoding."
+      }
     },
     "markdownLab": {
       "title": "Markdown Lab",
-      "description": "Real-time Markdown editor with live HTML preview and sanitization."
+      "description": "Real-time Markdown editor with live HTML preview and sanitization.",
+      "page": {
+        "title": "Markdown Lab",
+        "subtitle": "Write with snippets and preview styled HTML in real-time.",
+        "copyMdButton": "Copy MD",
+        "downloadHtmlButton": "Download HTML",
+        "livePreviewLabel": "Live Preview",
+        "editorPlaceholder": "# Hello World\nStart typing your markdown here...",
+        "copyHtmlButton": "Copy HTML",
+        "clearButton": "Clear Editor"
+      },
+      "seo": {
+        "title": "Markdown Lab | ToolBite",
+        "description": "Real-time Markdown editor with live HTML preview and sanitization."
+      }
     },
     "imageCompressor": {
       "title": "Image Compressor",
-      "description": "Shrink image file sizes by up to 80% without losing visual quality."
+      "description": "Shrink image file sizes by up to 80% without losing visual quality.",
+      "page": {
+        "title": "Image Compressor",
+        "subtitle": "Shrink JPEGs, PNGs, and WEBPs with zero visual quality loss.",
+        "backToWorkspace": "Back to workspace",
+        "dropzoneLabel": "Drop your Image here",
+        "uploadRestrictions": "Supports JPG, PNG, and WEBP up to 15MB.",
+        "selectImageButton": "Select Image",
+        "compressionSettingsLabel": "Compression Settings",
+        "imageQualityLabel": "Image Quality",
+        "smallestFileLabel": "Smallest File",
+        "bestQualityLabel": "Best Quality",
+        "compressingLabel": "Compressing...",
+        "cancelButton": "Cancel",
+        "compressionCompleteLabel": "Compression Complete! 🎉",
+        "originalSizeLabel": "Original Size",
+        "newSizeLabel": "NEW",
+        "compressedSizeLabel": "Compressed Size",
+        "totalSavedLabel": "Total Saved",
+        "downloadImageButton": "Download Image",
+        "compressAnotherButton": "Compress Another",
+        "compressionErrorLabel": "Compression Error",
+        "errors": {
+          "invalidFile": "Please upload a valid image file (JPEG, PNG, WEBP).",
+          "processingError": "Error processing image."
+        }
+      },
+      "seo": {
+        "title": "Image Compressor | ToolBite",
+        "description": "Shrink image file sizes by up to 80% without losing visual quality."
+      }
     },
     "unitPro": {
       "title": "Unit Converter Pro",
@@ -149,7 +267,26 @@
     },
     "pdfSurgeon": {
       "title": "PDF Surgeon",
-      "description": "Merge multiple documents or extract specific pages with pinpoint precision."
+      "description": "Merge multiple documents or extract specific pages with pinpoint precision.",
+      "page": {
+        "title": "PDF Surgeon",
+        "subtitle": "Merge or split PDF documents instantly in your browser.",
+        "minFilesError": "Please add at least 2 PDFs to merge.",
+        "uploadSplitError": "Please upload a PDF to split.",
+        "mergeTabLabel": "Merge",
+        "splitTabLabel": "Split",
+        "pageRangeLabel": "Page Range",
+        "pdfReadyLabel": "PDF Ready!",
+        "downloadResultButton": "Download Result",
+        "dropzoneLabel": "Drop your PDFs here",
+        "selectFilesButton": "Select Files",
+        "mergePdfsButton": "Merge PDFs",
+        "extractPagesButton": "Extract Pages"
+      },
+      "seo": {
+        "title": "PDF Surgeon | ToolBite",
+        "description": "Merge multiple documents or extract specific pages with pinpoint precision."
+      }
     },
     "secretShield": {
       "title": "Secret Shield",

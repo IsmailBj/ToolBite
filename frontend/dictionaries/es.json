@@ -48,7 +48,28 @@
     },
     "neumorphism": {
       "title": "Generador de Neumorfismo",
-      "description": "Genera códigos hexadecimales de UI suave y CSS de sombras complejas basados en un solo color base."
+      "description": "Genera códigos hexadecimales de UI suave y CSS de sombras complejas basados en un solo color base.",
+      "page": {
+        "title": "Generador de Neumorfismo",
+        "subtitle": "Genera código CSS de interfaz suave basado en un único color base.",
+        "baseColorLabel": "Color Base",
+        "shapeLabel": "Forma",
+        "distanceLabel": "Distancia",
+        "blurLabel": "Desenfoque",
+        "intensityLabel": "Intensidad",
+        "cssOutputLabel": "Resultado CSS",
+        "copyButton": "Copiar CSS",
+        "shapes": {
+          "flat": "Plano",
+          "concave": "Cóncavo",
+          "convex": "Covexo",
+          "pressed": "Presionado"
+        }
+      },
+      "seo": {
+        "title": "Generador de Neumorfismo | ToolBite",
+        "description": "Genera códigos hexadecimales de interfaz suave y sombras CSS complejas basadas en un solo color."
+      }
     },
     "csvConverter": {
       "title": "CSV a JSON",
@@ -76,7 +97,27 @@
     },
     "scrollbar": {
       "title": "Scrollbar Personalizado",
-      "description": "Editor visual para diseñar barras de desplazamiento Webkit, incluyendo la pista, el pulgar y los estados al pasar el cursor."
+      "description": "Editor visual para diseñar barras de desplazamiento Webkit, incluyendo la pista, el pulgar y los estados al pasar el cursor.",
+      "page": {
+        "title": "Barra de Desplazamiento Personalizada",
+        "subtitle": "Editor visual multiplataforma para barras de desplazamiento Webkit y Firefox.",
+        "dimensionsLabel": "Ancho / Alto",
+        "paddingLabel": "Padding (Efecto Flotante)",
+        "borderRadiusLabel": "Radio del Borde",
+        "trackColorLabel": "Color de la Pista",
+        "thumbColorLabel": "Color del Deslizador",
+        "thumbHoverLabel": "Hover del Deslizador",
+        "cssOutputLabel": "Resultado CSS",
+        "livePreviewLabel": "Vista Previa en Vivo",
+        "scrollContentLabel": "Contenido con Desplazamiento Vertical y Horizontal",
+        "copyButton": "Copiar CSS",
+        "resetButton": "Restablecer Valores",
+        "copiedMessage": "¡Copiado al portapapeles!"
+      },
+      "seo": {
+        "title": "Generador de Barras de Desplazamiento | ToolBite",
+        "description": "Editor visual para estilizar barras de desplazamiento Webkit, incluyendo pista, deslizador y estados hover."
+      }
     },
     "videoToGif": {
       "title": "Video a GIF",
@@ -101,7 +142,25 @@
     },
     "gridBuilder": {
       "title": "Constructor de Grid CSS",
-      "description": "Interfaz visual para definir columnas, filas y huecos, exportando código CSS grid al instante."
+      "description": "Interfaz visual para definir columnas, filas y huecos, exportando código CSS grid al instante.",
+      "page": {
+        "title": "Constructor de CSS Grid",
+        "subtitle": "Define visualmente columnas, filas, extensiones y espacios para generar código grid.",
+        "containerLabel": "Contenedor",
+        "columnsLabel": "Columnas",
+        "rowsLabel": "Filas",
+        "gapLabel": "Espacio (Gap)",
+        "selectedItemLabel": "Elemento Seleccionado",
+        "columnSpanLabel": "Extensión de Columna",
+        "rowSpanLabel": "Extensión de Fila",
+        "addBlockButton": "Añadir Bloque",
+        "removeBlockButton": "Eliminar Bloque",
+        "cssOutputLabel": "Resultado CSS"
+      },
+      "seo": {
+        "title": "Constructor de CSS Grid | ToolBite",
+        "description": "Interfaz visual para definir columnas, filas y espacios, exportando instantáneamente código CSS grid."
+      }
     },
     "blobGenerator": {
       "title": "Generador de Formas Blob",
@@ -133,15 +192,74 @@
     },
     "safeLink": {
       "title": "Codificador de Enlaces Seguros",
-      "description": "Ofusca enlaces para ocultarlos de bots y scrapers utilizando codificación nativa del navegador."
+      "description": "Ofusca enlaces para ocultarlos de bots y scrapers utilizando codificación nativa del navegador.",
+      "page": {
+        "title": "Codificador Safe-Link",
+        "subtitle": "Oculta URLs para protegerlas de scrapers y bots.",
+        "invalidUrlWarning": "Advertencia: Esto no parece una URL válida, pero la codificaré de todos modos.",
+        "encodeButton": "Codificar",
+        "decodeButton": "Decodificar",
+        "resultLabel": "Resultado",
+        "copyButton": "Copiar al portapapeles",
+        "urlPlaceholder": "Introduce la URL o el código aquí...",
+        "clearButton": "Limpiar"
+      },
+      "seo": {
+        "title": "Codificador Safe-Link | ToolBite",
+        "description": "Oculta enlaces para esconderlos de bots y scrapers usando codificación nativa del navegador."
+      }
     },
     "markdownLab": {
       "title": "Laboratorio Markdown",
-      "description": "Editor de Markdown en tiempo real con vista previa HTML en vivo y sanitización."
+      "description": "Editor de Markdown en tiempo real con vista previa HTML en vivo y sanitización.",
+      "page": {
+        "title": "Laboratorio Markdown",
+        "subtitle": "Escribe con fragmentos y previsualiza HTML con estilo en tiempo real.",
+        "copyMdButton": "Copiar MD",
+        "downloadHtmlButton": "Descargar HTML",
+        "livePreviewLabel": "Vista Previa",
+        "editorPlaceholder": "# Hola Mundo\nEmpieza a escribir tu markdown aquí...",
+        "copyHtmlButton": "Copiar HTML",
+        "clearButton": "Limpiar Editor"
+      },
+      "seo": {
+        "title": "Laboratorio Markdown | ToolBite",
+        "description": "Editor de Markdown en tiempo real con vista previa de HTML y sanitización."
+      }
     },
     "imageCompressor": {
       "title": "Compresor de Imágenes",
-      "description": "Reduce el tamaño de los archivos de imagen hasta en un 80% sin perder calidad visual."
+      "description": "Reduce el tamaño de los archivos de imagen hasta en un 80% sin perder calidad visual.",
+      "page": {
+        "title": "Compresor de Imágenes",
+        "subtitle": "Reduce JPEGs, PNGs y WEBPs sin pérdida de calidad visual.",
+        "backToWorkspace": "Volver al espacio de trabajo",
+        "dropzoneLabel": "Arrastra tu imagen aquí",
+        "uploadRestrictions": "Soporta JPG, PNG y WEBP hasta 15MB.",
+        "selectImageButton": "Seleccionar Imagen",
+        "compressionSettingsLabel": "Ajustes de Compresión",
+        "imageQualityLabel": "Calidad de Imagen",
+        "smallestFileLabel": "Archivo más pequeño",
+        "bestQualityLabel": "Mejor calidad",
+        "compressingLabel": "Comprimiendo...",
+        "cancelButton": "Cancelar",
+        "compressionCompleteLabel": "¡Compresión completada! 🎉",
+        "originalSizeLabel": "Tamaño Original",
+        "newSizeLabel": "NUEVO",
+        "compressedSizeLabel": "Tamaño Comprimido",
+        "totalSavedLabel": "Ahorro Total",
+        "downloadImageButton": "Descargar Imagen",
+        "compressAnotherButton": "Comprimir Otra",
+        "compressionErrorLabel": "Error de Compresión",
+        "errors": {
+          "invalidFile": "Por favor, sube un archivo de imagen válido (JPEG, PNG, WEBP).",
+          "processingError": "Error al procesar la imagen."
+        }
+      },
+      "seo": {
+        "title": "Compresor de Imágenes | ToolBite",
+        "description": "Reduce el tamaño de tus imágenes hasta un 80% sin perder calidad visual."
+      }
     },
     "unitPro": {
       "title": "Convertidor de Unidades Pro",
@@ -149,7 +267,26 @@
     },
     "pdfSurgeon": {
       "title": "Cirujano PDF",
-      "description": "Combina múltiples documentos o extrae páginas específicas con precisión milimétrica."
+      "description": "Combina múltiples documentos o extrae páginas específicas con precisión milimétrica.",
+      "page": {
+        "title": "Cirujano PDF",
+        "subtitle": "Combina o divide documentos PDF al instante en tu navegador.",
+        "minFilesError": "Por favor, añade al menos 2 PDFs para combinar.",
+        "uploadSplitError": "Por favor, sube un PDF para dividir.",
+        "mergeTabLabel": "Combinar",
+        "splitTabLabel": "Dividir",
+        "pageRangeLabel": "Rango de Páginas",
+        "pdfReadyLabel": "¡PDF Listo!",
+        "downloadResultButton": "Descargar Resultado",
+        "dropzoneLabel": "Arrastra tus PDFs aquí",
+        "selectFilesButton": "Seleccionar Archivos",
+        "mergePdfsButton": "Combinar PDFs",
+        "extractPagesButton": "Extraer Páginas"
+      },
+      "seo": {
+        "title": "Cirujano PDF | ToolBite",
+        "description": "Combina varios documentos o extrae páginas específicas con precisión quirúrgica."
+      }
     },
     "secretShield": {
       "title": "Escudo Secreto",
