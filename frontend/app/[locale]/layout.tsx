@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 import Navbar from "../../components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getDictionary } from "@/dictionaries/get-dictionary";
 import DictionaryProvider from "@/components/DictionaryProvider";
 import { constructMetadata } from "@/lib/metadata";
@@ -58,6 +59,7 @@ export default async function RootLayout({
           <Navbar />
           <main>{children}</main>
           <Analytics />
+          <SpeedInsights />
         </DictionaryProvider>
       </body>
     </html>
