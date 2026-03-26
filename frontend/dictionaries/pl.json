@@ -10,7 +10,7 @@
     "subtitle": "Szybko, bezpiecznie i bezpośrednio w Twojej przeglądarce.",
     "search": "Szukaj narzędzi...",
     "launch": "Uruchom narzędzie",
-    "noTools": "Nie znaleziono narzędzi spełniających kryteria.",
+    "noTools": "Nie znaleziono narzędzi spełniających Twoje kryteria.",
     "reset": "Resetuj filtry",
     "categories": {
       "All": "Wszystkie",
@@ -18,6 +18,10 @@
       "Developer": "Programista",
       "Video": "Wideo",
       "Security": "Bezpieczeństwo"
+    },
+    "seo": {
+      "title": "ToolBite | Twój bezpieczny i wszechstronny warsztat narzędziowy",
+      "description": "Dostęp do ponad 20 profesjonalnych narzędzi dla programistów i projektantów. 100% prywatności, działanie w przeglądarce i wysoka szybkość. Bez rejestracji."
     }
   },
   "tools": {
@@ -42,8 +46,14 @@
         "processingError": "Błąd podczas przetwarzania obrazu."
       },
       "seo": {
-        "title": "Usuń tło z obrazu za darmo | ToolBite",
-        "description": "Użyj naszej szybkiej sztucznej inteligencji, aby błyskawicznie usunąć tło z dowolnego obrazu bezpośrednio w przeglądarce. 100% darmowe i bezpieczne."
+        "title": "Darmowe usuwanie tła AI | ToolBite",
+        "description": "Usuwaj tło z obrazów natychmiastowo dzięki szybkiej sztucznej inteligencji. Profesjonalne przezroczyste pliki PNG bezpośrednio w Twojej przeglądarce.",
+        "features": [
+          "Przetwarzanie AI na urządzeniu",
+          "Eksport PNG w wysokiej rozdzielczości",
+          "100% Prywatne i Bezpieczne",
+          "Działa z ludźmi i produktami"
+        ]
       }
     },
     "neumorphism": {
@@ -67,8 +77,14 @@
         }
       },
       "seo": {
-        "title": "Generator neumorfizmu | ToolBite",
-        "description": "Generuj kody hex miękkiego UI i złożone cienie CSS na podstawie jednego koloru bazowego."
+        "title": "Generator CSS Neumorfizm | Narzędzie Soft UI | ToolBite",
+        "description": "Twórz piękne projekty neumorficzne za pomocą naszego generatora miękkiego UI. Dostosuj cienie, rozmycie i intensywność z natychmiastowym eksportem CSS.",
+        "features": [
+          "Generowanie CSS w czasie rzeczywistym",
+          "4 gotowe kształty",
+          "Własny próbnik kolorów",
+          "Dostępne cienie Soft-UI"
+        ]
       }
     },
     "csvConverter": {
@@ -91,8 +107,14 @@
         "noValidDataError": "Nie podano prawidłowych danych."
       },
       "seo": {
-        "title": "Konwerter CSV na JSON | ToolBite",
-        "description": "Błyskawicznie przetwarzaj lokalne dane CSV na sformatowane tablice JSON i wizualne tabele HTML w przeglądarce."
+        "title": "Konwerter CSV na JSON | Online i bezpiecznie | ToolBite",
+        "description": "Konwertuj pliki CSV na JSON, tabele HTML lub Markdown natychmiast. Bezpieczne lokalne przetwarzanie gwarantuje, że dane nigdy nie opuszczają Twojej przeglądarki.",
+        "features": [
+          "Przetwarzanie danych tylko lokalnie",
+          "Obsługa własnych ograniczników",
+          "Eksport do HTML i Markdown",
+          "Obsługa dużych plików"
+        ]
       }
     },
     "scrollbar": {
@@ -102,7 +124,7 @@
         "title": "Własny pasek przewijania",
         "subtitle": "Wieloprzeglądarkowy edytor wizualny dla pasków przewijania Webkit i Firefox.",
         "dimensionsLabel": "Szerokość / Wysokość",
-        "paddingLabel": "Dopełnienie (efekt pływania)",
+        "paddingLabel": "Dopełnienie (Efekt pływania)",
         "borderRadiusLabel": "Promień obramowania",
         "trackColorLabel": "Kolor ścieżki",
         "thumbColorLabel": "Kolor suwaka",
@@ -111,20 +133,26 @@
         "livePreviewLabel": "Podgląd na żywo",
         "scrollContentLabel": "Treść przewijana pionowo i poziomo",
         "copyButton": "Kopiuj CSS",
-        "resetButton": "Resetuj do domyślnych",
+        "resetButton": "Resetuj domyślne",
         "copiedMessage": "Skopiowano do schowka!"
       },
       "seo": {
-        "title": "Generator własnego paska przewijania | ToolBite",
-        "description": "Wizualny edytor do stylizacji pasków przewijania Webkit, w tym stanów ścieżki, suwaka i najechania."
+        "title": "Generator własnego paska przewijania CSS | ToolBite",
+        "description": "Wizualnie projektuj niestandardowe paski przewijania CSS dla Chrome, Safari i Firefox. Podgląd w czasie rzeczywistym i natychmiastowy eksport kodu.",
+        "features": [
+          "Obsługa Webkit i Firefox",
+          "Wizualny podgląd na żywo",
+          "Stylizacja ścieżki i suwaka",
+          "Dostosowanie stanu najechania"
+        ]
       }
     },
     "videoToGif": {
       "title": "Wideo do GIF",
-      "description": "Konwertuj klipy wideo na wysokiej jakości animowane pliki GIF, które można łatwo udostępniać.",
+      "description": "Konwertuj klipy wideo na wysokiej jakości animowane pliki GIF.",
       "page": {
         "title": "Wideo do GIF",
-        "subtitle": "Konwertuj wideo na wysokiej jakości GIF-y całkowicie w przeglądarce.",
+        "subtitle": "Konwertuj wideo na wysokiej jakości GIF-y całkowicie w swojej przeglądarce.",
         "selectVideoLabel": "Wybierz wideo",
         "convertToGifLabel": "Konwertuj na GIF",
         "conversionCompleteLabel": "Konwersja zakończona! ✨",
@@ -135,8 +163,14 @@
         "errorConversion": "Błąd podczas konwersji wideo."
       },
       "seo": {
-        "title": "Wideo do GIF | ToolBite",
-        "description": "Konwertuj klipy wideo na wysokiej jakości animowane pliki GIF."
+        "title": "Konwerter wideo na GIF | Za darmo i online | ToolBite",
+        "description": "Zamień wideo MP4, WEBM lub MOV w wysokiej jakości GIF-y. Bez znaków wodnych, bez przesyłania danych, 100% prywatna konwersja.",
+        "features": [
+          "Lokalna konwersja bez wysyłania plików",
+          "Eksport GIF wysokiej jakości",
+          "Obsługa MP4, WEBM, MOV",
+          "Brak znaków wodnych"
+        ]
       }
     },
     "clipPathMaker": {
@@ -152,20 +186,26 @@
         "cssOutputLabel": "Wynik CSS"
       },
       "seo": {
-        "title": "Kreator CSS Clip-Path | ToolBite",
-        "description": "Przeciągaj punkty wielokąta, aby tworzyć własne kształty i generować właściwość CSS clip-path."
+        "title": "Generator CSS Clip-Path | ToolBite",
+        "description": "Twórz własne kształty CSS wizualnie. Przeciągaj punkty wielokąta, aby wygenerować kod clip-path dla nowoczesnego web designu.",
+        "features": [
+          "Wizualny edytor wielokątów",
+          "Podgląd obrazu w tle",
+          "Własne gotowe kształty",
+          "Natychmiastowy eksport CSS"
+        ]
       }
     },
     "gridBuilder": {
       "title": "Kreator CSS Grid",
-      "description": "Wizualny interfejs do definiowania kolumn, wierszy i odstępów, z błyskawicznym eksportem kodu CSS grid.",
+      "description": "Wizualny interfejs do definiowania kolumn, wierszy i odstępów, z błyskawicznym eksportem kodu CSS Grid.",
       "page": {
         "title": "Kreator CSS Grid",
         "subtitle": "Wizualnie definiuj kolumny, wiersze, rozpiętości i odstępy, aby generować kod siatki.",
         "containerLabel": "Kontener",
         "columnsLabel": "Kolumny",
         "rowsLabel": "Wiersze",
-        "gapLabel": "Odstęp (Gap)",
+        "gapLabel": "Odstęp",
         "selectedItemLabel": "Wybrany element",
         "columnSpanLabel": "Rozpiętość kolumn",
         "rowSpanLabel": "Rozpiętość wierszy",
@@ -174,8 +214,14 @@
         "cssOutputLabel": "Wynik CSS"
       },
       "seo": {
-        "title": "Kreator CSS Grid | ToolBite",
-        "description": "Wizualny interfejs do definiowania kolumn, wierszy i odstępów, z błyskawicznym eksportem kodu CSS grid."
+        "title": "Wizualny generator CSS Grid | ToolBite",
+        "description": "Buduj złożone układy CSS Grid wizualnie. Definiuj kolumny, wiersze i rozpiętości za pomocą interaktywnego edytora.",
+        "features": [
+          "Interaktywny edytor siatki",
+          "Kontrola odstępów i dopełnienia",
+          "Responsywny wynik CSS",
+          "Obsługa rozpiętości i wyrównania"
+        ]
       }
     },
     "blobGenerator": {
@@ -190,8 +236,14 @@
         "randomizeButton": "Losuj"
       },
       "seo": {
-        "title": "Generator kształtów Blob | ToolBite",
-        "description": "Generuj płynne, organiczne kształty blob SVG dla nowoczesnych układów stron i tła."
+        "title": "Generator Blobów SVG | Organiczne kształty | ToolBite",
+        "description": "Twórz unikalne, organiczne bloby SVG dla tła i elementów interfejsu. Dostosuj krawędzie, wzrost i złożoność.",
+        "features": [
+          "Losowe generowanie SVG",
+          "Kontrola złożoności i wzrostu",
+          "Natychmiastowy eksport kodu SVG",
+          "Płynne kształty projektowe"
+        ]
       }
     },
     "socialPreviewer": {
@@ -206,8 +258,14 @@
         "livePreviewsLabel": "Podglądy na żywo"
       },
       "seo": {
-        "title": "Podgląd społecznościowy | ToolBite",
-        "description": "Podgląd na żywo i generowanie Meta Tagów dla kart Twitter, Facebook i LinkedIn."
+        "title": "Podgląd Meta Tagów społecznościowych | ToolBite",
+        "description": "Sprawdź, jak Twoja strona wygląda na Facebooku, Twitterze i LinkedIn. Generuj tagi Open Graph i Meta natychmiast.",
+        "features": [
+          "Podgląd Twitter, FB, LinkedIn",
+          "Generowanie meta Open Graph",
+          "Obsługa podglądu lokalnych obrazów",
+          "Walidacja tagów SEO"
+        ]
       }
     },
     "uaInspector": {
@@ -218,11 +276,17 @@
         "subtitle": "Analizuj ciągi przeglądarek i odciski palców urządzeń.",
         "userAgentStringLabel": "Ciąg User Agent",
         "analyzeStringLabel": "Analizuj ciąg",
-        "copyRawLabel": "Kopiuj surowe dane"
+        "copyRawLabel": "Kopiuj surowe"
       },
       "seo": {
-        "title": "Inspektor UA | ToolBite",
-        "description": "Wykrywaj i analizuj ciągi User-Agent, aby zidentyfikować przeglądarki, systemy operacyjne i szczegóły sprzętowe."
+        "title": "Parser i inspektor User-Agent | ToolBite",
+        "description": "Natychmiastowo zidentyfikuj wersję przeglądarki, system operacyjny i szczegóły sprzętu z dowolnego ciągu User-Agent.",
+        "features": [
+          "Głęboka analiza ciągów",
+          "Wykrywanie urządzeń i systemów",
+          "Identyfikacja silnika przeglądarki",
+          "Narzędzie do debugowania"
+        ]
       }
     },
     "shadowGenerator": {
@@ -234,14 +298,20 @@
         "parametersLabel": "Parametry",
         "layersLabel": "Warstwy",
         "blurStrengthLabel": "Siła (Rozmycie)",
-        "maxOpacityLabel": "Max Opacity",
+        "maxOpacityLabel": "Maks. nieprzezroczystość",
         "shadowColorLabel": "Kolor cienia",
         "generatedCssLabel": "Wygenerowany CSS",
         "previewCardLabel": "Karta podglądu"
       },
       "seo": {
-        "title": "Generator palety cieni | ToolBite",
-        "description": "Twórz gładkie, wielowarstwowe cienie CSS dla naturalnie wyglądających elementów interfejsu."
+        "title": "Generator gładkich cieni CSS | ToolBite",
+        "description": "Generuj wielowarstwowe, organiczne cienie box-shadow CSS. Dostosuj rozmycie, nieprzezroczystość i warstwy dla realistycznego UI.",
+        "features": [
+          "Wielowarstwowe cienie",
+          "Realistyczne organiczne rozmycie",
+          "Własne kolory cieni",
+          "Kod CSS gotowy do użycia"
+        ]
       }
     },
     "safeLink": {
@@ -259,8 +329,14 @@
         "clearButton": "Wyczyść"
       },
       "seo": {
-        "title": "Koder bezpiecznych linków | ToolBite",
-        "description": "Zamazuj linki, aby ukryć je przed botami i scraperami, używając natywnego kodowania przeglądarki."
+        "title": "Obfuskator URL | Chroń linki przed botami | ToolBite",
+        "description": "Zakoduj swoje linki, aby zapobiec ich wykrywaniu przez boty i scrapery. Proste, bezpieczne kodowanie natywne dla przeglądarki.",
+        "features": [
+          "Ochrona linków przed botami",
+          "Obfuskacja Base64 i URL",
+          "Przetwarzanie po stronie klienta",
+          "Natychmiastowe koder/dekoder"
+        ]
       }
     },
     "markdownLab": {
@@ -268,7 +344,7 @@
       "description": "Edytor Markdown w czasie rzeczywistym z podglądem HTML na żywo i sanityzacją.",
       "page": {
         "title": "Laboratorium Markdown",
-        "subtitle": "Pisz za pomocą fragmentów kodu i przeglądaj ostylowany HTML w czasie rzeczywistym.",
+        "subtitle": "Pisz za pomocą fragmentów i przeglądaj ostylowany HTML w czasie rzeczywistym.",
         "copyMdButton": "Kopiuj MD",
         "downloadHtmlButton": "Pobierz HTML",
         "livePreviewLabel": "Podgląd na żywo",
@@ -277,8 +353,14 @@
         "clearButton": "Wyczyść edytor"
       },
       "seo": {
-        "title": "Laboratorium Markdown | ToolBite",
-        "description": "Edytor Markdown w czasie rzeczywistym z podglądem HTML na żywo i sanityzacją."
+        "title": "Edytor Markdown z podglądem HTML na żywo | ToolBite",
+        "description": "Pisz i przeglądaj Markdown w czasie rzeczywistym. Czysty wynik HTML, bezpieczna sanityzacja i obsługa fragmentów.",
+        "features": [
+          "Podgląd HTML na żywo",
+          "Bezpieczna sanityzacja HTML",
+          "Eksport Markdown do HTML",
+          "Edytor gotowy na fragmenty"
+        ]
       }
     },
     "imageCompressor": {
@@ -311,22 +393,34 @@
         }
       },
       "seo": {
-        "title": "Kompresor obrazów | ToolBite",
-        "description": "Zmniejsz rozmiar plików obrazów nawet o 80% bez utraty jakości wizualnej."
+        "title": "Kompresuj obrazy online | Bez utraty jakości | ToolBite",
+        "description": "Zmniejsz rozmiar plików obrazów JPG, PNG i WEBP nawet o 80%. Szybsze ładowanie bez utraty jakości wizualnej.",
+        "features": [
+          "Kompresja tylko lokalna",
+          "Obsługa JPG, PNG, WEBP",
+          "Przetwarzanie wsadowe",
+          "Zero przesyłania danych"
+        ]
       }
     },
     "unitPro": {
       "title": "Konwerter jednostek Pro",
-      "description": "Zaawansowana konwersja jednostek internetowych (PX/REM), pamięci cyfrowej i długości fizycznej.",
+      "description": "Zaawansowana konwersja dla jednostek internetowych (PX/REM), pamięci cyfrowej i długości fizycznej.",
       "page": {
         "title": "Konwerter jednostek Pro",
-        "subtitle": "Precyzyjna konwersja dla potrzeb designu, programowania i codziennych zadań.",
+        "subtitle": "Precyzyjna konwersja dla potrzeb projektowych, programistycznych i codziennych.",
         "fromLabel": "Z",
         "toLabel": "Na"
       },
       "seo": {
-        "title": "Konwerter jednostek Pro | ToolBite",
-        "description": "Zaawansowana konwersja jednostek internetowych (PX/REM), pamięci cyfrowej i długości fizycznej."
+        "title": "Profesjonalny konwerter jednostek | PX na REM i więcej | ToolBite",
+        "description": "Konwertuj jednostki projektowe takie jak PX na REM, pamięć cyfrową i pomiary fizyczne z wysoką precyzją.",
+        "features": [
+          "Konwerter PX na REM",
+          "Jednostki pamięci cyfrowej",
+          "Matematyka wysokiej precyzji",
+          "Jednostki dla programistów"
+        ]
       }
     },
     "pdfSurgeon": {
@@ -334,7 +428,7 @@
       "description": "Łącz wiele dokumentów lub wyodrębniaj określone strony z najwyższą precyzją.",
       "page": {
         "title": "PDF Surgeon",
-        "subtitle": "Błyskawicznie łącz lub dziel dokumenty PDF w przeglądarce.",
+        "subtitle": "Łącz lub dziel dokumenty PDF natychmiastowo w swojej przeglądarce.",
         "minFilesError": "Proszę dodać co najmniej 2 pliki PDF do połączenia.",
         "uploadSplitError": "Proszę przesłać plik PDF do podziału.",
         "mergeTabLabel": "Połącz",
@@ -344,12 +438,18 @@
         "downloadResultButton": "Pobierz wynik",
         "dropzoneLabel": "Przeciągnij swoje pliki PDF tutaj",
         "selectFilesButton": "Wybierz pliki",
-        "mergePdfsButton": "Połącz pliki PDF",
+        "mergePdfsButton": "Połącz PDFy",
         "extractPagesButton": "Wyodrębnij strony"
       },
       "seo": {
-        "title": "PDF Surgeon | ToolBite",
-        "description": "Łącz wiele dokumentów lub wyodrębniaj określone strony z najwyższą precyzją."
+        "title": "Łączenie i dzielenie PDF online | 100% Prywatnie | ToolBite",
+        "description": "Łącz pliki PDF lub wyodrębniaj strony z chirurgiczną precyzją. Wszystko odbywa się lokalnie — Twoje dokumenty nigdy nie opuszczają Twojego PC.",
+        "features": [
+          "Prywatność (przetwarzanie lokalne)",
+          "Łączenie wielu PDF",
+          "Dzielenie i wyodrębnianie stron",
+          "Brak limitów rozmiaru plików"
+        ]
       }
     },
     "secretShield": {
@@ -369,16 +469,22 @@
         "startNewLabel": "Zacznij od nowa"
       },
       "seo": {
-        "title": "Secret Shield | ToolBite",
-        "description": "Wojskowe szyfrowanie AES-256. Zabezpiecz dowolny plik lokalnie w swojej przeglądarce."
+        "title": "Szyfrowanie plików AES-256 | Bezpieczeństwo klasy wojskowej | ToolBite",
+        "description": "Zabezpiecz swoje pliki szyfrowaniem AES-256. Bezpieczeństwo Zero-Knowledge gwarantuje, że pliki są szyfrowane lokalnie w przeglądarce.",
+        "features": [
+          "Klasa wojskowa AES-256",
+          "Bezpieczeństwo Zero-Knowledge",
+          "Szyfrowanie na urządzeniu",
+          "Działa z każdym typem pliku"
+        ]
       }
     },
     "voiceNotes": {
       "title": "Notatki głosowe",
-      "description": "Błyskawicznie konwertuj mowę na tekst za pomocą sztucznej inteligencji Whisper od OpenAI.",
+      "description": "Konwertuj mowę na tekst natychmiastowo za pomocą AI Whisper od OpenAI.",
       "page": {
         "title": "Notatki głosowe",
-        "subtitle": "Audio na tekst. Whisper AI działa lokalnie w Twojej przeglądarce.",
+        "subtitle": "Audio na tekst. Whisper AI działający lokalnie w Twojej przeglądarce.",
         "speakClearlyLabel": "Mów wyraźnie do mikrofonu",
         "uploadAudioLabel": "Prześlij audio",
         "supportedFormatsLabel": "Obsługiwane formaty: MP3, WAV, M4A",
@@ -391,8 +497,14 @@
         "errorWordGeneration": "Nie udało się wygenerować dokumentu Word."
       },
       "seo": {
-        "title": "Notatki głosowe | ToolBite",
-        "description": "Błyskawicznie konwertuj mowę na tekst za pomocą sztucznej inteligencji Whisper od OpenAI."
+        "title": "Głos na tekst AI | Prywatny transkrybent audio | ToolBite",
+        "description": "Konwertuj mowę na tekst za pomocą Whisper AI od OpenAI. Prywatna transkrypcja na urządzeniu oznacza, że audio nigdy nie jest wysyłane do sieci.",
+        "features": [
+          "Silnik OpenAI Whisper AI",
+          "Transkrypcja skupiona na prywatności",
+          "Obsługa MP3, WAV, M4A",
+          "Lokalne przetwarzanie w czasie rzeczywistym"
+        ]
       }
     },
     "colorPalette": {
@@ -400,18 +512,24 @@
       "description": "Wyodrębnij najbardziej dominujące i najpiękniejsze kolory z dowolnego zdjęcia.",
       "page": {
         "title": "Paleta kolorów",
-        "subtitle": "Błyskawicznie wyodrębniaj dominujące kolory z dowolnego obrazu.",
+        "subtitle": "Wyodrębnij dominujące kolory z dowolnego obrazu natychmiastowo.",
         "dropImageLabel": "Przeciągnij obraz, aby pobrać próbki kolorów",
         "uploadNewImageButton": "Prześlij nowy obraz"
       },
       "seo": {
-        "title": "Paleta kolorów | ToolBite",
-        "description": "Wyodrębnij najbardziej dominujące i najpiękniejsze kolory z dowolnego zdjęcia."
+        "title": "Ekstraktor palety kolorów z obrazu | ToolBite",
+        "description": "Wyodrębnij dominujące palety kolorów z dowolnego obrazu. Pobierz kody HEX i RGB dla projektantów natychmiastowo.",
+        "features": [
+          "Ekstrakcja kolorów dominujących",
+          "Generator kodów HEX",
+          "Palety klasy projektowej",
+          "Natychmiastowe próbkowanie obrazu"
+        ]
       }
     },
     "cronVisualizer": {
       "title": "Wizualizator Cron",
-      "description": "Konwertuj tajemnicze wyrażenia cron na czytelne dla człowieka zdania i harmonogramy.",
+      "description": "Konwertuj tajemnicze wyrażenia cron na zrozumiałe zdania i harmonogramy.",
       "page": {
         "title": "Wizualizator Cron",
         "subtitle": "Dekoduj wyrażenia cron na harmonogramy w prostym języku.",
@@ -419,15 +537,21 @@
         "scheduleDescriptionLabel": "Opis harmonogramu",
         "invalidError": "Nieprawidłowe wyrażenie Cron. Proszę sprawdzić format.",
         "examples": {
-          "every5Mins": "Co 5 minut",
+          "every5Mins": "Co 5 min",
           "everyHour": "Co godzinę",
           "midnightDaily": "Codziennie o północy",
           "everyMonday": "W każdy poniedziałek"
         }
       },
       "seo": {
-        "title": "Wizualizator Cron | ToolBite",
-        "description": "Konwertuj tajemnicze wyrażenia cron na czytelne dla człowieka zdania i harmonogramy."
+        "title": "Wizualizator i dekoder wyrażeń Cron | ToolBite",
+        "description": "Zamień złożone harmonogramy Cron na tekst zrozumiały dla człowieka. Debuguj i wizualizuj swoje wyrażenia cron natychmiastowo.",
+        "features": [
+          "Dekodowanie czytelne dla człowieka",
+          "Walidacja cron w czasie rzeczywistym",
+          "Wizualny podgląd harmonogramu",
+          "Obsługa składni cron"
+        ]
       }
     }
   }

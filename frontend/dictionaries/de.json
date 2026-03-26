@@ -18,6 +18,10 @@
       "Developer": "Entwickler",
       "Video": "Video",
       "Security": "Sicherheit"
+    },
+    "seo": {
+      "title": "ToolBite | Dein sicherer All-in-One-Utility-Workspace",
+      "description": "Nutze über 20 professionelle Tools für Entwickler und Designer. 100% privat, browser-nativ und extrem schnell. Keine Registrierung erforderlich."
     }
   },
   "tools": {
@@ -42,8 +46,14 @@
         "processingError": "Fehler bei der Bildverarbeitung."
       },
       "seo": {
-        "title": "Bildhintergrund kostenlos entfernen | ToolBite",
-        "description": "Nutzen Sie unsere Hochgeschwindigkeits-KI, um Hintergründe von jedem Bild sofort in Ihrem Browser zu entfernen. 100 % kostenlos und sicher."
+        "title": "Kostenloser KI-Hintergrund-Entferner | ToolBite",
+        "description": "Entfernen Sie Hintergründe von Bildern sofort mit Hochgeschwindigkeits-KI. Professionelle transparente PNG-Ergebnisse direkt in Ihrem Browser.",
+        "features": [
+          "KI-Verarbeitung auf dem Gerät",
+          "Hochauflösender PNG-Export",
+          "100 % privat und sicher",
+          "Funktioniert mit Personen und Produkten"
+        ]
       }
     },
     "neumorphism": {
@@ -67,8 +77,14 @@
         }
       },
       "seo": {
-        "title": "Neumorphismus-Generator | ToolBite",
-        "description": "Erzeugen Sie weiche UI-Hex-Codes und komplexe Schatten-CSS basierend auf einer einzigen Basisfarbe."
+        "title": "Neumorphismus CSS Generator | Soft UI Tool | ToolBite",
+        "description": "Erstellen Sie wunderschöne neumorphische Designs mit unserem Soft-UI-Generator. Passen Sie Schatten, Weichzeichner und Intensität mit sofortigem CSS-Export an.",
+        "features": [
+          "Echtzeit-CSS-Generierung",
+          "4 Form-Voreinstellungen",
+          "Benutzerdefinierte Farbauswahl",
+          "Barrierefreie Soft-UI-Schatten"
+        ]
       }
     },
     "csvConverter": {
@@ -82,7 +98,7 @@
         "delimiters": {
           "comma": "Komma (,)",
           "semicolon": "Semikolon (;)",
-          "tab": "Tabulator",
+          "tab": "Tab",
           "pipe": "Pipe (|)"
         },
         "firstRowHeadersLabel": "Erste Zeile enthält Kopfzeilen",
@@ -91,8 +107,14 @@
         "noValidDataError": "Keine gültigen Daten angegeben."
       },
       "seo": {
-        "title": "CSV-zu-JSON-Konverter | ToolBite",
-        "description": "Analysieren Sie lokale CSV-Daten sofort in Ihrem Browser in formatierte JSON-Arrays und visuelle HTML-Tabellen."
+        "title": "CSV-zu-JSON-Konverter | Online & Sicher | ToolBite",
+        "description": "Konvertieren Sie CSV-Dateien sofort in JSON, HTML-Tabellen oder Markdown. Die sichere lokale Verarbeitung stellt sicher, dass Ihre Daten Ihren Browser niemals verlassen.",
+        "features": [
+          "Nur lokale Datenanalyse",
+          "Unterstützung benutzerdefinierter Trennzeichen",
+          "HTML- & Markdown-Export",
+          "Unterstützung großer Dateien"
+        ]
       }
     },
     "scrollbar": {
@@ -115,8 +137,14 @@
         "copiedMessage": "In die Zwischenablage kopiert!"
       },
       "seo": {
-        "title": "Generator für benutzerdefinierte Bildlaufleisten | ToolBite",
-        "description": "Visueller Editor zum Stylen von Webkit-Bildlaufleisten einschließlich Track, Thumb und Hover-Zuständen."
+        "title": "Individueller Scrollbar CSS Generator | ToolBite",
+        "description": "Gestalten Sie visuell benutzerdefinierte CSS-Bildlaufleisten für Chrome, Safari und Firefox. Echtzeit-Vorschau und sofortiger Code-Export.",
+        "features": [
+          "Webkit- & Firefox-Unterstützung",
+          "Live-Visualisierungsvorschau",
+          "Track- & Thumb-Styling",
+          "Anpassung des Hover-Zustands"
+        ]
       }
     },
     "videoToGif": {
@@ -135,8 +163,14 @@
         "errorConversion": "Fehler beim Konvertieren des Videos."
       },
       "seo": {
-        "title": "Video zu GIF | ToolBite",
-        "description": "Konvertieren Sie Videoclips in hochwertige, teilbare animierte GIFs."
+        "title": "Video-zu-GIF-Konverter | Kostenlos & Online | ToolBite",
+        "description": "Verwandeln Sie MP4-, WEBM- oder MOV-Videos in hochwertige GIFs. Keine Wasserzeichen, keine Uploads, 100 % private Konvertierung.",
+        "features": [
+          "Lokale Konvertierung ohne Upload",
+          "Hochwertiger GIF-Export",
+          "Unterstützt MP4, WEBM, MOV",
+          "Null Wasserzeichen"
+        ]
       }
     },
     "clipPathMaker": {
@@ -152,8 +186,14 @@
         "cssOutputLabel": "CSS-Ausgabe"
       },
       "seo": {
-        "title": "CSS Clip-Path Maker | ToolBite",
-        "description": "Ziehen Sie Polygonpunkte, um benutzerdefinierte Formen zu erstellen und die CSS-Eigenschaft clip-path auszugeben."
+        "title": "CSS Clip-Path Generator | ToolBite",
+        "description": "Erstellen Sie visuell benutzerdefinierte CSS-Formen. Ziehen Sie Polygonpunkte, um Clip-Path-Code für modernes Webdesign zu generieren.",
+        "features": [
+          "Visueller Polygon-Editor",
+          "Bildvorschau im Hintergrund",
+          "Benutzerdefinierte Form-Voreinstellungen",
+          "Sofortiger CSS-Export"
+        ]
       }
     },
     "gridBuilder": {
@@ -174,8 +214,14 @@
         "cssOutputLabel": "CSS-Ausgabe"
       },
       "seo": {
-        "title": "CSS Grid Builder | ToolBite",
-        "description": "Visuelle Oberfläche zum Definieren von Spalten, Zeilen und Abständen, mit sofortigem Export von CSS-Grid-Code."
+        "title": "Visueller CSS Grid Generator | ToolBite",
+        "description": "Erstellen Sie komplexe CSS-Grid-Layouts visuell. Definieren Sie Spalten, Zeilen und Spannen mit einem interaktiven Editor.",
+        "features": [
+          "Interaktiver Grid-Editor",
+          "Gap- & Padding-Steuerung",
+          "Responsive CSS-Ausgabe",
+          "Unterstützung für Span & Align"
+        ]
       }
     },
     "blobGenerator": {
@@ -190,8 +236,14 @@
         "randomizeButton": "Zufällig generieren"
       },
       "seo": {
-        "title": "Blob-Form-Generator | ToolBite",
-        "description": "Erzeugen Sie flüssige, organische SVG-Blob-Formen für moderne Web-Layouts und Hintergründe."
+        "title": "SVG Blob Generator | Organische Formen | ToolBite",
+        "description": "Erstellen Sie einzigartige, organische SVG-Blobs für Hintergründe und UI-Elemente. Passen Sie Kanten, Wachstum und Komplexität an.",
+        "features": [
+          "Randomisierte SVG-Generierung",
+          "Komplexitäts- & Wachstumssteuerung",
+          "Sofortiger SVG-Code-Export",
+          "Flüssige Designformen"
+        ]
       }
     },
     "socialPreviewer": {
@@ -206,8 +258,14 @@
         "livePreviewsLabel": "Live-Vorschauen"
       },
       "seo": {
-        "title": "Social Previewer | ToolBite",
-        "description": "Live-Vorschau und Generierung von Meta-Tags für Twitter-, Facebook- und LinkedIn-Cards."
+        "title": "Social Media Meta Tag Vorschau | ToolBite",
+        "description": "Vorschau, wie Ihre Website auf Facebook, Twitter und LinkedIn aussieht. Generieren Sie sofort Open Graph- und Meta-Tags.",
+        "features": [
+          "Twitter, FB, LinkedIn Vorschauen",
+          "Open Graph Meta-Generierung",
+          "Unterstützung für lokale Bildvorschau",
+          "SEO-Tag-Validierung"
+        ]
       }
     },
     "uaInspector": {
@@ -221,8 +279,14 @@
         "copyRawLabel": "Rohdaten kopieren"
       },
       "seo": {
-        "title": "UA Inspector | ToolBite",
-        "description": "Erkennen und Analysieren von User-Agent-Strings zur Identifizierung von Browsern, Betriebssystemen und Hardwaredetails."
+        "title": "User-Agent Parser & Inspektor | ToolBite",
+        "description": "Identifizieren Sie Browserversion, Betriebssystem und Hardwaredetails aus jedem User-Agent-String sofort.",
+        "features": [
+          "Tiefe String-Analyse",
+          "Geräte- & OS-Erkennung",
+          "Browser-Engine-Identifikation",
+          "Entwickler-Debug-Tool"
+        ]
       }
     },
     "shadowGenerator": {
@@ -240,8 +304,14 @@
         "previewCardLabel": "Vorschau-Karte"
       },
       "seo": {
-        "title": "Schatten-Paletten-Generator | ToolBite",
-        "description": "Erstellen Sie glatte, mehrschichtige CSS-Schatten für natürlich aussehende UI-Elemente."
+        "title": "Smooth CSS Shadow Generator | ToolBite",
+        "description": "Generieren Sie mehrschichtige, organische CSS-Box-Shadows. Passen Sie Unschärfe, Deckkraft und Ebenen für realistisches UI-Design an.",
+        "features": [
+          "Mehrschichtige Schatten",
+          "Realistische organische Unschärfe",
+          "Benutzerdefinierte Schattenfarben",
+          "Produktionsreifer CSS-Code"
+        ]
       }
     },
     "safeLink": {
@@ -259,8 +329,14 @@
         "clearButton": "Löschen"
       },
       "seo": {
-        "title": "Safe-Link Encoder | ToolBite",
-        "description": "Verschleiern Sie Links, um sie mithilfe von browser-nativer Kodierung vor Bots und Scrapern zu verbergen."
+        "title": "URL-Obfuscator | Links vor Bots schützen | ToolBite",
+        "description": "Kodieren Sie Ihre Links, um zu verhindern, dass Web-Scraper und Bots sie erkennen. Einfache, sichere browsernative Kodierung.",
+        "features": [
+          "Anti-Bot-Link-Schutz",
+          "Base64- & URL-Verschleierung",
+          "Clientseitige Verarbeitung",
+          "Sofortiges Kodieren/Dekodieren"
+        ]
       }
     },
     "markdownLab": {
@@ -277,8 +353,14 @@
         "clearButton": "Editor löschen"
       },
       "seo": {
-        "title": "Markdown Lab | ToolBite",
-        "description": "Echtzeit-Markdown-Editor mit Live-HTML-Vorschau und Bereinigung."
+        "title": "Markdown Editor mit Live-HTML-Vorschau | ToolBite",
+        "description": "Schreiben und Vorschau von Markdown in Echtzeit. Saubere HTML-Ausgabe, sichere Bereinigung und Snippet-Unterstützung.",
+        "features": [
+          "Live-HTML-Vorschau",
+          "Sichere HTML-Bereinigung",
+          "Markdown-zu-HTML-Export",
+          "Snippet-fähiger Editor"
+        ]
       }
     },
     "imageCompressor": {
@@ -311,8 +393,14 @@
         }
       },
       "seo": {
-        "title": "Bildkompressor | ToolBite",
-        "description": "Verkleinern Sie Bilddateigrößen um bis zu 80 % ohne Verlust der visuellen Qualität."
+        "title": "Bilder online komprimieren | Kein Qualitätsverlust | ToolBite",
+        "description": "Reduzieren Sie die Dateigröße von JPG-, PNG- und WEBP-Bildern um bis zu 80 %. Schnellere Ladezeiten ohne visuellen Qualitätsverlust.",
+        "features": [
+          "Nur lokale Komprimierung",
+          "Unterstützt JPG, PNG, WEBP",
+          "Batch-fähige Verarbeitung",
+          "Keine Daten-Uploads"
+        ]
       }
     },
     "unitPro": {
@@ -325,8 +413,14 @@
         "toLabel": "Nach"
       },
       "seo": {
-        "title": "Unit Converter Pro | ToolBite",
-        "description": "Fortgeschrittene Konvertierung für Web-Einheiten (PX/REM), digitalen Speicher und physische Länge."
+        "title": "Professioneller Einheitenrechner | PX zu REM & mehr | ToolBite",
+        "description": "Konvertieren Sie Designeinheiten wie PX zu REM, digitalen Speicher und physische Maße mit hoher Präzision.",
+        "features": [
+          "PX zu REM Design-Konverter",
+          "Einheiten für digitalen Speicher",
+          "Hochpräzise Mathematik",
+          "Entwicklerorientierte Einheiten"
+        ]
       }
     },
     "pdfSurgeon": {
@@ -348,8 +442,14 @@
         "extractPagesButton": "Seiten extrahieren"
       },
       "seo": {
-        "title": "PDF Surgeon | ToolBite",
-        "description": "Zusammenführen mehrerer Dokumente oder Extrahieren spezifischer Seiten mit höchster Präzision."
+        "title": "PDF online zusammenführen & teilen | 100 % privat | ToolBite",
+        "description": "Kombinieren Sie PDF-Dateien oder extrahieren Sie Seiten mit chirurgischer Präzision. Alles passiert lokal – Ihre Dokumente verlassen niemals Ihren PC.",
+        "features": [
+          "Datenschutz-fokussierte lokale Verarbeitung",
+          "Mehrere PDFs zusammenführen",
+          "Seiten teilen & extrahieren",
+          "Keine Dateigrößenbeschränkungen"
+        ]
       }
     },
     "secretShield": {
@@ -369,8 +469,14 @@
         "startNewLabel": "Neu starten"
       },
       "seo": {
-        "title": "Secret Shield | ToolBite",
-        "description": "Militärische AES-256-Verschlüsselung. Sichern Sie jede Datei lokal in Ihrem Browser."
+        "title": "AES-256 Dateiverschlüsselung | Militärische Sicherheit | ToolBite",
+        "description": "Sichern Sie Ihre Dateien mit AES-256-Verschlüsselung. Zero-Knowledge-Sicherheit stellt sicher, dass Ihre Dateien lokal in Ihrem Browser verschlüsselt werden.",
+        "features": [
+          "Militärisches AES-256",
+          "Zero-Knowledge-Sicherheit",
+          "Verschlüsselung auf dem Gerät",
+          "Funktioniert mit jedem Dateityp"
+        ]
       }
     },
     "voiceNotes": {
@@ -391,8 +497,14 @@
         "errorWordGeneration": "Word-Dokument konnte nicht erstellt werden."
       },
       "seo": {
-        "title": "Sprachnotizen | ToolBite",
-        "description": "Konvertieren Sie Sprache sofort in Text mit der Whisper-KI von OpenAI."
+        "title": "KI-Sprache zu Text | Privater Audio-Transkribierer | ToolBite",
+        "description": "Konvertieren Sie Sprache in Text mit der Whisper-KI von OpenAI. Private On-Device-Transkription bedeutet, dass Ihr Audio niemals hochgeladen wird.",
+        "features": [
+          "OpenAI Whisper KI-Engine",
+          "Datenschutzorientierte Transkription",
+          "Unterstützt MP3, WAV, M4A",
+          "Echtzeit-Lokalverarbeitung"
+        ]
       }
     },
     "colorPalette": {
@@ -405,8 +517,14 @@
         "uploadNewImageButton": "Neues Bild hochladen"
       },
       "seo": {
-        "title": "Farbpalette | ToolBite",
-        "description": "Extrahieren Sie die dominantesten und schönsten Farben aus jedem Foto."
+        "title": "Bild-Farbpaletten-Extraktor | ToolBite",
+        "description": "Extrahieren Sie dominante Farbpaletten aus jedem Bild. Erhalten Sie sofort HEX- und RGB-Codes für Designer aus Ihren Fotos.",
+        "features": [
+          "Extraktion dominanter Farben",
+          "HEX-Code-Generator",
+          "Designer-taugliche Paletten",
+          "Sofortige Bildabtastung"
+        ]
       }
     },
     "cronVisualizer": {
@@ -419,15 +537,21 @@
         "scheduleDescriptionLabel": "Beschreibung des Zeitplans",
         "invalidError": "Ungültiger Cron-Ausdruck. Bitte überprüfen Sie das Format.",
         "examples": {
-          "every5Mins": "Alle 5 Minuten",
+          "every5Mins": "Alle 5 Min.",
           "everyHour": "Jede Stunde",
           "midnightDaily": "Täglich um Mitternacht",
           "everyMonday": "Jeden Montag"
         }
       },
       "seo": {
-        "title": "Cron Visualizer | ToolBite",
-        "description": "Wandeln Sie kryptische Cron-Ausdrücke in menschenlesbare Sätze und Zeitpläne um."
+        "title": "Cron Expression Visualizer & Decoder | ToolBite",
+        "description": "Verwandeln Sie komplexe Cron-Zeitpläne in menschenlesbares Deutsch. Debuggen und visualisieren Sie Ihre Cron-Ausdrücke sofort.",
+        "features": [
+          "Menschenlesbare Dekodierung",
+          "Echtzeit-Cron-Validierung",
+          "Visuelle Zeitplanvorschau",
+          "Cron-Syntax-Unterstützung"
+        ]
       }
     }
   }

@@ -1,17 +1,15 @@
 import { constructMetadata } from "@/lib/metadata";
 import { getDictionary } from "@/dictionaries/get-dictionary";
+import { constructJSONLD } from "@/lib/schema";
+import { Locale } from "@/proxy"; // Using your global Locale type
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: "en" | "es" }>;
+  params: Promise<{ locale: Locale }>;
 }) {
-  // 3. Unwrap the Next.js 16 Promise
-  const resolvedParams = await params;
-
-  // 4. Fetch the correct dictionary
-  const dict = await getDictionary(resolvedParams.locale);
-
+  const { locale } = await params;
+  const dict = await getDictionary(locale);
   const seo = dict.tools?.bgRemover?.seo;
 
   return constructMetadata({
@@ -19,10 +17,40 @@ export async function generateMetadata({
     description:
       seo?.description ||
       "Instantly strip backgrounds from any image using high-speed AI.",
-    path: `/${resolvedParams.locale}/tools/bg-remover`,
+    path: `/${locale}/tools/bg-remover`,
   });
 }
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+export default async function Layout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale);
+  const seo = dict.tools?.bgRemover?.seo;
+
+  // 1. Generate the GEO-optimized schema
+  const jsonLd = constructJSONLD({
+    name: seo?.title || "Background Remover",
+    description:
+      seo?.description || "Instantly strip backgrounds from any image.",
+    url: `https://toolbite.space/${locale}/tools/bg-remover`,
+    category: "MultimediaApplication",
+    features: seo?.features, // This will pull from your JSON later
+    locale: locale,
+  });
+
+  return (
+    <>
+      {/* 2. Inject the JSON-LD Script */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
+  );
 }

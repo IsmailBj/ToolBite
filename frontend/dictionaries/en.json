@@ -18,6 +18,10 @@
       "Developer": "Developer",
       "Video": "Video",
       "Security": "Security"
+    },
+    "seo": {
+      "title": "ToolBite | Your Secure All-in-One Utility Workspace",
+      "description": "Access 20+ professional tools for developers and designers. 100% private, browser-native, and high-speed. No registration required."
     }
   },
   "tools": {
@@ -42,8 +46,14 @@
         "processingError": "Error processing image."
       },
       "seo": {
-        "title": "Remove Background from Image Free | ToolBite",
-        "description": "Use our high-speed AI to remove backgrounds from any image instantly right in your browser. 100% free and secure."
+        "title": "Free AI Background Remover | ToolBite",
+        "description": "Remove backgrounds from images instantly with high-speed AI. Professional transparent PNG results directly in your browser.",
+        "features": [
+          "On-device AI processing",
+          "High-resolution PNG export",
+          "100% Private & Secure",
+          "Works with People & Products"
+        ]
       }
     },
     "neumorphism": {
@@ -67,8 +77,14 @@
         }
       },
       "seo": {
-        "title": "Neumorphism Generator | ToolBite",
-        "description": "Generate soft UI hex codes and complex shadow CSS based on a single base color."
+        "title": "Neumorphism CSS Generator | Soft UI Tool | ToolBite",
+        "description": "Create beautiful Neumorphic designs with our soft UI generator. Customize shadows, blur, and intensity with instant CSS export.",
+        "features": [
+          "Real-time CSS generation",
+          "4 Shape presets",
+          "Custom color picking",
+          "Accessible Soft-UI shadows"
+        ]
       }
     },
     "csvConverter": {
@@ -91,8 +107,14 @@
         "noValidDataError": "No valid data provided."
       },
       "seo": {
-        "title": "CSV to JSON Converter | ToolBite",
-        "description": "Parse local CSV data into formatted JSON arrays and visual HTML tables instantly in your browser."
+        "title": "CSV to JSON Converter | Online & Secure | ToolBite",
+        "description": "Convert CSV files to JSON, HTML tables, or Markdown instantly. Secure local processing ensures your data never leaves your browser.",
+        "features": [
+          "Local-only data parsing",
+          "Custom delimiter support",
+          "HTML & Markdown export",
+          "Large file support"
+        ]
       }
     },
     "scrollbar": {
@@ -115,8 +137,14 @@
         "copiedMessage": "Copied to clipboard!"
       },
       "seo": {
-        "title": "Custom Scrollbar Generator | ToolBite",
-        "description": "Visual editor to style Webkit scrollbars including track, thumb, and hover states."
+        "title": "Custom Scrollbar CSS Generator | ToolBite",
+        "description": "Visually design custom CSS scrollbars for Chrome, Safari, and Firefox. Real-time preview and instant code export.",
+        "features": [
+          "Webkit & Firefox support",
+          "Live visual preview",
+          "Track & Thumb styling",
+          "Hover state customization"
+        ]
       }
     },
     "videoToGif": {
@@ -135,8 +163,14 @@
         "errorConversion": "Error converting video."
       },
       "seo": {
-        "title": "Video to GIF | ToolBite",
-        "description": "Convert video clips into high-quality, shareable animated GIFs."
+        "title": "Video to GIF Converter | Free & Online | ToolBite",
+        "description": "Turn MP4, WEBM, or MOV videos into high-quality GIFs. No watermarks, no uploads, 100% private conversion.",
+        "features": [
+          "No-upload local conversion",
+          "High-quality GIF export",
+          "Supports MP4, WEBM, MOV",
+          "Zero watermarks"
+        ]
       }
     },
     "clipPathMaker": {
@@ -152,8 +186,14 @@
         "cssOutputLabel": "CSS Output"
       },
       "seo": {
-        "title": "CSS Clip-Path Maker | ToolBite",
-        "description": "Drag polygon points to create custom shapes and output the clip-path CSS property."
+        "title": "CSS Clip-Path Generator | ToolBite",
+        "description": "Create custom CSS shapes visually. Drag polygon points to generate clip-path code for modern web design.",
+        "features": [
+          "Visual polygon editor",
+          "Image preview background",
+          "Custom shape presets",
+          "Instant CSS export"
+        ]
       }
     },
     "gridBuilder": {
@@ -174,8 +214,14 @@
         "cssOutputLabel": "CSS Output"
       },
       "seo": {
-        "title": "CSS Grid Builder | ToolBite",
-        "description": "Visual interface to define columns, rows, and gaps, instantly exporting CSS grid code."
+        "title": "Visual CSS Grid Generator | ToolBite",
+        "description": "Build complex CSS Grid layouts visually. Define columns, rows, and spans with an interactive editor.",
+        "features": [
+          "Interactive grid editor",
+          "Gap & Padding controls",
+          "Responsive CSS output",
+          "Span & Align support"
+        ]
       }
     },
     "blobGenerator": {
@@ -190,8 +236,14 @@
         "randomizeButton": "Randomize"
       },
       "seo": {
-        "title": "Blob Shape Generator | ToolBite",
-        "description": "Generate fluid, organic SVG blob shapes for modern web layouts and backgrounds."
+        "title": "SVG Blob Generator | Organic Shapes | ToolBite",
+        "description": "Create unique, organic SVG blobs for backgrounds and UI elements. Customize edges, growth, and complexity.",
+        "features": [
+          "Randomized SVG generation",
+          "Complexity & Growth controls",
+          "Instant SVG code export",
+          "Fluid design shapes"
+        ]
       }
     },
     "socialPreviewer": {
@@ -206,8 +258,14 @@
         "livePreviewsLabel": "Live Previews"
       },
       "seo": {
-        "title": "Social Previewer | ToolBite",
-        "description": "Live preview and generate Meta Tags for Twitter, Facebook, and LinkedIn cards."
+        "title": "Social Media Meta Tag Previewer | ToolBite",
+        "description": "Preview how your website looks on Facebook, Twitter, and LinkedIn. Generate Open Graph and Meta Tags instantly.",
+        "features": [
+          "Twitter, FB, LinkedIn previews",
+          "Open Graph meta generation",
+          "Local image preview support",
+          "SEO tag validation"
+        ]
       }
     },
     "uaInspector": {
@@ -221,8 +279,14 @@
         "copyRawLabel": "Copy Raw"
       },
       "seo": {
-        "title": "UA Inspector | ToolBite",
-        "description": "Detect and parse User-Agent strings to identify browsers, OS, and hardware details."
+        "title": "User-Agent Parser & Inspector | ToolBite",
+        "description": "Identify browser version, operating system, and hardware details from any User-Agent string instantly.",
+        "features": [
+          "Deep string analysis",
+          "Device & OS detection",
+          "Browser engine identification",
+          "Developer debug tool"
+        ]
       }
     },
     "shadowGenerator": {
@@ -240,8 +304,14 @@
         "previewCardLabel": "Preview Card"
       },
       "seo": {
-        "title": "Shadow Palette Generator | ToolBite",
-        "description": "Create smooth, multi-layered CSS shadows for natural-looking UI elements."
+        "title": "Smooth CSS Shadow Generator | ToolBite",
+        "description": "Generate multi-layered, organic CSS box-shadows. Customize blur, opacity, and layers for realistic UI design.",
+        "features": [
+          "Multi-layered shadows",
+          "Realistic organic blur",
+          "Custom shadow colors",
+          "Production-ready CSS code"
+        ]
       }
     },
     "safeLink": {
@@ -259,8 +329,14 @@
         "clearButton": "Clear"
       },
       "seo": {
-        "title": "Safe-Link Encoder | ToolBite",
-        "description": "Obfuscate links to hide them from bots and scrapers using browser-native encoding."
+        "title": "URL Obfuscator | Protect Links from Bots | ToolBite",
+        "description": "Encode your links to prevent web scrapers and bots from detecting them. Simple, secure browser-native encoding.",
+        "features": [
+          "Anti-bot link protection",
+          "Base64 & URL obfuscation",
+          "Client-side processing",
+          "Instant Encode/Decode"
+        ]
       }
     },
     "markdownLab": {
@@ -277,8 +353,14 @@
         "clearButton": "Clear Editor"
       },
       "seo": {
-        "title": "Markdown Lab | ToolBite",
-        "description": "Real-time Markdown editor with live HTML preview and sanitization."
+        "title": "Markdown Editor with Live HTML Preview | ToolBite",
+        "description": "Write and preview Markdown in real-time. Clean HTML output, secure sanitization, and snippet support.",
+        "features": [
+          "Live HTML preview",
+          "Secure HTML sanitization",
+          "Markdown to HTML export",
+          "Snippet-ready editor"
+        ]
       }
     },
     "imageCompressor": {
@@ -311,8 +393,14 @@
         }
       },
       "seo": {
-        "title": "Image Compressor | ToolBite",
-        "description": "Shrink image file sizes by up to 80% without losing visual quality."
+        "title": "Compress Images Online | No Quality Loss | ToolBite",
+        "description": "Reduce file size of JPG, PNG, and WEBP images by up to 80%. Faster loading times with zero visual quality loss.",
+        "features": [
+          "Local-only compression",
+          "Supports JPG, PNG, WEBP",
+          "Batch-ready processing",
+          "Zero data uploads"
+        ]
       }
     },
     "unitPro": {
@@ -325,8 +413,14 @@
         "toLabel": "To"
       },
       "seo": {
-        "title": "Unit Converter Pro | ToolBite",
-        "description": "Advanced conversion for web units (PX/REM), digital storage, and physical length."
+        "title": "Professional Unit Converter | PX to REM & More | ToolBite",
+        "description": "Convert design units like PX to REM, digital storage, and physical measurements with high precision.",
+        "features": [
+          "PX to REM Design Converter",
+          "Digital Storage units",
+          "High-precision math",
+          "Developer-focused units"
+        ]
       }
     },
     "pdfSurgeon": {
@@ -348,8 +442,14 @@
         "extractPagesButton": "Extract Pages"
       },
       "seo": {
-        "title": "PDF Surgeon | ToolBite",
-        "description": "Merge multiple documents or extract specific pages with pinpoint precision."
+        "title": "Merge & Split PDF Online | 100% Private | ToolBite",
+        "description": "Combine PDF files or extract pages with surgical precision. Everything happens locally—your documents never leave your PC.",
+        "features": [
+          "Privacy-first local processing",
+          "Merge multiple PDFs",
+          "Split & Extract pages",
+          "No file size limits"
+        ]
       }
     },
     "secretShield": {
@@ -369,8 +469,14 @@
         "startNewLabel": "Start New"
       },
       "seo": {
-        "title": "Secret Shield | ToolBite",
-        "description": "Military-grade AES-256 encryption. Secure any file locally in your browser."
+        "title": "AES-256 File Encryption | Military Grade Security | ToolBite",
+        "description": "Secure your files with AES-256 encryption. Zero-knowledge security ensures your files are encrypted locally in your browser.",
+        "features": [
+          "Military-grade AES-256",
+          "Zero-Knowledge security",
+          "On-device encryption",
+          "Works with any file type"
+        ]
       }
     },
     "voiceNotes": {
@@ -391,8 +497,14 @@
         "errorWordGeneration": "Failed to generate Word document."
       },
       "seo": {
-        "title": "Voice Notes | ToolBite",
-        "description": "Convert speech to text instantly using OpenAI's Whisper AI."
+        "title": "AI Voice to Text | Private Audio Transcriber | ToolBite",
+        "description": "Convert speech to text using OpenAI's Whisper AI. Private on-device transcription means your audio is never uploaded.",
+        "features": [
+          "OpenAI Whisper AI engine",
+          "Privacy-focused transcription",
+          "Supports MP3, WAV, M4A",
+          "Real-time local processing"
+        ]
       }
     },
     "colorPalette": {
@@ -405,8 +517,14 @@
         "uploadNewImageButton": "Upload New Image"
       },
       "seo": {
-        "title": "Color Palette | ToolBite",
-        "description": "Extract the most dominant and beautiful colors from any photograph."
+        "title": "Image Color Palette Extractor | ToolBite",
+        "description": "Extract dominant color palettes from any image. Get HEX and RGB codes for designers instantly from your photos.",
+        "features": [
+          "Dominant color extraction",
+          "HEX code generator",
+          "Designer-grade palettes",
+          "Instant image sampling"
+        ]
       }
     },
     "cronVisualizer": {
@@ -426,8 +544,14 @@
         }
       },
       "seo": {
-        "title": "Cron Visualizer | ToolBite",
-        "description": "Convert cryptic cron expressions into human-readable sentences and schedules."
+        "title": "Cron Expression Visualizer & Decoder | ToolBite",
+        "description": "Turn complex Cron schedules into human-readable English. Debug and visualize your cron expressions instantly.",
+        "features": [
+          "Human-readable decoding",
+          "Real-time cron validation",
+          "Visual schedule preview",
+          "Cron syntax support"
+        ]
       }
     }
   }

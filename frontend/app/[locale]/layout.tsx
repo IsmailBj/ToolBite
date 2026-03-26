@@ -5,16 +5,36 @@ import Navbar from "../../components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 import { getDictionary } from "@/dictionaries/get-dictionary";
 import DictionaryProvider from "@/components/DictionaryProvider";
+import { constructMetadata } from "@/lib/metadata";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "ToolBite | Your Utility Workspace",
-  description: "Fast, secure, all-in-one utility tools.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as any);
+
+  return constructMetadata({
+    title: dict.home?.seo?.title || "ToolBite | Your Utility Workspace",
+    description:
+      dict.home?.seo?.description ||
+      "Fast, secure, all-in-one utility tools directly in your browser.",
+    path: `/${locale}`,
+  });
+}
 
 export async function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "es" }];
+  return [
+    { locale: "en" },
+    { locale: "es" },
+    { locale: "fr" },
+    { locale: "de" },
+    { locale: "pl" },
+    { locale: "ru" },
+  ];
 }
 
 export default async function RootLayout({
@@ -25,16 +45,18 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }) {
   const resolvedParams = await params;
-  const dictionary = await getDictionary(resolvedParams.locale as "en" | "es");
+  const { locale } = resolvedParams;
+
+  const dictionary = await getDictionary(locale as any);
 
   return (
-    <html lang={resolvedParams.locale}>
+    <html lang={locale} className="scroll-smooth">
       <body
         className={`${inter.className} min-h-screen bg-slate-50 dark:bg-[#0a0a0a] text-slate-900 dark:text-slate-100 selection:bg-blue-100 dark:selection:bg-blue-900`}
       >
         <DictionaryProvider dictionary={dictionary}>
           <Navbar />
-          {children}
+          <main>{children}</main>
           <Analytics />
         </DictionaryProvider>
       </body>

@@ -1,10 +1,12 @@
 import { constructMetadata } from "@/lib/metadata";
 import { getDictionary } from "@/dictionaries/get-dictionary";
+import { constructJSONLD } from "@/lib/schema";
+import { Locale } from "@/proxy";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
@@ -21,6 +23,36 @@ export async function generateMetadata({
   });
 }
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+export default async function Layout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale);
+  const seo = dict.tools?.clipPathMaker?.seo;
+
+  // Generate the GEO-optimized schema for the Clip-Path Maker
+  const jsonLd = constructJSONLD({
+    name: seo?.title || "CSS Clip-Path Maker",
+    description:
+      seo?.description || "Create custom CSS clip-path shapes visually.",
+    url: `https://toolbite.space/${locale}/tools/clip-path-maker`,
+    category: "DeveloperApplication", // Optimized for developer tool queries
+    features: seo?.features,
+    locale: locale,
+  });
+
+  return (
+    <>
+      {/* Inject the JSON-LD Script */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
+  );
 }

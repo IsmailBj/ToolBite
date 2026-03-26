@@ -18,6 +18,10 @@
       "Developer": "Développeur",
       "Video": "Vidéo",
       "Security": "Sécurité"
+    },
+    "seo": {
+      "title": "ToolBite | Votre espace de travail utilitaire tout-en-un",
+      "description": "Accédez à plus de 20 outils professionnels pour développeurs et designers. 100% privé, natif du navigateur et ultra-rapide. Sans inscription."
     }
   },
   "tools": {
@@ -42,8 +46,14 @@
         "processingError": "Erreur lors du traitement de l'image."
       },
       "seo": {
-        "title": "Supprimer l'arrière-plan d'une image gratuitement | ToolBite",
-        "description": "Utilisez notre IA haute vitesse pour supprimer instantanément les arrière-plans de n'importe quelle image directement dans votre navigateur. 100% gratuit et sécurisé."
+        "title": "Suppresseur d'arrière-plan IA gratuit | ToolBite",
+        "description": "Supprimez instantanément les arrière-plans des images grâce à l'IA haute vitesse. Résultats PNG transparents professionnels directement dans votre navigateur.",
+        "features": [
+          "Traitement IA sur l'appareil",
+          "Exportation PNG haute résolution",
+          "100 % privé et sécurisé",
+          "Fonctionne avec les personnes et les produits"
+        ]
       }
     },
     "neumorphism": {
@@ -67,8 +77,14 @@
         }
       },
       "seo": {
-        "title": "Générateur de Neumorphisme | ToolBite",
-        "description": "Générez des codes hexadécimaux d'interface utilisateur douce et du CSS d'ombre complexe à partir d'une seule couleur de base."
+        "title": "Générateur CSS de Neumorphisme | Outil Soft UI | ToolBite",
+        "description": "Créez de superbes designs neumorphiques avec notre générateur d'interface douce. Personnalisez les ombres, le flou et l'intensité avec export CSS instantané.",
+        "features": [
+          "Génération CSS en temps réel",
+          "4 préréglages de formes",
+          "Sélecteur de couleurs personnalisé",
+          "Ombres Soft-UI accessibles"
+        ]
       }
     },
     "csvConverter": {
@@ -91,8 +107,14 @@
         "noValidDataError": "Aucune donnée valide fournie."
       },
       "seo": {
-        "title": "Convertisseur CSV vers JSON | ToolBite",
-        "description": "Analysez instantanément les données CSV locales en tableaux JSON formatés et en tableaux HTML visuels dans votre navigateur."
+        "title": "Convertisseur CSV vers JSON | En ligne et sécurisé | ToolBite",
+        "description": "Convertissez instantanément des fichiers CSV en JSON, tableaux HTML ou Markdown. Le traitement local sécurisé garantit que vos données ne quittent jamais votre navigateur.",
+        "features": [
+          "Analyse de données locale uniquement",
+          "Support des délimiteurs personnalisés",
+          "Exportation HTML et Markdown",
+          "Support des fichiers volumineux"
+        ]
       }
     },
     "scrollbar": {
@@ -115,8 +137,14 @@
         "copiedMessage": "Copié dans le presse-papiers !"
       },
       "seo": {
-        "title": "Générateur de barre de défilement personnalisée | ToolBite",
-        "description": "Éditeur visuel pour styliser les barres de défilement Webkit, y compris les états de piste, de curseur et de survol."
+        "title": "Générateur CSS de barre de défilement personnalisée | ToolBite",
+        "description": "Concevez visuellement des barres de défilement CSS personnalisées pour Chrome, Safari et Firefox. Aperçu en temps réel et export de code instantané.",
+        "features": [
+          "Support Webkit & Firefox",
+          "Aperçu visuel en direct",
+          "Style de la piste et du curseur",
+          "Personnalisation de l'état au survol"
+        ]
       }
     },
     "videoToGif": {
@@ -135,8 +163,14 @@
         "errorConversion": "Erreur lors de la conversion de la vidéo."
       },
       "seo": {
-        "title": "Vidéo en GIF | ToolBite",
-        "description": "Convertissez des clips vidéo en GIF animés de haute qualité et partageables."
+        "title": "Convertisseur Vidéo en GIF | Gratuit et en ligne | ToolBite",
+        "description": "Transformez vos vidéos MP4, WEBM ou MOV en GIF de haute qualité. Sans filigrane, sans téléchargement serveur, conversion 100 % privée.",
+        "features": [
+          "Conversion locale sans upload",
+          "Export GIF haute qualité",
+          "Supporte MP4, WEBM, MOV",
+          "Zéro filigrane"
+        ]
       }
     },
     "clipPathMaker": {
@@ -152,8 +186,14 @@
         "cssOutputLabel": "Sortie CSS"
       },
       "seo": {
-        "title": "Créateur de Clip-Path CSS | ToolBite",
-        "description": "Faites glisser les points du polygone pour créer des formes personnalisées et générer la propriété CSS clip-path."
+        "title": "Générateur de Clip-Path CSS | ToolBite",
+        "description": "Créez visuellement des formes CSS personnalisées. Faites glisser les points pour générer le code clip-path pour le web design moderne.",
+        "features": [
+          "Éditeur visuel de polygones",
+          "Aperçu d'image en arrière-plan",
+          "Préréglages de formes personnalisées",
+          "Export CSS instantané"
+        ]
       }
     },
     "gridBuilder": {
@@ -165,7 +205,7 @@
         "containerLabel": "Conteneur",
         "columnsLabel": "Colonnes",
         "rowsLabel": "Lignes",
-        "gapLabel": "Espacement (Gap)",
+        "gapLabel": "Espacement",
         "selectedItemLabel": "Élément sélectionné",
         "columnSpanLabel": "Étendue de colonne",
         "rowSpanLabel": "Étendue de ligne",
@@ -174,8 +214,14 @@
         "cssOutputLabel": "Sortie CSS"
       },
       "seo": {
-        "title": "Générateur de Grid CSS | ToolBite",
-        "description": "Interface visuelle pour définir les colonnes, les lignes et les espacements, avec exportation instantanée du code CSS Grid."
+        "title": "Générateur visuel de CSS Grid | ToolBite",
+        "description": "Créez des mises en page CSS Grid complexes visuellement. Définissez les colonnes, les lignes et les zones avec un éditeur interactif.",
+        "features": [
+          "Éditeur de grille interactif",
+          "Contrôles d'espacement (gap/padding)",
+          "Sortie CSS responsive",
+          "Support du span et de l'alignement"
+        ]
       }
     },
     "blobGenerator": {
@@ -190,8 +236,14 @@
         "randomizeButton": "Randomiser"
       },
       "seo": {
-        "title": "Générateur de formes Blob | ToolBite",
-        "description": "Générez des formes de blob SVG fluides et organiques pour des mises en page web et des arrière-plans modernes."
+        "title": "Générateur de Blobs SVG | Formes organiques | ToolBite",
+        "description": "Créez des formes SVG organiques uniques pour vos arrière-plans et interfaces. Personnalisez les bords et la complexité.",
+        "features": [
+          "Génération SVG aléatoire",
+          "Contrôle de la complexité",
+          "Export de code SVG instantané",
+          "Formes au design fluide"
+        ]
       }
     },
     "socialPreviewer": {
@@ -206,8 +258,14 @@
         "livePreviewsLabel": "Aperçus en direct"
       },
       "seo": {
-        "title": "Social Previewer | ToolBite",
-        "description": "Aperçu en direct et génération de balises Meta pour les cartes Twitter, Facebook et LinkedIn."
+        "title": "Prévisualiseur de Meta Tags réseaux sociaux | ToolBite",
+        "description": "Visualisez l'apparence de votre site sur Facebook, Twitter et LinkedIn. Générez instantanément vos balises Open Graph.",
+        "features": [
+          "Aperçus Twitter, FB, LinkedIn",
+          "Génération de méta Open Graph",
+          "Support image locale",
+          "Validation des balises SEO"
+        ]
       }
     },
     "uaInspector": {
@@ -218,11 +276,17 @@
         "subtitle": "Analysez les chaînes de navigateur et les empreintes digitales des appareils.",
         "userAgentStringLabel": "Chaîne User Agent",
         "analyzeStringLabel": "Analyser la chaîne",
-        "copyRawLabel": "Copier les données brutes"
+        "copyRawLabel": "Copier brut"
       },
       "seo": {
-        "title": "Inspecteur d'UA | ToolBite",
-        "description": "Détectez et analysez les chaînes User-Agent pour identifier les navigateurs, les systèmes d'exploitation et les détails du matériel."
+        "title": "Analyseur et Inspecteur de User-Agent | ToolBite",
+        "description": "Identifiez instantanément la version du navigateur, le système d'exploitation et le matériel à partir de n'importe quel User-Agent.",
+        "features": [
+          "Analyse approfondie de la chaîne",
+          "Détection appareil et OS",
+          "Identification du moteur navigateur",
+          "Outil de débogage développeur"
+        ]
       }
     },
     "shadowGenerator": {
@@ -240,8 +304,14 @@
         "previewCardLabel": "Carte d'aperçu"
       },
       "seo": {
-        "title": "Générateur de palette d'ombres | ToolBite",
-        "description": "Créez des ombres CSS lisses et multicouches pour des éléments d'interface utilisateur d'aspect naturel."
+        "title": "Générateur d'ombres CSS fluides | ToolBite",
+        "description": "Générez des ombres portées (box-shadow) multicouches et organiques. Personnalisez le flou et l'opacité pour un design réaliste.",
+        "features": [
+          "Ombres multicouches",
+          "Flou organique réaliste",
+          "Couleurs d'ombre personnalisées",
+          "Code CSS prêt pour la production"
+        ]
       }
     },
     "safeLink": {
@@ -259,8 +329,14 @@
         "clearButton": "Effacer"
       },
       "seo": {
-        "title": "Encodeur de liens sécurisés | ToolBite",
-        "description": "Obscurcissez les liens pour les cacher des bots et des scrapers en utilisant l'encodage natif du navigateur."
+        "title": "Obfuscateur d'URL | Protégez vos liens des bots | ToolBite",
+        "description": "Encodez vos liens pour empêcher les bots et scrapers de les détecter. Encodage natif simple et sécurisé.",
+        "features": [
+          "Protection anti-bot",
+          "Obfuscation Base64 & URL",
+          "Traitement côté client",
+          "Encodage/Décodage instantané"
+        ]
       }
     },
     "markdownLab": {
@@ -277,8 +353,14 @@
         "clearButton": "Effacer l'éditeur"
       },
       "seo": {
-        "title": "Markdown Lab | ToolBite",
-        "description": "Éditeur Markdown en temps réel avec aperçu HTML en direct et assainissement."
+        "title": "Éditeur Markdown avec aperçu HTML en direct | ToolBite",
+        "description": "Écrivez et prévisualisez le Markdown en temps réel. Sortie HTML propre, assainissement sécurisé et support des snippets.",
+        "features": [
+          "Aperçu HTML en temps réel",
+          "Assainissement HTML sécurisé",
+          "Export Markdown vers HTML",
+          "Éditeur prêt pour les snippets"
+        ]
       }
     },
     "imageCompressor": {
@@ -311,8 +393,14 @@
         }
       },
       "seo": {
-        "title": "Compresseur d'image | ToolBite",
-        "description": "Réduisez la taille des fichiers image jusqu'à 80 % sans perdre la qualité visuelle."
+        "title": "Compresser des images en ligne | Sans perte de qualité | ToolBite",
+        "description": "Réduisez le poids des images JPG, PNG et WEBP jusqu'à 80 %. Chargement plus rapide sans perte de qualité visuelle.",
+        "features": [
+          "Compression locale uniquement",
+          "Supporte JPG, PNG, WEBP",
+          "Traitement par lots",
+          "Zéro transfert de données"
+        ]
       }
     },
     "unitPro": {
@@ -325,8 +413,14 @@
         "toLabel": "À"
       },
       "seo": {
-        "title": "Convertisseur d'unités Pro | ToolBite",
-        "description": "Conversion avancée pour les unités web (PX/REM), le stockage numérique et la longueur physique."
+        "title": "Convertisseur d'unités professionnel | PX vers REM & plus | ToolBite",
+        "description": "Convertissez les unités de design comme PX en REM, le stockage numérique et les mesures physiques avec haute précision.",
+        "features": [
+          "Convertisseur Design PX vers REM",
+          "Unités de stockage numérique",
+          "Calculs haute précision",
+          "Unités orientées développeur"
+        ]
       }
     },
     "pdfSurgeon": {
@@ -348,8 +442,14 @@
         "extractPagesButton": "Extraire les pages"
       },
       "seo": {
-        "title": "PDF Surgeon | ToolBite",
-        "description": "Fusionnez plusieurs documents ou extrayez des pages spécifiques avec une précision extrême."
+        "title": "Fusionner et diviser PDF en ligne | 100 % privé | ToolBite",
+        "description": "Combinez des fichiers PDF ou extrayez des pages avec une précision chirurgicale. Tout se passe localement.",
+        "features": [
+          "Traitement local (confidentialité)",
+          "Fusionner plusieurs PDF",
+          "Diviser et extraire des pages",
+          "Aucune limite de taille de fichier"
+        ]
       }
     },
     "secretShield": {
@@ -369,8 +469,14 @@
         "startNewLabel": "Recommencer"
       },
       "seo": {
-        "title": "Secret Shield | ToolBite",
-        "description": "Cryptage AES-256 de qualité militaire. Sécurisez n'importe quel fichier localement dans votre navigateur."
+        "title": "Cryptage de fichier AES-256 | Sécurité militaire | ToolBite",
+        "description": "Sécurisez vos fichiers avec le cryptage AES-256. La sécurité Zero-Knowledge garantit que vos fichiers sont cryptés localement.",
+        "features": [
+          "Qualité militaire AES-256",
+          "Sécurité Zero-Knowledge",
+          "Cryptage sur l'appareil",
+          "Tous types de fichiers"
+        ]
       }
     },
     "voiceNotes": {
@@ -391,8 +497,14 @@
         "errorWordGeneration": "Échec de la génération du document Word."
       },
       "seo": {
-        "title": "Notes vocales | ToolBite",
-        "description": "Convertissez instantanément la parole en texte à l'aide de l'IA Whisper d'OpenAI."
+        "title": "Transcription Audio IA | Transcripteur privé | ToolBite",
+        "description": "Convertissez la parole en texte avec Whisper AI. La transcription locale garantit que votre audio n'est jamais mis en ligne.",
+        "features": [
+          "Moteur OpenAI Whisper AI",
+          "Transcription confidentielle",
+          "Supporte MP3, WAV, M4A",
+          "Traitement local temps réel"
+        ]
       }
     },
     "colorPalette": {
@@ -405,8 +517,14 @@
         "uploadNewImageButton": "Télécharger une nouvelle image"
       },
       "seo": {
-        "title": "Palette de couleurs | ToolBite",
-        "description": "Extrayez les couleurs les plus dominantes et les plus belles de n'importe quelle photographie."
+        "title": "Extracteur de palette de couleurs | ToolBite",
+        "description": "Extrayez les palettes de couleurs dominantes de n'importe quelle image. Obtenez instantanément les codes HEX et RGB.",
+        "features": [
+          "Extraction couleur dominante",
+          "Générateur de code HEX",
+          "Palettes pour designers",
+          "Échantillonnage instantané"
+        ]
       }
     },
     "cronVisualizer": {
@@ -419,15 +537,21 @@
         "scheduleDescriptionLabel": "Description du calendrier",
         "invalidError": "Expression Cron invalide. Veuillez vérifier le format.",
         "examples": {
-          "every5Mins": "Toutes les 5 minutes",
+          "every5Mins": "Toutes les 5 min",
           "everyHour": "Toutes les heures",
           "midnightDaily": "Tous les jours à minuit",
           "everyMonday": "Tous les lundis"
         }
       },
       "seo": {
-        "title": "Visualiseur Cron | ToolBite",
-        "description": "Convertissez les expressions cron cryptiques en phrases et calendriers lisibles par l'homme."
+        "title": "Visualiseur et Décodeur d'expressions Cron | ToolBite",
+        "description": "Transformez les planifications Cron complexes en texte lisible. Déboguez et visualisez vos expressions cron instantanément.",
+        "features": [
+          "Décodage lisible par l'homme",
+          "Validation cron temps réel",
+          "Aperçu visuel du calendrier",
+          "Support de la syntaxe cron"
+        ]
       }
     }
   }
