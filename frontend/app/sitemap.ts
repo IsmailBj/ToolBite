@@ -1,25 +1,31 @@
 import { MetadataRoute } from "next";
-import { tools } from "@/config/tools";
+import { getTools } from "@/config/tools"; // Import the function instead
+import { locales } from "@/proxy";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://toolbite.space";
 
-  // 1. Generate URLs for all active tools dynamically
-  const toolUrls = tools.map((tool) => ({
-    url: `${baseUrl}${tool.href}`,
+  // 1. Call the function with an empty object to get the array
+  // We don't need real translations for the sitemap URLs, just the hrefs.
+  const tools = getTools({});
+
+  // 2. Generate homepage URLs
+  const homeUrls = locales.map((locale) => ({
+    url: `${baseUrl}/${locale}`,
     lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
+    changeFrequency: "daily" as const,
+    priority: 1.0,
   }));
 
-  // 2. Combine the homepage URL with the tool URLs
-  return [
-    {
-      url: baseUrl,
+  // 3. Generate tool URLs using the 'href' from the returned array
+  const toolUrls = locales.flatMap((locale) =>
+    tools.map((tool) => ({
+      url: `${baseUrl}/${locale}${tool.href}`,
       lastModified: new Date(),
-      changeFrequency: "daily" as const,
-      priority: 1.0,
-    },
-    ...toolUrls,
-  ];
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    })),
+  );
+
+  return [...homeUrls, ...toolUrls];
 }
