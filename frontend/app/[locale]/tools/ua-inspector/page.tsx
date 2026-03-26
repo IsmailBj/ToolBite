@@ -13,11 +13,16 @@ import {
   Check,
 } from "lucide-react";
 import { parseUserAgent, UAInfo } from "../../../../utils/ua-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function UaInspectorPage() {
   const [uaInput, setUaInput] = useState("");
   const [info, setInfo] = useState<UAInfo | null>(null);
   const [copied, setCopied] = useState(false);
+
+  const dict = useDictionary();
+  const ui = dict.tools?.uaInspector?.page;
 
   useEffect(() => {
     const currentUA = navigator.userAgent;
@@ -61,13 +66,7 @@ export default function UaInspectorPage() {
 
   return (
     <main className="max-w-5xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 mb-8 transition-colors group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/40 rounded-2xl flex items-center justify-center">
@@ -75,10 +74,10 @@ export default function UaInspectorPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            UA Inspector
+            {ui?.title || "UA Inspector"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Analyze browser strings and device fingerprints.
+            {ui?.subtitle || "Analyze browser strings and device fingerprints."}
           </p>
         </div>
       </div>
@@ -87,7 +86,7 @@ export default function UaInspectorPage() {
         {/* Input Area */}
         <div className="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 shadow-xl">
           <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-3 ml-1">
-            User Agent String
+            {ui?.userAgentStringLabel || "User Agent String"}
           </label>
           <div className="flex gap-3">
             <textarea
@@ -101,7 +100,7 @@ export default function UaInspectorPage() {
               onClick={handleInspect}
               className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition-all shadow-md"
             >
-              Analyze String
+              {ui?.analyzeStringLabel || "Analyze String"}
             </button>
             <button
               onClick={copyRaw}
@@ -112,7 +111,7 @@ export default function UaInspectorPage() {
               ) : (
                 <Copy className="w-4 h-4" />
               )}
-              Copy Raw
+              {ui?.copyRawLabel || "Copy Raw"}
             </button>
           </div>
         </div>

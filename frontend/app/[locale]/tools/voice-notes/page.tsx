@@ -14,6 +14,8 @@ import {
   Trash2,
 } from "lucide-react";
 import { transcribeAudioWithWorker } from "../../../../utils/transcribe-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function VoiceNotesPage() {
   const [isRecording, setIsRecording] = useState(false);
@@ -25,6 +27,9 @@ export default function VoiceNotesPage() {
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
+
+  const dict = useDictionary();
+  const ui = dict.tools?.voiceNotes?.page;
 
   // Cleanup URLs to avoid memory leaks
   useEffect(() => {
@@ -48,9 +53,10 @@ export default function VoiceNotesPage() {
       });
       setTranscript(text);
     } catch (err: any) {
-      setError(
-        "Transcription failed. The file might be too large for your device's memory.",
-      );
+      {
+        ui?.errorTranscriptionFailed ||
+          "Transcription failed. The file might be too large for your device's memory.";
+      }
     } finally {
       setIsProcessing(false);
       setProgress(100);
@@ -78,9 +84,10 @@ export default function VoiceNotesPage() {
       setIsRecording(true);
       setError("");
     } catch (err) {
-      setError(
-        "Microphone access denied. Please check your browser permissions.",
-      );
+      {
+        ui?.errorMicAccessDenied ||
+          "Microphone access denied. Please check your browser permissions.";
+      }
     }
   };
 
@@ -148,19 +155,15 @@ export default function VoiceNotesPage() {
       link.click();
       URL.revokeObjectURL(url);
     } catch (err) {
-      setError("Failed to generate Word document.");
+      {
+        ui?.errorWordGeneration || "Failed to generate Word document.";
+      }
     }
   };
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 mb-8 transition-colors group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/40 rounded-2xl flex items-center justify-center">
@@ -168,10 +171,11 @@ export default function VoiceNotesPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            Voice Notes
+            {ui?.title || "Voice Notes"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Audio to text. Whisper AI running locally in your browser.
+            {ui?.subtitle ||
+              "Audio to text. Whisper AI running locally in your browser."}
           </p>
         </div>
       </div>
@@ -201,7 +205,7 @@ export default function VoiceNotesPage() {
                 {isRecording ? "Stop Recording" : "Record Live"}
               </span>
               <p className="text-sm text-slate-500 mt-2">
-                Speak clearly into your mic
+                {ui?.speakClearlyLabel || "Speak clearly into your mic"}
               </p>
             </button>
 
@@ -219,10 +223,10 @@ export default function VoiceNotesPage() {
                 <FileAudio className="text-slate-600 dark:text-slate-300 w-8 h-8" />
               </div>
               <span className="font-bold text-lg text-slate-900 dark:text-white">
-                Upload Audio
+                {ui?.uploadAudioLabel || "Upload Audio"}
               </span>
               <p className="text-sm text-slate-500 mt-2">
-                MP3, WAV, M4A supported
+                {ui?.supportedFormatsLabel || "MP3, WAV, M4A supported"}
               </p>
             </label>
           </div>
@@ -233,10 +237,11 @@ export default function VoiceNotesPage() {
           <div className="text-center py-20 animate-pulse">
             <RefreshCw className="w-12 h-12 text-indigo-600 animate-spin mx-auto mb-6" />
             <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">
-              Transcribing...
+              {ui?.transcribingStatus || "Transcribing..."}
             </h3>
             <p className="text-slate-500 dark:text-slate-400 mb-6">
-              Running Whisper AI model on your device.
+              {ui?.modelRunningLabel ||
+                "Running Whisper AI model on your device."}
             </p>
             <div className="w-full max-w-xs mx-auto bg-slate-200 dark:bg-slate-700 rounded-full h-2">
               <div
@@ -245,7 +250,8 @@ export default function VoiceNotesPage() {
               ></div>
             </div>
             <p className="text-xs text-slate-400 mt-4 italic">
-              First load may take a minute to download models (~40MB).
+              {ui?.firstLoadNotice ||
+                "First load may take a minute to download models (~40MB)."}
             </p>
           </div>
         )}
@@ -255,7 +261,7 @@ export default function VoiceNotesPage() {
           <div className="animate-in fade-in slide-in-from-top-4 duration-500">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4">
               <h3 className="font-bold text-xl text-slate-900 dark:text-white">
-                Transcription Result
+                {ui?.transcriptionResultLabel || "Transcription Result"}
               </h3>
               <div className="flex flex-wrap gap-2">
                 <button

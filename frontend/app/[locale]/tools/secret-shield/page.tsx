@@ -13,6 +13,8 @@ import {
   RefreshCw,
 } from "lucide-react";
 import { encryptFile, decryptFile } from "../../../../utils/encryption-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function SecretShieldPage() {
   const [mode, setMode] = useState<"encrypt" | "decrypt">("encrypt");
@@ -22,6 +24,9 @@ export default function SecretShieldPage() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [resultUrl, setResultUrl] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const dict = useDictionary();
+  const ui = dict.tools?.secretShield?.page;
 
   const handleFileSelect = (file: File) => {
     setError("");
@@ -59,13 +64,7 @@ export default function SecretShieldPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 mb-8 transition-colors group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/40 rounded-2xl flex items-center justify-center shadow-sm">
@@ -77,10 +76,11 @@ export default function SecretShieldPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            Secret Shield
+            {ui?.title || "Secret Shield"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            AES-256 military-grade encryption. Happens entirely in your browser.
+            {ui?.subtitle ||
+              "AES-256 military-grade encryption. Happens entirely in your browser."}
           </p>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function SecretShieldPage() {
                 : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200"
             }`}
           >
-            Encrypt
+            {ui?.encryptLabel || "Encrypt"}
           </button>
           <button
             onClick={() => {
@@ -112,7 +112,7 @@ export default function SecretShieldPage() {
                 : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200"
             }`}
           >
-            Decrypt
+            {ui?.decryptLabel || "Decrypt"}
           </button>
         </div>
 
@@ -131,10 +131,11 @@ export default function SecretShieldPage() {
             />
             <FileKey className="w-12 h-12 text-slate-300 dark:text-slate-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-              Select file to {mode}
+              {ui?.selectFileLabel || "Select file to"} {mode}
             </h3>
             <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-              Privacy first: Files never leave your device.
+              {ui?.privacyNote ||
+                "Privacy first: Files never leave your device."}
             </p>
           </div>
         ) : !resultUrl ? (
@@ -147,12 +148,12 @@ export default function SecretShieldPage() {
                 onClick={reset}
                 className="text-xs text-red-500 hover:text-red-600 font-bold ml-2"
               >
-                Remove
+                {ui?.removeLabel || "Remove"}
               </button>
             </div>
             <div className="space-y-2">
               <label className="text-sm font-semibold ml-1 text-slate-700 dark:text-slate-300">
-                Set Password
+                {ui?.setPasswordLabel || "Set Password"}
               </label>
               <input
                 type="password"
@@ -187,7 +188,8 @@ export default function SecretShieldPage() {
               <ShieldCheck className="w-10 h-10 text-green-600 dark:text-green-400" />
             </div>
             <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">
-              File {mode === "encrypt" ? "Encrypted" : "Decrypted"}!
+              {ui?.fileLabel || "File"}{" "}
+              {mode === "encrypt" ? "Encrypted" : "Decrypted"}!
             </h2>
             <div className="flex flex-col gap-4 items-center">
               <a
@@ -199,13 +201,14 @@ export default function SecretShieldPage() {
                 }
                 className="inline-flex items-center px-10 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-xl hover:scale-105 transition-transform shadow-xl"
               >
-                <Download className="mr-2 w-5 h-5" /> Download Result
+                <Download className="mr-2 w-5 h-5" />{" "}
+                {ui?.downloadResultLabel || "Download Result"}
               </a>
               <button
                 onClick={reset}
                 className="mt-2 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 font-medium transition-colors"
               >
-                Start New
+                {ui?.startNewLabel || "Start New"}
               </button>
             </div>
           </div>

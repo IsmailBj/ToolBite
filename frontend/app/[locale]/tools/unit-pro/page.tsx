@@ -11,6 +11,8 @@ import {
   Check,
 } from "lucide-react";
 import { convertUnits, CONVERSION_DATA } from "../../../../utils/unit-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 type Category = "design" | "storage" | "length";
 
@@ -21,6 +23,9 @@ export default function UnitProPage() {
   const [toUnit, setToUnit] = useState("REM");
   const [result, setResult] = useState<number>(1);
   const [copied, setCopied] = useState(false);
+
+  const dict = useDictionary();
+  const ui = dict.tools?.unitPro?.page;
 
   useEffect(() => {
     const units =
@@ -58,13 +63,7 @@ export default function UnitProPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400 hover:text-emerald-600 mb-8 transition-colors group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/40 rounded-2xl flex items-center justify-center">
@@ -72,10 +71,11 @@ export default function UnitProPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            Unit Converter Pro
+            {ui?.title || "Unit Converter Pro"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Precision conversion for design, dev, and daily tasks.
+            {ui?.subtitle ||
+              "Precision conversion for design, dev, and daily tasks."}
           </p>
         </div>
       </div>
@@ -100,7 +100,7 @@ export default function UnitProPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-4">
             <label className="text-sm font-bold text-slate-500 ml-1 uppercase">
-              From
+              {ui?.fromLabel || "From"}
             </label>
             <div className="flex gap-2">
               <input
@@ -128,7 +128,7 @@ export default function UnitProPage() {
 
           <div className="space-y-4">
             <label className="text-sm font-bold text-slate-500 ml-1 uppercase">
-              To
+              {ui?.toLabel || "To"}
             </label>
             <div className="flex gap-2">
               <div className="w-full px-5 py-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl border border-emerald-100 dark:border-emerald-800/50 text-xl font-bold text-emerald-700 dark:text-emerald-400 flex items-center">

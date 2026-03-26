@@ -1,0 +1,434 @@
+{
+  "common": {
+    "backToWorkspace": "Zurück zum Arbeitsbereich",
+    "copy": "Ausgabe kopieren",
+    "download": "Datei herunterladen"
+  },
+  "home": {
+    "title1": "Ihr All-in-One",
+    "title2": "Utility-Arbeitsbereich.",
+    "subtitle": "Schnell, sicher und direkt in Ihrem Browser ausgeführt.",
+    "search": "Nach Tools suchen...",
+    "launch": "Tool starten",
+    "noTools": "Keine Tools gefunden, die Ihren Kriterien entsprechen.",
+    "reset": "Filter zurücksetzen",
+    "categories": {
+      "All": "Alle",
+      "Design": "Design",
+      "Developer": "Entwickler",
+      "Video": "Video",
+      "Security": "Sicherheit"
+    }
+  },
+  "tools": {
+    "bgRemover": {
+      "title": "Hintergrund-Entferner",
+      "description": "Entfernen Sie Hintergründe von jedem Bild sofort mit Hochgeschwindigkeits-KI.",
+      "page": {
+        "title": "Hintergrund-Entferner",
+        "subtitle": "Extrahieren Sie Motive aus Bildern sofort mit On-Device-KI.",
+        "dropzoneLabel": "Bild hier ablegen",
+        "uploadHint": "Funktioniert am besten mit klaren Motiven (Personen, Produkte, Tiere).",
+        "selectBtn": "Bild auswählen",
+        "initialDownloadNotice": "Beim ersten Durchlauf wird die KI heruntergeladen (dauert einen Moment).",
+        "removeBgBtn": "Hintergrund entfernen",
+        "cancelBtn": "Abbrechen",
+        "successMessage": "Motiv extrahiert! ✨",
+        "downloadBtn": "PNG herunterladen",
+        "startOverBtn": "Neu starten",
+        "errorMessage": "Fehler",
+        "imageValidationError": "Bitte laden Sie eine gültige Bilddatei hoch (JPEG, PNG, WEBP).",
+        "wakingModel": "KI-Modell wird gestartet...",
+        "processingError": "Fehler bei der Bildverarbeitung."
+      },
+      "seo": {
+        "title": "Bildhintergrund kostenlos entfernen | ToolBite",
+        "description": "Nutzen Sie unsere Hochgeschwindigkeits-KI, um Hintergründe von jedem Bild sofort in Ihrem Browser zu entfernen. 100 % kostenlos und sicher."
+      }
+    },
+    "neumorphism": {
+      "title": "Neumorphismus-Generator",
+      "description": "Erzeugen Sie weiche UI-Hex-Codes und komplexe Schatten-CSS basierend auf einer einzigen Basisfarbe.",
+      "page": {
+        "title": "Neumorphismus-Generator",
+        "subtitle": "Erzeugen Sie weichen UI-CSS-Code basierend auf einer einzigen Basisfarbe.",
+        "baseColorLabel": "Basisfarbe",
+        "shapeLabel": "Form",
+        "distanceLabel": "Abstand",
+        "blurLabel": "Weichzeichner",
+        "intensityLabel": "Intensität",
+        "cssOutputLabel": "CSS-Ausgabe",
+        "copyButton": "CSS kopieren",
+        "shapes": {
+          "flat": "Flach",
+          "concave": "Konkav",
+          "convex": "Konvex",
+          "pressed": "Gedrückt"
+        }
+      },
+      "seo": {
+        "title": "Neumorphismus-Generator | ToolBite",
+        "description": "Erzeugen Sie weiche UI-Hex-Codes und komplexe Schatten-CSS basierend auf einer einzigen Basisfarbe."
+      }
+    },
+    "csvConverter": {
+      "title": "CSV zu JSON",
+      "description": "Analysieren Sie lokale CSV-Daten in formatierte JSON-Arrays und visuelle HTML-Tabellen.",
+      "page": {
+        "title": "CSV-zu-JSON-Konverter",
+        "subtitle": "Robuster Parser mit benutzerdefinierten Trennzeichen, JSON-, HTML- und Markdown-Export.",
+        "configurationLabel": "Konfiguration",
+        "delimiterLabel": "Trennzeichen",
+        "delimiters": {
+          "comma": "Komma (,)",
+          "semicolon": "Semikolon (;)",
+          "tab": "Tabulator",
+          "pipe": "Pipe (|)"
+        },
+        "firstRowHeadersLabel": "Erste Zeile enthält Kopfzeilen",
+        "rawInputLabel": "Rohdateneingabe",
+        "uploadButtonLabel": "Hochladen",
+        "noValidDataError": "Keine gültigen Daten angegeben."
+      },
+      "seo": {
+        "title": "CSV-zu-JSON-Konverter | ToolBite",
+        "description": "Analysieren Sie lokale CSV-Daten sofort in Ihrem Browser in formatierte JSON-Arrays und visuelle HTML-Tabellen."
+      }
+    },
+    "scrollbar": {
+      "title": "Benutzerdefinierte Bildlaufleiste",
+      "description": "Visueller Editor zum Stylen von Webkit-Bildlaufleisten einschließlich Track, Thumb und Hover-Zuständen.",
+      "page": {
+        "title": "Benutzerdefinierte Bildlaufleiste",
+        "subtitle": "Browserübergreifender visueller Editor für Webkit- und Firefox-Bildlaufleisten.",
+        "dimensionsLabel": "Breite / Höhe",
+        "paddingLabel": "Padding (Schwebender Effekt)",
+        "borderRadiusLabel": "Abgerundete Ecken",
+        "trackColorLabel": "Track-Farbe",
+        "thumbColorLabel": "Thumb-Farbe",
+        "thumbHoverLabel": "Thumb-Hover",
+        "cssOutputLabel": "CSS-Ausgabe",
+        "livePreviewLabel": "Live-Vorschau",
+        "scrollContentLabel": "Vertikaler & Horizontaler Scroll-Inhalt",
+        "copyButton": "CSS kopieren",
+        "resetButton": "Standardwerte zurücksetzen",
+        "copiedMessage": "In die Zwischenablage kopiert!"
+      },
+      "seo": {
+        "title": "Generator für benutzerdefinierte Bildlaufleisten | ToolBite",
+        "description": "Visueller Editor zum Stylen von Webkit-Bildlaufleisten einschließlich Track, Thumb und Hover-Zuständen."
+      }
+    },
+    "videoToGif": {
+      "title": "Video zu GIF",
+      "description": "Konvertieren Sie Videoclips in hochwertige, teilbare animierte GIFs.",
+      "page": {
+        "title": "Video zu GIF",
+        "subtitle": "Konvertieren Sie Videos vollständig in Ihrem Browser in hochwertige GIFs.",
+        "selectVideoLabel": "Video auswählen",
+        "convertToGifLabel": "In GIF konvertieren",
+        "conversionCompleteLabel": "Konvertierung abgeschlossen! ✨",
+        "cancelLabel": "Abbrechen",
+        "downloadGifLabel": "GIF herunterladen",
+        "convertAnotherLabel": "Weiteres konvertieren",
+        "errorInvalidVideo": "Bitte laden Sie eine gültige Videodatei hoch (MP4, WEBM, MOV).",
+        "errorConversion": "Fehler beim Konvertieren des Videos."
+      },
+      "seo": {
+        "title": "Video zu GIF | ToolBite",
+        "description": "Konvertieren Sie Videoclips in hochwertige, teilbare animierte GIFs."
+      }
+    },
+    "clipPathMaker": {
+      "title": "CSS Clip-Path Maker",
+      "description": "Ziehen Sie Polygonpunkte, um benutzerdefinierte Formen zu erstellen und die CSS-Eigenschaft clip-path auszugeben.",
+      "page": {
+        "title": "CSS Clip-Path Maker",
+        "subtitle": "Fortgeschrittener Generator mit Drag-Steuerung und Bildvorschau.",
+        "shapeTypeLabel": "Formtyp",
+        "presetsLabel": "Voreinstellungen",
+        "customImageLabel": "Benutzerdefiniertes Bild",
+        "uploadButtonLabel": "Bild hochladen",
+        "cssOutputLabel": "CSS-Ausgabe"
+      },
+      "seo": {
+        "title": "CSS Clip-Path Maker | ToolBite",
+        "description": "Ziehen Sie Polygonpunkte, um benutzerdefinierte Formen zu erstellen und die CSS-Eigenschaft clip-path auszugeben."
+      }
+    },
+    "gridBuilder": {
+      "title": "CSS Grid Builder",
+      "description": "Visuelle Oberfläche zum Definieren von Spalten, Zeilen und Abständen, mit sofortigem Export von CSS-Grid-Code.",
+      "page": {
+        "title": "CSS Grid Builder",
+        "subtitle": "Definieren Sie Spalten, Zeilen, Spannen und Abstände visuell, um Grid-Code zu generieren.",
+        "containerLabel": "Container",
+        "columnsLabel": "Spalten",
+        "rowsLabel": "Zeilen",
+        "gapLabel": "Abstand (Gap)",
+        "selectedItemLabel": "Ausgewähltes Element",
+        "columnSpanLabel": "Spalten-Spanne",
+        "rowSpanLabel": "Zeilen-Spanne",
+        "addBlockButton": "Block hinzufügen",
+        "removeBlockButton": "Block entfernen",
+        "cssOutputLabel": "CSS-Ausgabe"
+      },
+      "seo": {
+        "title": "CSS Grid Builder | ToolBite",
+        "description": "Visuelle Oberfläche zum Definieren von Spalten, Zeilen und Abständen, mit sofortigem Export von CSS-Grid-Code."
+      }
+    },
+    "blobGenerator": {
+      "title": "Blob-Form-Generator",
+      "description": "Erzeugen Sie flüssige, organische SVG-Blob-Formen für moderne Web-Layouts und Hintergründe.",
+      "page": {
+        "blobTitle": "Blob-Form-Generator",
+        "blobSubtitle": "Erstellen Sie organische SVG-Formen für Ihre Web-Designs.",
+        "parameters": "Parameter",
+        "edgesLabel": "Kanten (Komplexität)",
+        "growthLabel": "Wachstum (Zufälligkeit)",
+        "randomizeButton": "Zufällig generieren"
+      },
+      "seo": {
+        "title": "Blob-Form-Generator | ToolBite",
+        "description": "Erzeugen Sie flüssige, organische SVG-Blob-Formen für moderne Web-Layouts und Hintergründe."
+      }
+    },
+    "socialPreviewer": {
+      "title": "Social Previewer",
+      "description": "Live-Vorschau und Generierung von Meta-Tags für Twitter-, Facebook- und LinkedIn-Cards.",
+      "page": {
+        "title": "Social Previewer",
+        "subtitle": "Vorschau und Generierung von SEO-Meta-Tags mit Unterstützung für lokale Bilder.",
+        "pageTitleLabel": "Seitentitel",
+        "descriptionLabel": "Beschreibung",
+        "previewImageLabel": "Vorschaubild",
+        "livePreviewsLabel": "Live-Vorschauen"
+      },
+      "seo": {
+        "title": "Social Previewer | ToolBite",
+        "description": "Live-Vorschau und Generierung von Meta-Tags für Twitter-, Facebook- und LinkedIn-Cards."
+      }
+    },
+    "uaInspector": {
+      "title": "UA Inspector",
+      "description": "Erkennen und Analysieren von User-Agent-Strings zur Identifizierung von Browsern, Betriebssystemen und Hardwaredetails.",
+      "page": {
+        "title": "UA Inspector",
+        "subtitle": "Browser-Strings und Geräte-Fingerabdrücke analysieren.",
+        "userAgentStringLabel": "User-Agent-String",
+        "analyzeStringLabel": "String analysieren",
+        "copyRawLabel": "Rohdaten kopieren"
+      },
+      "seo": {
+        "title": "UA Inspector | ToolBite",
+        "description": "Erkennen und Analysieren von User-Agent-Strings zur Identifizierung von Browsern, Betriebssystemen und Hardwaredetails."
+      }
+    },
+    "shadowGenerator": {
+      "title": "Schatten-Paletten-Generator",
+      "description": "Erstellen Sie glatte, mehrschichtige CSS-Schatten für natürlich aussehende UI-Elemente.",
+      "page": {
+        "title": "Schatten-Paletten-Generator",
+        "subtitle": "Erstellen Sie natürliche, geschichtete CSS-Schatten mit benutzerdefinierten Farben.",
+        "parametersLabel": "Parameter",
+        "layersLabel": "Ebenen",
+        "blurStrengthLabel": "Stärke (Weichzeichner)",
+        "maxOpacityLabel": "Max. Deckkraft",
+        "shadowColorLabel": "Schattenfarbe",
+        "generatedCssLabel": "Generiertes CSS",
+        "previewCardLabel": "Vorschau-Karte"
+      },
+      "seo": {
+        "title": "Schatten-Paletten-Generator | ToolBite",
+        "description": "Erstellen Sie glatte, mehrschichtige CSS-Schatten für natürlich aussehende UI-Elemente."
+      }
+    },
+    "safeLink": {
+      "title": "Safe-Link Encoder",
+      "description": "Verschleiern Sie Links, um sie mithilfe von browser-nativer Kodierung vor Bots und Scrapern zu verbergen.",
+      "page": {
+        "title": "Safe-Link Encoder",
+        "subtitle": "URLs verschleiern, um sie vor Scrapern und Bots zu schützen.",
+        "invalidUrlWarning": "Warnung: Dies sieht nicht nach einer gültigen URL aus, aber ich werde sie trotzdem kodieren.",
+        "encodeButton": "Kodieren",
+        "decodeButton": "Dekodieren",
+        "resultLabel": "Ergebnis",
+        "copyButton": "In die Zwischenablage kopieren",
+        "urlPlaceholder": "URL oder Code hier eingeben...",
+        "clearButton": "Löschen"
+      },
+      "seo": {
+        "title": "Safe-Link Encoder | ToolBite",
+        "description": "Verschleiern Sie Links, um sie mithilfe von browser-nativer Kodierung vor Bots und Scrapern zu verbergen."
+      }
+    },
+    "markdownLab": {
+      "title": "Markdown Lab",
+      "description": "Echtzeit-Markdown-Editor mit Live-HTML-Vorschau und Bereinigung.",
+      "page": {
+        "title": "Markdown Lab",
+        "subtitle": "Schreiben Sie mit Snippets und sehen Sie sich gestaltetes HTML in Echtzeit an.",
+        "copyMdButton": "MD kopieren",
+        "downloadHtmlButton": "HTML herunterladen",
+        "livePreviewLabel": "Live-Vorschau",
+        "editorPlaceholder": "# Hallo Welt\nBeginnen Sie hier mit dem Tippen Ihres Markdowns...",
+        "copyHtmlButton": "HTML kopieren",
+        "clearButton": "Editor löschen"
+      },
+      "seo": {
+        "title": "Markdown Lab | ToolBite",
+        "description": "Echtzeit-Markdown-Editor mit Live-HTML-Vorschau und Bereinigung."
+      }
+    },
+    "imageCompressor": {
+      "title": "Bildkompressor",
+      "description": "Verkleinern Sie Bilddateigrößen um bis zu 80 % ohne Verlust der visuellen Qualität.",
+      "page": {
+        "title": "Bildkompressor",
+        "subtitle": "Verkleinern Sie JPEGs, PNGs und WEBPs ohne visuellen Qualitätsverlust.",
+        "backToWorkspace": "Zurück zum Arbeitsbereich",
+        "dropzoneLabel": "Bild hier ablegen",
+        "uploadRestrictions": "Unterstützt JPG, PNG und WEBP bis zu 15 MB.",
+        "selectImageButton": "Bild auswählen",
+        "compressionSettingsLabel": "Komprimierungseinstellungen",
+        "imageQualityLabel": "Bildqualität",
+        "smallestFileLabel": "Kleinste Datei",
+        "bestQualityLabel": "Beste Qualität",
+        "compressingLabel": "Komprimierung...",
+        "cancelButton": "Abbrechen",
+        "compressionCompleteLabel": "Komprimierung abgeschlossen! 🎉",
+        "originalSizeLabel": "Originalgröße",
+        "newSizeLabel": "NEU",
+        "compressedSizeLabel": "Komprimierte Größe",
+        "totalSavedLabel": "Gesamt gespart",
+        "downloadImageButton": "Bild herunterladen",
+        "compressAnotherButton": "Weiteres komprimieren",
+        "compressionErrorLabel": "Komprimierungsfehler",
+        "errors": {
+          "invalidFile": "Bitte laden Sie eine gültige Bilddatei hoch (JPEG, PNG, WEBP).",
+          "processingError": "Fehler bei der Bildverarbeitung."
+        }
+      },
+      "seo": {
+        "title": "Bildkompressor | ToolBite",
+        "description": "Verkleinern Sie Bilddateigrößen um bis zu 80 % ohne Verlust der visuellen Qualität."
+      }
+    },
+    "unitPro": {
+      "title": "Unit Converter Pro",
+      "description": "Fortgeschrittene Konvertierung für Web-Einheiten (PX/REM), digitalen Speicher und physische Länge.",
+      "page": {
+        "title": "Unit Converter Pro",
+        "subtitle": "Präzisionskonvertierung für Design, Entwicklung und tägliche Aufgaben.",
+        "fromLabel": "Von",
+        "toLabel": "Nach"
+      },
+      "seo": {
+        "title": "Unit Converter Pro | ToolBite",
+        "description": "Fortgeschrittene Konvertierung für Web-Einheiten (PX/REM), digitalen Speicher und physische Länge."
+      }
+    },
+    "pdfSurgeon": {
+      "title": "PDF Surgeon",
+      "description": "Zusammenführen mehrerer Dokumente oder Extrahieren spezifischer Seiten mit höchster Präzision.",
+      "page": {
+        "title": "PDF Surgeon",
+        "subtitle": "PDF-Dokumente sofort in Ihrem Browser zusammenführen oder teilen.",
+        "minFilesError": "Bitte fügen Sie mindestens 2 PDFs zum Zusammenführen hinzu.",
+        "uploadSplitError": "Bitte laden Sie eine PDF zum Teilen hoch.",
+        "mergeTabLabel": "Zusammenführen",
+        "splitTabLabel": "Teilen",
+        "pageRangeLabel": "Seitenbereich",
+        "pdfReadyLabel": "PDF fertig!",
+        "downloadResultButton": "Ergebnis herunterladen",
+        "dropzoneLabel": "Legen Sie Ihre PDFs hier ab",
+        "selectFilesButton": "Dateien auswählen",
+        "mergePdfsButton": "PDFs zusammenführen",
+        "extractPagesButton": "Seiten extrahieren"
+      },
+      "seo": {
+        "title": "PDF Surgeon | ToolBite",
+        "description": "Zusammenführen mehrerer Dokumente oder Extrahieren spezifischer Seiten mit höchster Präzision."
+      }
+    },
+    "secretShield": {
+      "title": "Secret Shield",
+      "description": "Militärische AES-256-Verschlüsselung. Sichern Sie jede Datei lokal.",
+      "page": {
+        "title": "Secret Shield",
+        "subtitle": "AES-256 militärische Verschlüsselung. Erfolgt vollständig in Ihrem Browser.",
+        "encryptLabel": "Verschlüsseln",
+        "decryptLabel": "Entschlüsseln",
+        "privacyNote": "Datenschutz zuerst: Dateien verlassen niemals Ihr Gerät.",
+        "selectFileLabel": "Datei auswählen zum",
+        "removeLabel": "Entfernen",
+        "setPasswordLabel": "Passwort festlegen",
+        "fileLabel": "Datei",
+        "downloadResultLabel": "Ergebnis herunterladen",
+        "startNewLabel": "Neu starten"
+      },
+      "seo": {
+        "title": "Secret Shield | ToolBite",
+        "description": "Militärische AES-256-Verschlüsselung. Sichern Sie jede Datei lokal in Ihrem Browser."
+      }
+    },
+    "voiceNotes": {
+      "title": "Sprachnotizen",
+      "description": "Konvertieren Sie Sprache sofort in Text mit der Whisper-KI von OpenAI.",
+      "page": {
+        "title": "Sprachnotizen",
+        "subtitle": "Audio zu Text. Whisper-KI läuft lokal in Ihrem Browser.",
+        "speakClearlyLabel": "Sprechen Sie deutlich in Ihr Mikrofon",
+        "uploadAudioLabel": "Audio hochladen",
+        "supportedFormatsLabel": "MP3, WAV, M4A unterstützt",
+        "transcribingStatus": "Transkribieren...",
+        "modelRunningLabel": "Whisper-KI-Modell wird auf Ihrem Gerät ausgeführt.",
+        "firstLoadNotice": "Das erste Laden kann eine Minute dauern, um Modelle herunterzuladen (~40MB).",
+        "transcriptionResultLabel": "Transkriptionsergebnis",
+        "errorTranscriptionFailed": "Transkription fehlgeschlagen. Die Datei ist möglicherweise zu groß für den Speicher Ihres Geräts.",
+        "errorMicAccessDenied": "Mikrofonzugriff verweigert. Bitte überprüfen Sie Ihre Browserberechtigungen.",
+        "errorWordGeneration": "Word-Dokument konnte nicht erstellt werden."
+      },
+      "seo": {
+        "title": "Sprachnotizen | ToolBite",
+        "description": "Konvertieren Sie Sprache sofort in Text mit der Whisper-KI von OpenAI."
+      }
+    },
+    "colorPalette": {
+      "title": "Farbpalette",
+      "description": "Extrahieren Sie die dominantesten und schönsten Farben aus jedem Foto.",
+      "page": {
+        "title": "Farbpalette",
+        "subtitle": "Extrahiere dominante Farben sofort aus jedem Bild.",
+        "dropImageLabel": "Bild ablegen, um Farben zu sampeln",
+        "uploadNewImageButton": "Neues Bild hochladen"
+      },
+      "seo": {
+        "title": "Farbpalette | ToolBite",
+        "description": "Extrahieren Sie die dominantesten und schönsten Farben aus jedem Foto."
+      }
+    },
+    "cronVisualizer": {
+      "title": "Cron Visualizer",
+      "description": "Wandeln Sie kryptische Cron-Ausdrücke in menschenlesbare Sätze und Zeitpläne um.",
+      "page": {
+        "title": "Cron Visualizer",
+        "subtitle": "Dekodieren Sie Cron-Ausdrücke in einfache Zeitpläne.",
+        "inputLabel": "Cron-Ausdruck",
+        "scheduleDescriptionLabel": "Beschreibung des Zeitplans",
+        "invalidError": "Ungültiger Cron-Ausdruck. Bitte überprüfen Sie das Format.",
+        "examples": {
+          "every5Mins": "Alle 5 Minuten",
+          "everyHour": "Jede Stunde",
+          "midnightDaily": "Täglich um Mitternacht",
+          "everyMonday": "Jeden Montag"
+        }
+      },
+      "seo": {
+        "title": "Cron Visualizer | ToolBite",
+        "description": "Wandeln Sie kryptische Cron-Ausdrücke in menschenlesbare Sätze und Zeitpläne um."
+      }
+    }
+  }
+}

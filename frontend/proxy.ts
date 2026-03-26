@@ -3,17 +3,21 @@ import type { NextRequest } from "next/server";
 import { match as matchLocale } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 
-export const locales = ["en", "es"];
+// 1. 'as const' allows us to derive the Locale type perfectly
+export const locales = ["en", "es", "de", "fr", "pl", "ru"] as const;
+export type Locale = (typeof locales)[number];
 export const defaultLocale = "en";
 
 function getLocale(request: NextRequest): string | undefined {
   const negotiatorHeaders: Record<string, string> = {};
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
 
-  let languages = new Negotiator({ headers: negotiatorHeaders }).languages(
-    locales,
-  );
-  return matchLocale(languages, locales, defaultLocale);
+  // 2. Use [...locales] to satisfy the 'string[]' type requirement
+  let languages = new Negotiator({ headers: negotiatorHeaders }).languages([
+    ...locales,
+  ]);
+
+  return matchLocale(languages, [...locales], defaultLocale);
 }
 
 export function proxy(request: NextRequest) {
@@ -43,6 +47,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };

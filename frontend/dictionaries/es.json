@@ -121,7 +121,23 @@
     },
     "videoToGif": {
       "title": "Video a GIF",
-      "description": "Convierte clips de video en GIFs animados de alta calidad listos para compartir."
+      "description": "Convierte clips de video en GIFs animados de alta calidad listos para compartir.",
+      "page": {
+        "title": "Video a GIF",
+        "subtitle": "Convierte videos a GIFs de alta calidad totalmente en tu navegador.",
+        "selectVideoLabel": "Seleccionar Video",
+        "convertToGifLabel": "Convertir a GIF",
+        "conversionCompleteLabel": "¡Conversión Completada! ✨",
+        "cancelLabel": "Cancelar",
+        "downloadGifLabel": "Descargar GIF",
+        "convertAnotherLabel": "Convertir Otro",
+        "errorInvalidVideo": "Por favor, sube un archivo de video válido (MP4, WEBM, MOV).",
+        "errorConversion": "Error al convertir el video."
+      },
+      "seo": {
+        "title": "Video a GIF | ToolBite",
+        "description": "Convierte clips de video en GIFs animados de alta calidad y fáciles de compartir."
+      }
     },
     "clipPathMaker": {
       "title": "Creador de Clip-Path CSS",
@@ -180,15 +196,53 @@
     },
     "socialPreviewer": {
       "title": "Previsualizador Social",
-      "description": "Previsualiza en vivo y genera Metaetiquetas para tarjetas de Twitter, Facebook y LinkedIn."
+      "description": "Previsualiza en vivo y genera Metaetiquetas para tarjetas de Twitter, Facebook y LinkedIn.",
+      "page": {
+        "title": "Previsualizador Social",
+        "subtitle": "Previsualiza y genera etiquetas meta SEO con soporte para imágenes locales.",
+        "pageTitleLabel": "Título de la Página",
+        "descriptionLabel": "Descripción",
+        "previewImageLabel": "Imagen de Vista Previa",
+        "livePreviewsLabel": "Vistas Previas en Vivo"
+      },
+      "seo": {
+        "title": "Previsualizador Social | ToolBite",
+        "description": "Previsualización en vivo y generación de etiquetas meta para tarjetas de Twitter, Facebook y LinkedIn."
+      }
     },
     "uaInspector": {
       "title": "Inspector de UA",
-      "description": "Detecta y analiza cadenas de User-Agent (Agente de Usuario) para identificar navegadores, sistemas operativos y detalles de hardware."
+      "description": "Detecta y analiza cadenas de User-Agent (Agente de Usuario) para identificar navegadores, sistemas operativos y detalles de hardware.",
+      "page": {
+        "title": "Inspector de UA",
+        "subtitle": "Analiza cadenas de navegador y huellas digitales de dispositivos.",
+        "userAgentStringLabel": "Cadena de User Agent",
+        "analyzeStringLabel": "Analizar Cadena",
+        "copyRawLabel": "Copiar Datos Brutos"
+      },
+      "seo": {
+        "title": "Inspector de UA | ToolBite",
+        "description": "Detecta y analiza cadenas de User-Agent para identificar navegadores, SO y detalles de hardware."
+      }
     },
     "shadowGenerator": {
       "title": "Generador de Sombras",
-      "description": "Crea sombras CSS suaves y de múltiples capas para elementos de interfaz de usuario de aspecto natural."
+      "description": "Crea sombras CSS suaves y de múltiples capas para elementos de interfaz de usuario de aspecto natural.",
+      "page": {
+        "title": "Generador de Sombras en Capas",
+        "subtitle": "Crea sombras CSS naturales y por capas con colores personalizados.",
+        "parametersLabel": "Parámetros",
+        "layersLabel": "Capas",
+        "blurStrengthLabel": "Fuerza (Desenfoque)",
+        "maxOpacityLabel": "Opacidad Máxima",
+        "shadowColorLabel": "Color de la Sombra",
+        "generatedCssLabel": "CSS Generado",
+        "previewCardLabel": "Tarjeta de Vista Previa"
+      },
+      "seo": {
+        "title": "Generador de Sombras en Capas | ToolBite",
+        "description": "Crea sombras CSS suaves y de múltiples capas para elementos de interfaz naturales."
+      }
     },
     "safeLink": {
       "title": "Codificador de Enlaces Seguros",
@@ -263,7 +317,17 @@
     },
     "unitPro": {
       "title": "Convertidor de Unidades Pro",
-      "description": "Conversión avanzada para unidades web (PX/REM), almacenamiento digital y longitud física."
+      "description": "Conversión avanzada para unidades web (PX/REM), almacenamiento digital y longitud física.",
+      "page": {
+        "title": "Convertidor de Unidades Pro",
+        "subtitle": "Conversión de precisión para diseño, desarrollo y tareas diarias.",
+        "fromLabel": "De",
+        "toLabel": "A"
+      },
+      "seo": {
+        "title": "Convertidor de Unidades Pro | ToolBite",
+        "description": "Conversión avanzada para unidades web (PX/REM), almacenamiento digital y longitud física."
+      }
     },
     "pdfSurgeon": {
       "title": "Cirujano PDF",
@@ -290,11 +354,46 @@
     },
     "secretShield": {
       "title": "Escudo Secreto",
-      "description": "Cifrado AES-256 de grado militar. Protege cualquier archivo localmente."
+      "description": "Cifrado AES-256 de grado militar. Protege cualquier archivo localmente.",
+      "page": {
+        "title": "Secret Shield",
+        "subtitle": "Cifrado de grado militar AES-256. Todo sucede en tu navegador.",
+        "encryptLabel": "Encriptar",
+        "decryptLabel": "Desencriptar",
+        "privacyNote": "La privacidad es lo primero: los archivos nunca salen de tu dispositivo.",
+        "selectFileLabel": "Seleccionar archivo para",
+        "removeLabel": "Eliminar",
+        "setPasswordLabel": "Establecer Contraseña",
+        "fileLabel": "Archivo",
+        "downloadResultLabel": "Descargar Resultado",
+        "startNewLabel": "Comenzar de Nuevo"
+      },
+      "seo": {
+        "title": "Secret Shield | ToolBite",
+        "description": "Cifrado de grado militar AES-256. Asegura cualquier archivo localmente en tu navegador."
+      }
     },
     "voiceNotes": {
       "title": "Notas de Voz",
-      "description": "Convierte voz a texto instantáneamente utilizando Whisper AI de OpenAI."
+      "description": "Convierte voz a texto instantáneamente utilizando Whisper AI de OpenAI.",
+      "page": {
+        "title": "Notas de Voz",
+        "subtitle": "Audio a texto. Whisper AI ejecutándose localmente en tu navegador.",
+        "speakClearlyLabel": "Habla con claridad al micrófono",
+        "uploadAudioLabel": "Subir Audio",
+        "supportedFormatsLabel": "Compatible con MP3, WAV, M4A",
+        "transcribingStatus": "Transcribiendo...",
+        "modelRunningLabel": "Ejecutando el modelo Whisper AI en tu dispositivo.",
+        "firstLoadNotice": "La primera carga puede tardar un minuto para descargar los modelos (~40MB).",
+        "transcriptionResultLabel": "Resultado de la Transcripción",
+        "errorTranscriptionFailed": "Error en la transcripción. El archivo podría ser demasiado grande para la memoria de tu dispositivo.",
+        "errorMicAccessDenied": "Acceso al micrófono denegado. Por favor, revisa los permisos de tu navegador.",
+        "errorWordGeneration": "Error al generar el documento de Word."
+      },
+      "seo": {
+        "title": "Notas de Voz | ToolBite",
+        "description": "Convierte voz a texto al instante usando Whisper AI de OpenAI."
+      }
     },
     "colorPalette": {
       "title": "Paleta de Colores",

@@ -13,6 +13,8 @@ import {
   loadFFmpegEngine,
   convertVideoToGifLocally,
 } from "../../../../utils/video-to-gif-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function VideoToGifPage() {
   const [dragActive, setDragActive] = useState(false);
@@ -26,6 +28,9 @@ export default function VideoToGifPage() {
   const [resultUrl, setResultUrl] = useState<string | null>(null);
 
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const dict = useDictionary();
+  const ui = dict.tools?.videoToGif?.page;
 
   useEffect(() => {
     const initializeEngine = async () => {
@@ -66,7 +71,10 @@ export default function VideoToGifPage() {
 
   const handleFileSelect = (file: File) => {
     if (!file.type.startsWith("video/")) {
-      setError("Please upload a valid video file (MP4, WEBM, MOV).");
+      {
+        ui?.errorInvalidVideo ||
+          "Please upload a valid video file (MP4, WEBM, MOV).";
+      }
       return;
     }
     setError("");
@@ -92,7 +100,9 @@ export default function VideoToGifPage() {
       setResultUrl(URL.createObjectURL(resultBlob));
     } catch (err: any) {
       console.error(err);
-      setError(err.message || "Error converting video.");
+      {
+        ui?.errorConversion || err.message || "Error converting video.";
+      }
     } finally {
       setIsProcessing(false);
     }
@@ -109,13 +119,7 @@ export default function VideoToGifPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 mb-8 transition-colors group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/40 rounded-2xl flex items-center justify-center shadow-sm">
@@ -123,10 +127,11 @@ export default function VideoToGifPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Video to GIF
+            {ui?.title || "Video to GIF"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400 mt-1 text-lg">
-            Convert videos to high-quality GIFs entirely in your browser.
+            {ui?.subtitle ||
+              "Convert videos to high-quality GIFs entirely in your browser."}
           </p>
         </div>
       </div>
@@ -174,7 +179,7 @@ export default function VideoToGifPage() {
               disabled={!isReady}
               className="px-10 py-4 bg-slate-900 dark:bg-purple-600 hover:bg-black dark:hover:bg-purple-500 text-white font-bold rounded-2xl shadow-lg transition-all transform hover:scale-105 disabled:opacity-50 disabled:hover:scale-100"
             >
-              Select Video
+              {ui?.selectVideoLabel || "Select Video"}
             </button>
           </div>
         )}
@@ -204,13 +209,14 @@ export default function VideoToGifPage() {
                   onClick={handleConvertToGif}
                   className="flex-1 px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-2xl shadow-lg shadow-purple-200 dark:shadow-none transition-all flex justify-center items-center"
                 >
-                  <Film className="w-5 h-5 mr-2" /> Convert to GIF
+                  <Film className="w-5 h-5 mr-2" />{" "}
+                  {ui?.convertToGifLabel || "Convert to GIF"}
                 </button>
                 <button
                   onClick={reset}
                   className="px-6 py-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded-2xl transition-all"
                 >
-                  Cancel
+                  {ui?.cancelLabel || "Cancel"}
                 </button>
               </div>
             )}
@@ -220,7 +226,7 @@ export default function VideoToGifPage() {
         {resultUrl && (
           <div className="p-8 md:p-12 text-center animate-in zoom-in-95 duration-500">
             <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-8">
-              Conversion Complete! ✨
+              {ui?.conversionCompleteLabel || "Conversion Complete! ✨"}
             </h2>
             <div className="w-full max-w-lg mx-auto rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 mb-8 bg-slate-50 dark:bg-slate-800/40">
               <div className="w-full flex justify-center items-center p-4">
@@ -237,13 +243,15 @@ export default function VideoToGifPage() {
                 download={`converted_${selectedFile?.name.replace(/\.[^/.]+$/, "")}.gif`}
                 className="flex items-center justify-center px-10 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-2xl shadow-xl shadow-purple-100 dark:shadow-none transition-all transform hover:scale-[1.02]"
               >
-                <Download className="w-5 h-5 mr-2" /> Download GIF
+                <Download className="w-5 h-5 mr-2" />{" "}
+                {ui?.downloadGifLabel || "Download GIF"}
               </a>
               <button
                 onClick={reset}
                 className="flex items-center justify-center px-10 py-4 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold rounded-2xl hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
               >
-                <RefreshCw className="w-4 h-4 mr-2" /> Convert Another
+                <RefreshCw className="w-4 h-4 mr-2" />{" "}
+                {ui?.convertAnotherLabel || "Convert Another"}
               </button>
             </div>
           </div>

@@ -7,7 +7,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const dict = await getDictionary(locale as "en" | "es");
+  const dict = await getDictionary(locale);
 
   const seo = dict.tools?.imageCompressor?.seo;
 

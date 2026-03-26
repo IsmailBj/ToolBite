@@ -1,0 +1,434 @@
+{
+  "common": {
+    "backToWorkspace": "Retour à l'espace de travail",
+    "copy": "Copier le résultat",
+    "download": "Télécharger le fichier"
+  },
+  "home": {
+    "title1": "Votre espace",
+    "title2": "utilitaire tout-en-un.",
+    "subtitle": "Rapide, sécurisé et fonctionnant directement dans votre navigateur.",
+    "search": "Rechercher des outils...",
+    "launch": "Lancer l'outil",
+    "noTools": "Aucun outil ne correspond à vos critères.",
+    "reset": "Réinitialiser les filtres",
+    "categories": {
+      "All": "Tous",
+      "Design": "Design",
+      "Developer": "Développeur",
+      "Video": "Vidéo",
+      "Security": "Sécurité"
+    }
+  },
+  "tools": {
+    "bgRemover": {
+      "title": "Suppresseur d'arrière-plan",
+      "description": "Supprimez instantanément l'arrière-plan de n'importe quelle image grâce à l'IA haute vitesse.",
+      "page": {
+        "title": "Suppresseur d'arrière-plan",
+        "subtitle": "Extrayez instantanément les sujets des images grâce à l'IA locale.",
+        "dropzoneLabel": "Déposez votre image ici",
+        "uploadHint": "Fonctionne mieux avec des sujets clairs (personnes, produits, animaux).",
+        "selectBtn": "Sélectionner une image",
+        "initialDownloadNotice": "Le premier lancement télécharge l'IA (cela prend un moment).",
+        "removeBgBtn": "Supprimer l'arrière-plan",
+        "cancelBtn": "Annuler",
+        "successMessage": "Sujet extrait ! ✨",
+        "downloadBtn": "Télécharger PNG",
+        "startOverBtn": "Recommencer",
+        "errorMessage": "Erreur",
+        "imageValidationError": "Veuillez télécharger un fichier image valide (JPEG, PNG, WEBP).",
+        "wakingModel": "Démarrage du modèle d'IA...",
+        "processingError": "Erreur lors du traitement de l'image."
+      },
+      "seo": {
+        "title": "Supprimer l'arrière-plan d'une image gratuitement | ToolBite",
+        "description": "Utilisez notre IA haute vitesse pour supprimer instantanément les arrière-plans de n'importe quelle image directement dans votre navigateur. 100% gratuit et sécurisé."
+      }
+    },
+    "neumorphism": {
+      "title": "Générateur de Neumorphisme",
+      "description": "Générez des codes hexadécimaux d'interface utilisateur douce et du CSS d'ombre complexe à partir d'une seule couleur de base.",
+      "page": {
+        "title": "Générateur de Neumorphisme",
+        "subtitle": "Générez du code CSS d'interface utilisateur douce à partir d'une seule couleur de base.",
+        "baseColorLabel": "Couleur de base",
+        "shapeLabel": "Forme",
+        "distanceLabel": "Distance",
+        "blurLabel": "Flou",
+        "intensityLabel": "Intensité",
+        "cssOutputLabel": "Sortie CSS",
+        "copyButton": "Copier le CSS",
+        "shapes": {
+          "flat": "Plat",
+          "concave": "Concave",
+          "convex": "Convexe",
+          "pressed": "Enfoncé"
+        }
+      },
+      "seo": {
+        "title": "Générateur de Neumorphisme | ToolBite",
+        "description": "Générez des codes hexadécimaux d'interface utilisateur douce et du CSS d'ombre complexe à partir d'une seule couleur de base."
+      }
+    },
+    "csvConverter": {
+      "title": "CSV vers JSON",
+      "description": "Analysez les données CSV locales en tableaux JSON formatés et en tableaux HTML visuels.",
+      "page": {
+        "title": "Convertisseur CSV vers JSON",
+        "subtitle": "Analyseur robuste avec délimiteurs personnalisés, export JSON, HTML et Markdown.",
+        "configurationLabel": "Configuration",
+        "delimiterLabel": "Délimiteur",
+        "delimiters": {
+          "comma": "Virgule (,)",
+          "semicolon": "Point-virgule (;)",
+          "tab": "Tabulation",
+          "pipe": "Barre verticale (|)"
+        },
+        "firstRowHeadersLabel": "La première ligne contient les en-têtes",
+        "rawInputLabel": "Saisie des données brutes",
+        "uploadButtonLabel": "Télécharger",
+        "noValidDataError": "Aucune donnée valide fournie."
+      },
+      "seo": {
+        "title": "Convertisseur CSV vers JSON | ToolBite",
+        "description": "Analysez instantanément les données CSV locales en tableaux JSON formatés et en tableaux HTML visuels dans votre navigateur."
+      }
+    },
+    "scrollbar": {
+      "title": "Barre de défilement personnalisée",
+      "description": "Éditeur visuel pour styliser les barres de défilement Webkit, y compris les états de piste, de curseur et de survol.",
+      "page": {
+        "title": "Barre de défilement personnalisée",
+        "subtitle": "Éditeur visuel multi-navigateurs pour les barres de défilement Webkit et Firefox.",
+        "dimensionsLabel": "Largeur / Hauteur",
+        "paddingLabel": "Marge interne (effet flottant)",
+        "borderRadiusLabel": "Rayon de bordure",
+        "trackColorLabel": "Couleur de la piste",
+        "thumbColorLabel": "Couleur du curseur",
+        "thumbHoverLabel": "Survol du curseur",
+        "cssOutputLabel": "Sortie CSS",
+        "livePreviewLabel": "Aperçu en direct",
+        "scrollContentLabel": "Contenu à défilement vertical et horizontal",
+        "copyButton": "Copier le CSS",
+        "resetButton": "Réinitialiser les paramètres",
+        "copiedMessage": "Copié dans le presse-papiers !"
+      },
+      "seo": {
+        "title": "Générateur de barre de défilement personnalisée | ToolBite",
+        "description": "Éditeur visuel pour styliser les barres de défilement Webkit, y compris les états de piste, de curseur et de survol."
+      }
+    },
+    "videoToGif": {
+      "title": "Vidéo en GIF",
+      "description": "Convertissez des clips vidéo en GIF animés de haute qualité et partageables.",
+      "page": {
+        "title": "Vidéo en GIF",
+        "subtitle": "Convertissez des vidéos en GIF de haute qualité entièrement dans votre navigateur.",
+        "selectVideoLabel": "Sélectionner une vidéo",
+        "convertToGifLabel": "Convertir en GIF",
+        "conversionCompleteLabel": "Conversion terminée ! ✨",
+        "cancelLabel": "Annuler",
+        "downloadGifLabel": "Télécharger le GIF",
+        "convertAnotherLabel": "En convertir un autre",
+        "errorInvalidVideo": "Veuillez télécharger un fichier vidéo valide (MP4, WEBM, MOV).",
+        "errorConversion": "Erreur lors de la conversion de la vidéo."
+      },
+      "seo": {
+        "title": "Vidéo en GIF | ToolBite",
+        "description": "Convertissez des clips vidéo en GIF animés de haute qualité et partageables."
+      }
+    },
+    "clipPathMaker": {
+      "title": "Créateur de Clip-Path CSS",
+      "description": "Faites glisser les points du polygone pour créer des formes personnalisées et générer la propriété CSS clip-path.",
+      "page": {
+        "title": "Créateur de Clip-Path CSS",
+        "subtitle": "Générateur avancé avec commandes de glissement et aperçu d'image.",
+        "shapeTypeLabel": "Type de forme",
+        "presetsLabel": "Préréglages",
+        "customImageLabel": "Image personnalisée",
+        "uploadButtonLabel": "Télécharger une image",
+        "cssOutputLabel": "Sortie CSS"
+      },
+      "seo": {
+        "title": "Créateur de Clip-Path CSS | ToolBite",
+        "description": "Faites glisser les points du polygone pour créer des formes personnalisées et générer la propriété CSS clip-path."
+      }
+    },
+    "gridBuilder": {
+      "title": "Générateur de Grid CSS",
+      "description": "Interface visuelle pour définir les colonnes, les lignes et les espacements, avec exportation instantanée du code CSS Grid.",
+      "page": {
+        "title": "Générateur de Grid CSS",
+        "subtitle": "Définissez visuellement les colonnes, les lignes, les étendues et les espacements pour générer du code de grille.",
+        "containerLabel": "Conteneur",
+        "columnsLabel": "Colonnes",
+        "rowsLabel": "Lignes",
+        "gapLabel": "Espacement (Gap)",
+        "selectedItemLabel": "Élément sélectionné",
+        "columnSpanLabel": "Étendue de colonne",
+        "rowSpanLabel": "Étendue de ligne",
+        "addBlockButton": "Ajouter un bloc",
+        "removeBlockButton": "Supprimer le bloc",
+        "cssOutputLabel": "Sortie CSS"
+      },
+      "seo": {
+        "title": "Générateur de Grid CSS | ToolBite",
+        "description": "Interface visuelle pour définir les colonnes, les lignes et les espacements, avec exportation instantanée du code CSS Grid."
+      }
+    },
+    "blobGenerator": {
+      "title": "Générateur de formes Blob",
+      "description": "Générez des formes de blob SVG fluides et organiques pour des mises en page web et des arrière-plans modernes.",
+      "page": {
+        "blobTitle": "Générateur de formes Blob",
+        "blobSubtitle": "Créez des formes SVG organiques pour vos designs web.",
+        "parameters": "Paramètres",
+        "edgesLabel": "Bords (Complexité)",
+        "growthLabel": "Croissance (Aléatoire)",
+        "randomizeButton": "Randomiser"
+      },
+      "seo": {
+        "title": "Générateur de formes Blob | ToolBite",
+        "description": "Générez des formes de blob SVG fluides et organiques pour des mises en page web et des arrière-plans modernes."
+      }
+    },
+    "socialPreviewer": {
+      "title": "Social Previewer",
+      "description": "Aperçu en direct et génération de balises Meta pour les cartes Twitter, Facebook et LinkedIn.",
+      "page": {
+        "title": "Social Previewer",
+        "subtitle": "Prévisualisez et générez des balises méta SEO avec prise en charge d'images locales.",
+        "pageTitleLabel": "Titre de la page",
+        "descriptionLabel": "Description",
+        "previewImageLabel": "Image d'aperçu",
+        "livePreviewsLabel": "Aperçus en direct"
+      },
+      "seo": {
+        "title": "Social Previewer | ToolBite",
+        "description": "Aperçu en direct et génération de balises Meta pour les cartes Twitter, Facebook et LinkedIn."
+      }
+    },
+    "uaInspector": {
+      "title": "Inspecteur d'UA",
+      "description": "Détectez et analysez les chaînes User-Agent pour identifier les navigateurs, les systèmes d'exploitation et les détails du matériel.",
+      "page": {
+        "title": "Inspecteur d'UA",
+        "subtitle": "Analysez les chaînes de navigateur et les empreintes digitales des appareils.",
+        "userAgentStringLabel": "Chaîne User Agent",
+        "analyzeStringLabel": "Analyser la chaîne",
+        "copyRawLabel": "Copier les données brutes"
+      },
+      "seo": {
+        "title": "Inspecteur d'UA | ToolBite",
+        "description": "Détectez et analysez les chaînes User-Agent pour identifier les navigateurs, les systèmes d'exploitation et les détails du matériel."
+      }
+    },
+    "shadowGenerator": {
+      "title": "Générateur de palette d'ombres",
+      "description": "Créez des ombres CSS lisses et multicouches pour des éléments d'interface utilisateur d'aspect naturel.",
+      "page": {
+        "title": "Générateur de palette d'ombres",
+        "subtitle": "Créez des ombres CSS naturelles et superposées avec des couleurs personnalisées.",
+        "parametersLabel": "Paramètres",
+        "layersLabel": "Couches",
+        "blurStrengthLabel": "Force (Flou)",
+        "maxOpacityLabel": "Opacité Max",
+        "shadowColorLabel": "Couleur de l'ombre",
+        "generatedCssLabel": "CSS généré",
+        "previewCardLabel": "Carte d'aperçu"
+      },
+      "seo": {
+        "title": "Générateur de palette d'ombres | ToolBite",
+        "description": "Créez des ombres CSS lisses et multicouches pour des éléments d'interface utilisateur d'aspect naturel."
+      }
+    },
+    "safeLink": {
+      "title": "Encodeur de liens sécurisés",
+      "description": "Obscurcissez les liens pour les cacher des bots et des scrapers en utilisant l'encodage natif du navigateur.",
+      "page": {
+        "title": "Encodeur de liens sécurisés",
+        "subtitle": "Obscurcissez les URL pour les protéger des scrapers et des bots.",
+        "invalidUrlWarning": "Attention : cela ne ressemble pas à une URL valide, mais je vais l'encoder quand même.",
+        "encodeButton": "Encoder",
+        "decodeButton": "Décoder",
+        "resultLabel": "Résultat",
+        "copyButton": "Copier dans le presse-papiers",
+        "urlPlaceholder": "Entrez l'URL ou le code ici...",
+        "clearButton": "Effacer"
+      },
+      "seo": {
+        "title": "Encodeur de liens sécurisés | ToolBite",
+        "description": "Obscurcissez les liens pour les cacher des bots et des scrapers en utilisant l'encodage natif du navigateur."
+      }
+    },
+    "markdownLab": {
+      "title": "Markdown Lab",
+      "description": "Éditeur Markdown en temps réel avec aperçu HTML en direct et assainissement.",
+      "page": {
+        "title": "Markdown Lab",
+        "subtitle": "Écrivez avec des extraits et prévisualisez le HTML stylisé en temps réel.",
+        "copyMdButton": "Copier MD",
+        "downloadHtmlButton": "Télécharger HTML",
+        "livePreviewLabel": "Aperçu en direct",
+        "editorPlaceholder": "# Bonjour le monde\nCommencez à taper votre markdown ici...",
+        "copyHtmlButton": "Copier HTML",
+        "clearButton": "Effacer l'éditeur"
+      },
+      "seo": {
+        "title": "Markdown Lab | ToolBite",
+        "description": "Éditeur Markdown en temps réel avec aperçu HTML en direct et assainissement."
+      }
+    },
+    "imageCompressor": {
+      "title": "Compresseur d'image",
+      "description": "Réduisez la taille des fichiers image jusqu'à 80 % sans perdre la qualité visuelle.",
+      "page": {
+        "title": "Compresseur d'image",
+        "subtitle": "Réduisez les JPEG, PNG et WEBP sans aucune perte de qualité visuelle.",
+        "backToWorkspace": "Retour à l'espace de travail",
+        "dropzoneLabel": "Déposez votre image ici",
+        "uploadRestrictions": "Prend en charge JPG, PNG et WEBP jusqu'à 15 Mo.",
+        "selectImageButton": "Sélectionner une image",
+        "compressionSettingsLabel": "Paramètres de compression",
+        "imageQualityLabel": "Qualité de l'image",
+        "smallestFileLabel": "Fichier plus petit",
+        "bestQualityLabel": "Meilleure qualité",
+        "compressingLabel": "Compression en cours...",
+        "cancelButton": "Annuler",
+        "compressionCompleteLabel": "Compression terminée ! 🎉",
+        "originalSizeLabel": "Taille originale",
+        "newSizeLabel": "NOUVEAU",
+        "compressedSizeLabel": "Taille compressée",
+        "totalSavedLabel": "Économie totale",
+        "downloadImageButton": "Télécharger l'image",
+        "compressAnotherButton": "En compresser une autre",
+        "compressionErrorLabel": "Erreur de compression",
+        "errors": {
+          "invalidFile": "Veuillez télécharger un fichier image valide (JPEG, PNG, WEBP).",
+          "processingError": "Erreur lors du traitement de l'image."
+        }
+      },
+      "seo": {
+        "title": "Compresseur d'image | ToolBite",
+        "description": "Réduisez la taille des fichiers image jusqu'à 80 % sans perdre la qualité visuelle."
+      }
+    },
+    "unitPro": {
+      "title": "Convertisseur d'unités Pro",
+      "description": "Conversion avancée pour les unités web (PX/REM), le stockage numérique et la longueur physique.",
+      "page": {
+        "title": "Convertisseur d'unités Pro",
+        "subtitle": "Conversion de précision pour le design, le développement et les tâches quotidiennes.",
+        "fromLabel": "De",
+        "toLabel": "À"
+      },
+      "seo": {
+        "title": "Convertisseur d'unités Pro | ToolBite",
+        "description": "Conversion avancée pour les unités web (PX/REM), le stockage numérique et la longueur physique."
+      }
+    },
+    "pdfSurgeon": {
+      "title": "PDF Surgeon",
+      "description": "Fusionnez plusieurs documents ou extrayez des pages spécifiques avec une précision extrême.",
+      "page": {
+        "title": "PDF Surgeon",
+        "subtitle": "Fusionnez ou divisez des documents PDF instantanément dans votre navigateur.",
+        "minFilesError": "Veuillez ajouter au moins 2 PDF à fusionner.",
+        "uploadSplitError": "Veuillez télécharger un PDF à diviser.",
+        "mergeTabLabel": "Fusionner",
+        "splitTabLabel": "Diviser",
+        "pageRangeLabel": "Plage de pages",
+        "pdfReadyLabel": "PDF prêt !",
+        "downloadResultButton": "Télécharger le résultat",
+        "dropzoneLabel": "Déposez vos PDF ici",
+        "selectFilesButton": "Sélectionner des fichiers",
+        "mergePdfsButton": "Fusionner les PDF",
+        "extractPagesButton": "Extraire les pages"
+      },
+      "seo": {
+        "title": "PDF Surgeon | ToolBite",
+        "description": "Fusionnez plusieurs documents ou extrayez des pages spécifiques avec une précision extrême."
+      }
+    },
+    "secretShield": {
+      "title": "Secret Shield",
+      "description": "Cryptage AES-256 de qualité militaire. Sécurisez n'importe quel fichier localement.",
+      "page": {
+        "title": "Secret Shield",
+        "subtitle": "Cryptage de qualité militaire AES-256. Se passe entièrement dans votre navigateur.",
+        "encryptLabel": "Crypter",
+        "decryptLabel": "Décrypter",
+        "privacyNote": "La confidentialité d'abord : les fichiers ne quittent jamais votre appareil.",
+        "selectFileLabel": "Sélectionner le fichier à",
+        "removeLabel": "Supprimer",
+        "setPasswordLabel": "Définir le mot de passe",
+        "fileLabel": "Fichier",
+        "downloadResultLabel": "Télécharger le résultat",
+        "startNewLabel": "Recommencer"
+      },
+      "seo": {
+        "title": "Secret Shield | ToolBite",
+        "description": "Cryptage AES-256 de qualité militaire. Sécurisez n'importe quel fichier localement dans votre navigateur."
+      }
+    },
+    "voiceNotes": {
+      "title": "Notes vocales",
+      "description": "Convertissez instantanément la parole en texte à l'aide de l'IA Whisper d'OpenAI.",
+      "page": {
+        "title": "Notes vocales",
+        "subtitle": "Audio en texte. Whisper AI fonctionne localement dans votre navigateur.",
+        "speakClearlyLabel": "Parlez clairement dans votre micro",
+        "uploadAudioLabel": "Télécharger de l'audio",
+        "supportedFormatsLabel": "MP3, WAV, M4A supportés",
+        "transcribingStatus": "Transcription en cours...",
+        "modelRunningLabel": "Exécution du modèle Whisper AI sur votre appareil.",
+        "firstLoadNotice": "Le premier chargement peut prendre une minute pour télécharger les modèles (~40 Mo).",
+        "transcriptionResultLabel": "Résultat de la transcription",
+        "errorTranscriptionFailed": "La transcription a échoué. Le fichier est peut-être trop volumineux pour la mémoire de votre appareil.",
+        "errorMicAccessDenied": "Accès au microphone refusé. Veuillez vérifier les autorisations de votre navigateur.",
+        "errorWordGeneration": "Échec de la génération du document Word."
+      },
+      "seo": {
+        "title": "Notes vocales | ToolBite",
+        "description": "Convertissez instantanément la parole en texte à l'aide de l'IA Whisper d'OpenAI."
+      }
+    },
+    "colorPalette": {
+      "title": "Palette de couleurs",
+      "description": "Extrayez les couleurs les plus dominantes et les plus belles de n'importe quelle photographie.",
+      "page": {
+        "title": "Palette de couleurs",
+        "subtitle": "Extrayez instantanément les couleurs dominantes de n'importe quelle image.",
+        "dropImageLabel": "Déposez l'image pour échantillonner les couleurs",
+        "uploadNewImageButton": "Télécharger une nouvelle image"
+      },
+      "seo": {
+        "title": "Palette de couleurs | ToolBite",
+        "description": "Extrayez les couleurs les plus dominantes et les plus belles de n'importe quelle photographie."
+      }
+    },
+    "cronVisualizer": {
+      "title": "Visualiseur Cron",
+      "description": "Convertissez les expressions cron cryptiques en phrases et calendriers lisibles par l'homme.",
+      "page": {
+        "title": "Visualiseur Cron",
+        "subtitle": "Décodez les expressions cron en calendriers en français simple.",
+        "inputLabel": "Expression Cron",
+        "scheduleDescriptionLabel": "Description du calendrier",
+        "invalidError": "Expression Cron invalide. Veuillez vérifier le format.",
+        "examples": {
+          "every5Mins": "Toutes les 5 minutes",
+          "everyHour": "Toutes les heures",
+          "midnightDaily": "Tous les jours à minuit",
+          "everyMonday": "Tous les lundis"
+        }
+      },
+      "seo": {
+        "title": "Visualiseur Cron | ToolBite",
+        "description": "Convertissez les expressions cron cryptiques en phrases et calendriers lisibles par l'homme."
+      }
+    }
+  }
+}

@@ -13,6 +13,8 @@ import {
   Trash2,
 } from "lucide-react";
 import { generateMetaTags } from "../../../../utils/seo-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function SocialPreviewerPage() {
   const [data, setData] = useState({
@@ -25,6 +27,9 @@ export default function SocialPreviewerPage() {
   });
   const [copied, setCopied] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const dict = useDictionary();
+  const ui = dict.tools?.socialPreviewer?.page;
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -45,13 +50,7 @@ export default function SocialPreviewerPage() {
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 mb-8 transition-colors group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/40 rounded-2xl flex items-center justify-center">
@@ -59,10 +58,11 @@ export default function SocialPreviewerPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            Social Previewer
+            {ui?.title || "Social Previewer"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Preview and generate SEO meta tags with local image support.
+            {ui?.subtitle ||
+              "Preview and generate SEO meta tags with local image support."}
           </p>
         </div>
       </div>
@@ -72,7 +72,8 @@ export default function SocialPreviewerPage() {
         <div className="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 shadow-xl">
           <div className="space-y-4">
             <label className="flex items-center text-sm font-bold text-slate-700 dark:text-slate-300">
-              <Type className="w-4 h-4 mr-2" /> Page Title
+              <Type className="w-4 h-4 mr-2" />{" "}
+              {ui?.pageTitleLabel || "Page Title"}
             </label>
             <input
               type="text"
@@ -84,7 +85,8 @@ export default function SocialPreviewerPage() {
 
           <div className="space-y-4">
             <label className="flex items-center text-sm font-bold text-slate-700 dark:text-slate-300">
-              <Share2 className="w-4 h-4 mr-2" /> Description
+              <Share2 className="w-4 h-4 mr-2" />{" "}
+              {ui?.descriptionLabel || "Description"}
             </label>
             <textarea
               value={data.description}
@@ -97,7 +99,8 @@ export default function SocialPreviewerPage() {
 
           <div className="space-y-4">
             <label className="flex items-center text-sm font-bold text-slate-700 dark:text-slate-300">
-              <ImageIcon className="w-4 h-4 mr-2" /> Preview Image
+              <ImageIcon className="w-4 h-4 mr-2" />{" "}
+              {ui?.previewImageLabel || "Preview Image"}
             </label>
             <div className="flex gap-2">
               <input
@@ -154,7 +157,7 @@ export default function SocialPreviewerPage() {
         {/* Preview Side (Cards) */}
         <div className="space-y-8 sticky top-8">
           <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">
-            Live Previews
+            {ui?.livePreviewsLabel || "Live Previews"}
           </h3>
 
           <div className="bg-white dark:bg-black rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">

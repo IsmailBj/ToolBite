@@ -12,12 +12,14 @@ import {
   Palette,
 } from "lucide-react";
 import { generateSmoothShadow } from "../../../../utils/shadow-util";
+import { useDictionary } from "@/components/DictionaryProvider";
+import BackButton from "@/components/BackButton";
 
 export default function ShadowGeneratorPage() {
   const [layers, setLayers] = useState(6);
   const [strength, setStrength] = useState(2);
   const [opacity, setOpacity] = useState(0.15);
-  const [color, setColor] = useState("#4F46E5"); // New: Indigo shadow
+  const [color, setColor] = useState("#4F46E5");
   const [copied, setCopied] = useState(false);
   const [isDarkModePreview, setIsDarkModePreview] = useState(false);
 
@@ -28,6 +30,9 @@ export default function ShadowGeneratorPage() {
 
   const cssCode = `box-shadow: ${shadowValue};`;
 
+  const dict = useDictionary();
+  const ui = dict.tools?.shadowGenerator?.page;
+
   const copyToClipboard = () => {
     navigator.clipboard.writeText(cssCode);
     setCopied(true);
@@ -36,13 +41,7 @@ export default function ShadowGeneratorPage() {
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <a
-        href="/"
-        className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 mb-8 transition-colors group"
-      >
-        <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />{" "}
-        Back to workspace
-      </a>
+      <BackButton />
 
       <div className="flex items-center space-x-4 mb-10">
         <div className="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/40 rounded-2xl flex items-center justify-center">
@@ -50,10 +49,11 @@ export default function ShadowGeneratorPage() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-            Shadow Palette Generator
+            {ui?.title || "Shadow Palette Generator"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400">
-            Create natural, layered CSS shadows with custom colors.
+            {ui?.subtitle ||
+              "Create natural, layered CSS shadows with custom colors."}
           </p>
         </div>
       </div>
@@ -63,7 +63,8 @@ export default function ShadowGeneratorPage() {
         <div className="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 shadow-xl space-y-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold uppercase text-xs tracking-widest">
-              <Sliders className="w-4 h-4" /> Parameters
+              <Sliders className="w-4 h-4" />{" "}
+              {ui?.parametersLabel || "Parameters"}
             </div>
             <button
               onClick={() => setIsDarkModePreview(!isDarkModePreview)}
@@ -79,7 +80,7 @@ export default function ShadowGeneratorPage() {
 
           <div className="space-y-4">
             <div className="flex justify-between text-sm font-bold dark:text-white">
-              <span>Layers</span>
+              <span>{ui?.layersLabel || "Layers"}</span>
               <span>{layers}</span>
             </div>
             <input
@@ -94,7 +95,7 @@ export default function ShadowGeneratorPage() {
 
           <div className="space-y-4">
             <div className="flex justify-between text-sm font-bold dark:text-white">
-              <span>Strength (Blur)</span>
+              <span>{ui?.blurStrengthLabel || "Strength (Blur)"}</span>
               <span>{strength}</span>
             </div>
             <input
@@ -109,7 +110,7 @@ export default function ShadowGeneratorPage() {
 
           <div className="space-y-4">
             <div className="flex justify-between text-sm font-bold dark:text-white">
-              <span>Max Opacity</span>
+              <span>{ui?.maxOpacityLabel || "Max Opacity"}</span>
               <span>{(opacity * 100).toFixed(0)}%</span>
             </div>
             <input
@@ -126,7 +127,8 @@ export default function ShadowGeneratorPage() {
           {/* New: Color Picker Input */}
           <div className="space-y-4">
             <label className="flex items-center text-sm font-bold dark:text-white">
-              <Palette className="w-4 h-4 mr-2" /> Shadow Color
+              <Palette className="w-4 h-4 mr-2" />{" "}
+              {ui?.shadowColorLabel || "Shadow Color"}
             </label>
             <div className="flex gap-2">
               <input
@@ -147,7 +149,7 @@ export default function ShadowGeneratorPage() {
 
           <div className="pt-4 border-t border-slate-100 dark:border-slate-800">
             <label className="block text-xs font-bold text-slate-400 uppercase mb-3 ml-1 tracking-wider">
-              Generated CSS
+              {ui?.generatedCssLabel || "Generated CSS"}
             </label>
             <div className="relative group">
               <pre className="p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl text-[11px] font-mono text-slate-600 dark:text-slate-300 overflow-x-auto whitespace-pre-wrap leading-relaxed border border-slate-100 dark:border-slate-700">
@@ -175,7 +177,7 @@ export default function ShadowGeneratorPage() {
             className="w-56 h-56 bg-white dark:bg-slate-900 rounded-[2.5rem] flex items-center justify-center text-slate-400 font-medium animate-in zoom-in-90"
             style={{ boxShadow: shadowValue }}
           >
-            Preview Card
+            {ui?.previewCardLabel || "Preview Card"}
           </div>
         </div>
       </div>

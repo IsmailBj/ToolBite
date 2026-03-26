@@ -1,0 +1,434 @@
+{
+  "common": {
+    "backToWorkspace": "Вернуться в рабочую область",
+    "copy": "Копировать результат",
+    "download": "Скачать файл"
+  },
+  "home": {
+    "title1": "Ваше универсальное",
+    "title2": "рабочее пространство.",
+    "subtitle": "Быстро, безопасно и работает прямо в вашем браузере.",
+    "search": "Поиск инструментов...",
+    "launch": "Запустить инструмент",
+    "noTools": "Инструменты по вашему запросу не найдены.",
+    "reset": "Сбросить фильтры",
+    "categories": {
+      "All": "Все",
+      "Design": "Дизайн",
+      "Developer": "Разработка",
+      "Video": "Видео",
+      "Security": "Безопасность"
+    }
+  },
+  "tools": {
+    "bgRemover": {
+      "title": "Удаление фона",
+      "description": "Мгновенно удаляйте фон с любого изображения с помощью высокоскоростного ИИ.",
+      "page": {
+        "title": "Удаление фона",
+        "subtitle": "Мгновенно выделяйте объекты на изображениях с помощью ИИ прямо на устройстве.",
+        "dropzoneLabel": "Перетащите изображение сюда",
+        "uploadHint": "Лучше всего работает с четкими объектами (люди, товары, животные).",
+        "selectBtn": "Выбрать изображение",
+        "initialDownloadNotice": "При первом запуске загружается ИИ (это займет некоторое время).",
+        "removeBgBtn": "Удалить фон",
+        "cancelBtn": "Отмена",
+        "successMessage": "Объект выделен! ✨",
+        "downloadBtn": "Скачать PNG",
+        "startOverBtn": "Начать заново",
+        "errorMessage": "Ошибка",
+        "imageValidationError": "Пожалуйста, загрузите корректный файл изображения (JPEG, PNG, WEBP).",
+        "wakingModel": "Запуск модели ИИ...",
+        "processingError": "Ошибка при обработке изображения."
+      },
+      "seo": {
+        "title": "Удалить фон с изображения бесплатно | ToolBite",
+        "description": "Используйте наш высокоскоростной ИИ для мгновенного удаления фона с любого изображения прямо в браузере. 100% бесплатно и безопасно."
+      }
+    },
+    "neumorphism": {
+      "title": "Генератор неоморфизма",
+      "description": "Генерируйте hex-коды мягкого интерфейса и сложные тени CSS на основе одного базового цвета.",
+      "page": {
+        "title": "Генератор неоморфизма",
+        "subtitle": "Генерируйте CSS-код мягкого интерфейса на основе одного базового цвета.",
+        "baseColorLabel": "Базовый цвет",
+        "shapeLabel": "Форма",
+        "distanceLabel": "Расстояние",
+        "blurLabel": "Размытие",
+        "intensityLabel": "Интенсивность",
+        "cssOutputLabel": "Результат CSS",
+        "copyButton": "Копировать CSS",
+        "shapes": {
+          "flat": "Плоская",
+          "concave": "Вогнутая",
+          "convex": "Выпуклая",
+          "pressed": "Вдавленная"
+        }
+      },
+      "seo": {
+        "title": "Генератор неоморфизма | ToolBite",
+        "description": "Генерируйте hex-коды мягкого интерфейса и сложные тени CSS на основе одного базового цвета."
+      }
+    },
+    "csvConverter": {
+      "title": "CSV в JSON",
+      "description": "Преобразуйте локальные данные CSV в отформатированные массивы JSON и визуальные HTML-таблицы.",
+      "page": {
+        "title": "Конвертер CSV в JSON",
+        "subtitle": "Надежный парсер с пользовательскими разделителями и экспортом в JSON, HTML и Markdown.",
+        "configurationLabel": "Конфигурация",
+        "delimiterLabel": "Разделитель",
+        "delimiters": {
+          "comma": "Запятая (,)",
+          "semicolon": "Точка с запятой (;)",
+          "tab": "Табуляция",
+          "pipe": "Вертикальная черта (|)"
+        },
+        "firstRowHeadersLabel": "Первая строка содержит заголовки",
+        "rawInputLabel": "Ввод исходных данных",
+        "uploadButtonLabel": "Загрузить",
+        "noValidDataError": "Корректные данные не предоставлены."
+      },
+      "seo": {
+        "title": "Конвертер CSV в JSON | ToolBite",
+        "description": "Мгновенно преобразуйте локальные данные CSV в отформатированные массивы JSON и визуальные HTML-таблицы в вашем браузере."
+      }
+    },
+    "scrollbar": {
+      "title": "Пользовательский скроллбар",
+      "description": "Визуальный редактор для стилизации полос прокрутки Webkit, включая дорожку, ползунок и состояния при наведении.",
+      "page": {
+        "title": "Пользовательский скроллбар",
+        "subtitle": "Кроссбраузерный визуальный редактор полос прокрутки для Webkit и Firefox.",
+        "dimensionsLabel": "Ширина / Высота",
+        "paddingLabel": "Отступ (эффект парения)",
+        "borderRadiusLabel": "Радиус скругления",
+        "trackColorLabel": "Цвет дорожки",
+        "thumbColorLabel": "Цвет ползунка",
+        "thumbHoverLabel": "Ползунок при наведении",
+        "cssOutputLabel": "Результат CSS",
+        "livePreviewLabel": "Предпросмотр",
+        "scrollContentLabel": "Вертикальная и горизонтальная прокрутка контента",
+        "copyButton": "Копировать CSS",
+        "resetButton": "Сбросить настройки",
+        "copiedMessage": "Скопировано в буфер обмена!"
+      },
+      "seo": {
+        "title": "Генератор пользовательских полос прокрутки | ToolBite",
+        "description": "Визуальный редактор для стилизации полос прокрутки Webkit, включая дорожку, ползунок и состояния при наведении."
+      }
+    },
+    "videoToGif": {
+      "title": "Видео в GIF",
+      "description": "Конвертируйте видеоклипы в высококачественные анимированные GIF-файлы.",
+      "page": {
+        "title": "Видео в GIF",
+        "subtitle": "Конвертируйте видео в качественные GIF-файлы полностью в вашем браузере.",
+        "selectVideoLabel": "Выбрать видео",
+        "convertToGifLabel": "Конвертировать в GIF",
+        "conversionCompleteLabel": "Конвертация завершена! ✨",
+        "cancelLabel": "Отмена",
+        "downloadGifLabel": "Скачать GIF",
+        "convertAnotherLabel": "Конвертировать другое",
+        "errorInvalidVideo": "Пожалуйста, загрузите корректный видеофайл (MP4, WEBM, MOV).",
+        "errorConversion": "Ошибка при конвертации видео."
+      },
+      "seo": {
+        "title": "Видео в GIF | ToolBite",
+        "description": "Конвертируйте видеоклипы в высококачественные анимированные GIF-файлы."
+      }
+    },
+    "clipPathMaker": {
+      "title": "Создатель CSS Clip-Path",
+      "description": "Перетаскивайте точки многоугольника для создания произвольных форм и получения CSS-свойства clip-path.",
+      "page": {
+        "title": "Создатель CSS Clip-Path",
+        "subtitle": "Продвинутый генератор с управлением точками и предпросмотром изображения.",
+        "shapeTypeLabel": "Тип формы",
+        "presetsLabel": "Шаблоны",
+        "customImageLabel": "Свое изображение",
+        "uploadButtonLabel": "Загрузить изображение",
+        "cssOutputLabel": "Результат CSS"
+      },
+      "seo": {
+        "title": "Создатель CSS Clip-Path | ToolBite",
+        "description": "Перетаскивайте точки многоугольника для создания произвольных форм и получения CSS-свойства clip-path."
+      }
+    },
+    "gridBuilder": {
+      "title": "Конструктор CSS Grid",
+      "description": "Визуальный интерфейс для определения столбцов, строк и отступов с мгновенным экспортом кода CSS Grid.",
+      "page": {
+        "title": "Конструктор CSS Grid",
+        "subtitle": "Визуально настраивайте столбцы, строки и интервалы для генерации кода сетки.",
+        "containerLabel": "Контейнер",
+        "columnsLabel": "Столбцы",
+        "rowsLabel": "Строки",
+        "gapLabel": "Отступ (Gap)",
+        "selectedItemLabel": "Выбранный элемент",
+        "columnSpanLabel": "Охват столбцов",
+        "rowSpanLabel": "Охват строк",
+        "addBlockButton": "Добавить блок",
+        "removeBlockButton": "Удалить блок",
+        "cssOutputLabel": "Результат CSS"
+      },
+      "seo": {
+        "title": "Конструктор CSS Grid | ToolBite",
+        "description": "Визуальный интерфейс для определения столбцов, строк и отступов с мгновенным экспортом кода CSS Grid."
+      }
+    },
+    "blobGenerator": {
+      "title": "Генератор фигур Blob",
+      "description": "Генерируйте плавные органические формы SVG для современных макетов и фонов сайтов.",
+      "page": {
+        "blobTitle": "Генератор фигур Blob",
+        "blobSubtitle": "Создавайте органические SVG-фигуры для веб-дизайна.",
+        "parameters": "Параметры",
+        "edgesLabel": "Края (Сложность)",
+        "growthLabel": "Рост (Случайность)",
+        "randomizeButton": "Случайно"
+      },
+      "seo": {
+        "title": "Генератор фигур Blob | ToolBite",
+        "description": "Генерируйте плавные органические формы SVG для современных макетов и фонов сайтов."
+      }
+    },
+    "socialPreviewer": {
+      "title": "Превью соцсетей",
+      "description": "Предпросмотр и генерация мета-тегов для карточек Twitter, Facebook и LinkedIn.",
+      "page": {
+        "title": "Превью соцсетей",
+        "subtitle": "Предпросмотр и создание SEO мета-тегов с поддержкой локальных изображений.",
+        "pageTitleLabel": "Заголовок страницы",
+        "descriptionLabel": "Описание",
+        "previewImageLabel": "Изображение для превью",
+        "livePreviewsLabel": "Живой предпросмотр"
+      },
+      "seo": {
+        "title": "Превью соцсетей | ToolBite",
+        "description": "Предпросмотр и генерация мета-тегов для карточек Twitter, Facebook и LinkedIn."
+      }
+    },
+    "uaInspector": {
+      "title": "Инспектор UA",
+      "description": "Определяйте и анализируйте строки User-Agent для идентификации браузеров, ОС и деталей оборудования.",
+      "page": {
+        "title": "Инспектор UA",
+        "subtitle": "Анализ строк браузера и отпечатков устройств.",
+        "userAgentStringLabel": "Строка User Agent",
+        "analyzeStringLabel": "Анализировать",
+        "copyRawLabel": "Копировать исходник"
+      },
+      "seo": {
+        "title": "Инспектор UA | ToolBite",
+        "description": "Определяйте и анализируйте строки User-Agent для идентификации браузеров, ОС и деталей оборудования."
+      }
+    },
+    "shadowGenerator": {
+      "title": "Генератор палитры теней",
+      "description": "Создавайте плавные многослойные тени CSS для реалистичных элементов интерфейса.",
+      "page": {
+        "title": "Генератор палитры теней",
+        "subtitle": "Создавайте естественные многослойные CSS-тени с кастомными цветами.",
+        "parametersLabel": "Параметры",
+        "layersLabel": "Слои",
+        "blurStrengthLabel": "Сила (Размытие)",
+        "maxOpacityLabel": "Макс. непрозрачность",
+        "shadowColorLabel": "Цвет тени",
+        "generatedCssLabel": "Сгенерированный CSS",
+        "previewCardLabel": "Карточка предпросмотра"
+      },
+      "seo": {
+        "title": "Генератор палитры теней | ToolBite",
+        "description": "Создавайте плавные многослойные тени CSS для реалистичных элементов интерфейса."
+      }
+    },
+    "safeLink": {
+      "title": "Кодировщик безопасных ссылок",
+      "description": "Маскируйте ссылки для защиты от ботов и парсеров с помощью встроенного кодирования браузера.",
+      "page": {
+        "title": "Кодировщик безопасных ссылок",
+        "subtitle": "Маскируйте URL-адреса для защиты от парсеров и ботов.",
+        "invalidUrlWarning": "Предупреждение: это не похоже на валидный URL, но я все равно его закодирую.",
+        "encodeButton": "Закодировать",
+        "decodeButton": "Декодировать",
+        "resultLabel": "Результат",
+        "copyButton": "Копировать в буфер",
+        "urlPlaceholder": "Введите URL или код...",
+        "clearButton": "Очистить"
+      },
+      "seo": {
+        "title": "Кодировщик безопасных ссылок | ToolBite",
+        "description": "Маскируйте ссылки для защиты от ботов и парсеров с помощью встроенного кодирования браузера."
+      }
+    },
+    "markdownLab": {
+      "title": "Лаборатория Markdown",
+      "description": "Редактор Markdown в реальном времени с предпросмотром HTML и очисткой кода.",
+      "page": {
+        "title": "Лаборатория Markdown",
+        "subtitle": "Пишите с помощью сниппетов и просматривайте стилизованный HTML в реальном времени.",
+        "copyMdButton": "Копировать MD",
+        "downloadHtmlButton": "Скачать HTML",
+        "livePreviewLabel": "Предпросмотр",
+        "editorPlaceholder": "# Привет, мир\nНачните вводить текст здесь...",
+        "copyHtmlButton": "Копировать HTML",
+        "clearButton": "Очистить редактор"
+      },
+      "seo": {
+        "title": "Лаборатория Markdown | ToolBite",
+        "description": "Редактор Markdown в реальном времени с предпросмотром HTML и очисткой кода."
+      }
+    },
+    "imageCompressor": {
+      "title": "Компрессор изображений",
+      "description": "Уменьшайте размер файлов изображений до 80% без потери визуального качества.",
+      "page": {
+        "title": "Компрессор изображений",
+        "subtitle": "Сжимайте JPEG, PNG и WEBP без видимой потери качества.",
+        "backToWorkspace": "Вернуться в рабочую область",
+        "dropzoneLabel": "Перетащите изображение сюда",
+        "uploadRestrictions": "Поддержка JPG, PNG и WEBP до 15 МБ.",
+        "selectImageButton": "Выбрать изображение",
+        "compressionSettingsLabel": "Настройки сжатия",
+        "imageQualityLabel": "Качество изображения",
+        "smallestFileLabel": "Мин. размер",
+        "bestQualityLabel": "Макс. качество",
+        "compressingLabel": "Сжатие...",
+        "cancelButton": "Отмена",
+        "compressionCompleteLabel": "Сжатие завершено! 🎉",
+        "originalSizeLabel": "Исходный размер",
+        "newSizeLabel": "НОВЫЙ",
+        "compressedSizeLabel": "Сжатый размер",
+        "totalSavedLabel": "Всего сэкономлено",
+        "downloadImageButton": "Скачать изображение",
+        "compressAnotherButton": "Сжать другое",
+        "compressionErrorLabel": "Ошибка сжатия",
+        "errors": {
+          "invalidFile": "Пожалуйста, загрузите корректный файл изображения (JPEG, PNG, WEBP).",
+          "processingError": "Ошибка при обработке изображения."
+        }
+      },
+      "seo": {
+        "title": "Компрессор изображений | ToolBite",
+        "description": "Уменьшайте размер файлов изображений до 80% без потери визуального качества."
+      }
+    },
+    "unitPro": {
+      "title": "Конвертер юнитов Pro",
+      "description": "Продвинутая конвертация для веб-единиц (PX/REM), цифровых данных и физических величин.",
+      "page": {
+        "title": "Конвертер юнитов Pro",
+        "subtitle": "Точная конвертация для дизайна, разработки и повседневных задач.",
+        "fromLabel": "Из",
+        "toLabel": "В"
+      },
+      "seo": {
+        "title": "Конвертер юнитов Pro | ToolBite",
+        "description": "Продвинутая конвертация для веб-единиц (PX/REM), цифровых данных и физических величин."
+      }
+    },
+    "pdfSurgeon": {
+      "title": "PDF Surgeon",
+      "description": "Объединяйте документы или извлекайте страницы с идеальной точностью.",
+      "page": {
+        "title": "PDF Surgeon",
+        "subtitle": "Объединяйте или разделяйте PDF-документы прямо в вашем браузере.",
+        "minFilesError": "Пожалуйста, добавьте минимум 2 PDF для объединения.",
+        "uploadSplitError": "Пожалуйста, загрузите PDF для разделения.",
+        "mergeTabLabel": "Объединить",
+        "splitTabLabel": "Разделить",
+        "pageRangeLabel": "Диапазон страниц",
+        "pdfReadyLabel": "PDF готов!",
+        "downloadResultButton": "Скачать результат",
+        "dropzoneLabel": "Перетащите PDF сюда",
+        "selectFilesButton": "Выбрать файлы",
+        "mergePdfsButton": "Объединить PDF",
+        "extractPagesButton": "Извлечь страницы"
+      },
+      "seo": {
+        "title": "PDF Surgeon | ToolBite",
+        "description": "Объединяйте несколько документов или извлекайте страницы с идеальной точностью."
+      }
+    },
+    "secretShield": {
+      "title": "Secret Shield",
+      "description": "Шифрование военного уровня AES-256. Защитите любой файл локально.",
+      "page": {
+        "title": "Secret Shield",
+        "subtitle": "Шифрование AES-256 военного уровня. Происходит полностью в вашем браузере.",
+        "encryptLabel": "Зашифровать",
+        "decryptLabel": "Расшифровать",
+        "privacyNote": "Приватность прежде всего: файлы никогда не покидают ваше устройство.",
+        "selectFileLabel": "Выберите файл для",
+        "removeLabel": "Удалить",
+        "setPasswordLabel": "Установить пароль",
+        "fileLabel": "Файл",
+        "downloadResultLabel": "Скачать результат",
+        "startNewLabel": "Начать заново"
+      },
+      "seo": {
+        "title": "Secret Shield | ToolBite",
+        "description": "Шифрование военного уровня AES-256. Защитите любой файл локально в вашем браузере."
+      }
+    },
+    "voiceNotes": {
+      "title": "Голосовые заметки",
+      "description": "Мгновенно преобразуйте речь в текст с помощью Whisper AI от OpenAI.",
+      "page": {
+        "title": "Голосовые заметки",
+        "subtitle": "Аудио в текст. Whisper AI работает локально в вашем браузере.",
+        "speakClearlyLabel": "Говорите четко в микрофон",
+        "uploadAudioLabel": "Загрузить аудио",
+        "supportedFormatsLabel": "Поддержка MP3, WAV, M4A",
+        "transcribingStatus": "Транскрибация...",
+        "modelRunningLabel": "Модель Whisper AI запущена на вашем устройстве.",
+        "firstLoadNotice": "Первая загрузка может занять минуту для скачивания моделей (~40 МБ).",
+        "transcriptionResultLabel": "Результат транскрибации",
+        "errorTranscriptionFailed": "Транскрибация не удалась. Файл может быть слишком большим для памяти устройства.",
+        "errorMicAccessDenied": "Доступ к микрофону запрещен. Проверьте разрешения браузера.",
+        "errorWordGeneration": "Не удалось создать документ Word."
+      },
+      "seo": {
+        "title": "Голосовые заметки | ToolBite",
+        "description": "Мгновенно преобразуйте речь в текст с помощью Whisper AI от OpenAI."
+      }
+    },
+    "colorPalette": {
+      "title": "Цветовая палитра",
+      "description": "Извлекайте самые доминирующие и красивые цвета из любой фотографии.",
+      "page": {
+        "title": "Цветовая палитра",
+        "subtitle": "Мгновенно извлекайте основные цвета из любого изображения.",
+        "dropImageLabel": "Перетащите фото для анализа цветов",
+        "uploadNewImageButton": "Загрузить новое фото"
+      },
+      "seo": {
+        "title": "Цветовая палитра | ToolBite",
+        "description": "Извлекайте самые доминирующие и красивые цвета из любой фотографии."
+      }
+    },
+    "cronVisualizer": {
+      "title": "Визуализатор Cron",
+      "description": "Превращайте сложные cron-выражения в понятные описания графиков.",
+      "page": {
+        "title": "Визуализатор Cron",
+        "subtitle": "Декодируйте cron-выражения в расписания на понятном языке.",
+        "inputLabel": "Выражение Cron",
+        "scheduleDescriptionLabel": "Описание расписания",
+        "invalidError": "Неверное выражение Cron. Проверьте формат.",
+        "examples": {
+          "every5Mins": "Каждые 5 минут",
+          "everyHour": "Каждый час",
+          "midnightDaily": "Ежедневно в полночь",
+          "everyMonday": "Каждый понедельник"
+        }
+      },
+      "seo": {
+        "title": "Визуализатор Cron | ToolBite",
+        "description": "Превращайте сложные cron-выражения в понятные описания графиков."
+      }
+    }
+  }
+}

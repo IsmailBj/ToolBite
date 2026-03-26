@@ -121,7 +121,23 @@
     },
     "videoToGif": {
       "title": "Video to GIF",
-      "description": "Convert video clips into high-quality, shareable animated GIFs."
+      "description": "Convert video clips into high-quality, shareable animated GIFs.",
+      "page": {
+        "title": "Video to GIF",
+        "subtitle": "Convert videos to high-quality GIFs entirely in your browser.",
+        "selectVideoLabel": "Select Video",
+        "convertToGifLabel": "Convert to GIF",
+        "conversionCompleteLabel": "Conversion Complete! ✨",
+        "cancelLabel": "Cancel",
+        "downloadGifLabel": "Download GIF",
+        "convertAnotherLabel": "Convert Another",
+        "errorInvalidVideo": "Please upload a valid video file (MP4, WEBM, MOV).",
+        "errorConversion": "Error converting video."
+      },
+      "seo": {
+        "title": "Video to GIF | ToolBite",
+        "description": "Convert video clips into high-quality, shareable animated GIFs."
+      }
     },
     "clipPathMaker": {
       "title": "CSS Clip-Path Maker",
@@ -180,15 +196,53 @@
     },
     "socialPreviewer": {
       "title": "Social Previewer",
-      "description": "Live preview and generate Meta Tags for Twitter, Facebook, and LinkedIn cards."
+      "description": "Live preview and generate Meta Tags for Twitter, Facebook, and LinkedIn cards.",
+      "page": {
+        "title": "Social Previewer",
+        "subtitle": "Preview and generate SEO meta tags with local image support.",
+        "pageTitleLabel": "Page Title",
+        "descriptionLabel": "Description",
+        "previewImageLabel": "Preview Image",
+        "livePreviewsLabel": "Live Previews"
+      },
+      "seo": {
+        "title": "Social Previewer | ToolBite",
+        "description": "Live preview and generate Meta Tags for Twitter, Facebook, and LinkedIn cards."
+      }
     },
     "uaInspector": {
       "title": "UA Inspector",
-      "description": "Detect and parse User-Agent strings to identify browsers, OS, and hardware details."
+      "description": "Detect and parse User-Agent strings to identify browsers, OS, and hardware details.",
+      "page": {
+        "title": "UA Inspector",
+        "subtitle": "Analyze browser strings and device fingerprints.",
+        "userAgentStringLabel": "User Agent String",
+        "analyzeStringLabel": "Analyze String",
+        "copyRawLabel": "Copy Raw"
+      },
+      "seo": {
+        "title": "UA Inspector | ToolBite",
+        "description": "Detect and parse User-Agent strings to identify browsers, OS, and hardware details."
+      }
     },
     "shadowGenerator": {
       "title": "Shadow Palette Generator",
-      "description": "Create smooth, multi-layered CSS shadows for natural-looking UI elements."
+      "description": "Create smooth, multi-layered CSS shadows for natural-looking UI elements.",
+      "page": {
+        "title": "Shadow Palette Generator",
+        "subtitle": "Create natural, layered CSS shadows with custom colors.",
+        "parametersLabel": "Parameters",
+        "layersLabel": "Layers",
+        "blurStrengthLabel": "Strength (Blur)",
+        "maxOpacityLabel": "Max Opacity",
+        "shadowColorLabel": "Shadow Color",
+        "generatedCssLabel": "Generated CSS",
+        "previewCardLabel": "Preview Card"
+      },
+      "seo": {
+        "title": "Shadow Palette Generator | ToolBite",
+        "description": "Create smooth, multi-layered CSS shadows for natural-looking UI elements."
+      }
     },
     "safeLink": {
       "title": "Safe-Link Encoder",
@@ -263,7 +317,17 @@
     },
     "unitPro": {
       "title": "Unit Converter Pro",
-      "description": "Advanced conversion for web units (PX/REM), digital storage, and physical length."
+      "description": "Advanced conversion for web units (PX/REM), digital storage, and physical length.",
+      "page": {
+        "title": "Unit Converter Pro",
+        "subtitle": "Precision conversion for design, dev, and daily tasks.",
+        "fromLabel": "From",
+        "toLabel": "To"
+      },
+      "seo": {
+        "title": "Unit Converter Pro | ToolBite",
+        "description": "Advanced conversion for web units (PX/REM), digital storage, and physical length."
+      }
     },
     "pdfSurgeon": {
       "title": "PDF Surgeon",
@@ -290,11 +354,46 @@
     },
     "secretShield": {
       "title": "Secret Shield",
-      "description": "Military-grade AES-256 encryption. Secure any file locally."
+      "description": "Military-grade AES-256 encryption. Secure any file locally.",
+      "page": {
+        "title": "Secret Shield",
+        "subtitle": "AES-256 military-grade encryption. Happens entirely in your browser.",
+        "encryptLabel": "Encrypt",
+        "decryptLabel": "Decrypt",
+        "privacyNote": "Privacy first: Files never leave your device.",
+        "selectFileLabel": "Select file to",
+        "removeLabel": "Remove",
+        "setPasswordLabel": "Set Password",
+        "fileLabel": "File",
+        "downloadResultLabel": "Download Result",
+        "startNewLabel": "Start New"
+      },
+      "seo": {
+        "title": "Secret Shield | ToolBite",
+        "description": "Military-grade AES-256 encryption. Secure any file locally in your browser."
+      }
     },
     "voiceNotes": {
       "title": "Voice Notes",
-      "description": "Convert speech to text instantly using OpenAI's Whisper AI."
+      "description": "Convert speech to text instantly using OpenAI's Whisper AI.",
+      "page": {
+        "title": "Voice Notes",
+        "subtitle": "Audio to text. Whisper AI running locally in your browser.",
+        "speakClearlyLabel": "Speak clearly into your mic",
+        "uploadAudioLabel": "Upload Audio",
+        "supportedFormatsLabel": "MP3, WAV, M4A supported",
+        "transcribingStatus": "Transcribing...",
+        "modelRunningLabel": "Running Whisper AI model on your device.",
+        "firstLoadNotice": "First load may take a minute to download models (~40MB).",
+        "transcriptionResultLabel": "Transcription Result",
+        "errorTranscriptionFailed": "Transcription failed. The file might be too large for your device's memory.",
+        "errorMicAccessDenied": "Microphone access denied. Please check your browser permissions.",
+        "errorWordGeneration": "Failed to generate Word document."
+      },
+      "seo": {
+        "title": "Voice Notes | ToolBite",
+        "description": "Convert speech to text instantly using OpenAI's Whisper AI."
+      }
     },
     "colorPalette": {
       "title": "Color Palette",

@@ -7,7 +7,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const dict = await getDictionary(locale as "en" | "es");
+  const dict = await getDictionary(locale);
 
   // Using the .seo key as we agreed
   const seo = dict.tools?.clipPathMaker?.seo;
