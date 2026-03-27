@@ -87,6 +87,35 @@
         ]
       }
     },
+    "fingerprintChecker": {
+      "title": "Browser-Fingerabdruck-Checker",
+      "description": "Entdecken Sie Ihren einzigartigen Browser-Fußabdruck und sehen Sie, wie Websites Sie ohne Cookies verfolgen.",
+      "page": {
+        "btnScan": "Datenschutz-Scan starten",
+        "btnScanning": "Browser-Entropie wird analysiert...",
+        "disclaimer": "100% Client-seitig. Wir analysieren Canvas, WebGL und Audio lokal auf Ihrem Gerät.",
+        "hashTitle": "Ihr einzigartiger Browser-Hash",
+        "hardwareTitle": "Hardware-Entropie",
+        "graphicsTitle": "Grafik & Audio",
+        "cores": "CPU-Kerne",
+        "memory": "Arbeitsspeicher",
+        "platform": "Plattform",
+        "renderer": "WebGL-Renderer",
+        "audio": "Audio-Abtastrate",
+        "hidden": "Versteckt",
+        "btnReset": "Neuen Scan ausführen"
+      },
+      "seo": {
+        "title": "Browser Fingerabdruck Test | Online-Datenschutz | ToolBite",
+        "description": "Testen Sie Ihren Browser-Fingerabdruck. Sehen Sie, wie Websites Sie über Canvas, WebGL und Audio-API ohne Cookies verfolgen.",
+        "features": [
+          "Canvas- & WebGL-Analyse",
+          "Audio-Stack-Profiling",
+          "Hardware-Erkennung",
+          "100% lokale Verarbeitung"
+        ]
+      }
+    },
     "csvConverter": {
       "title": "CSV zu JSON",
       "description": "Analysieren Sie lokale CSV-Daten in formatierte JSON-Arrays und visuelle HTML-Tabellen.",

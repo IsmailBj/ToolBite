@@ -20,6 +20,7 @@ import {
   Layers,
   SlidersVertical,
   TableProperties,
+  Fingerprint,
 } from "lucide-react";
 
 export interface Tool {
@@ -142,6 +143,22 @@ export const getTools = (dict: any): Tool[] => [
     hoverBorder: "hover:border-indigo-300 dark:hover:border-indigo-700",
     status: "Active",
     href: "/tools/blob-generator",
+  },
+  {
+    id: "fingerprint-checker",
+    title:
+      dict.tools?.fingerprintChecker?.title || "Browser Fingerprint Checker",
+    category: "Security",
+    description:
+      dict.tools?.fingerprintChecker?.description ||
+      "Discover your unique browser footprint and see how websites track you.",
+    icon: (
+      <Fingerprint className="w-7 h-7 text-emerald-600 dark:text-emerald-400" />
+    ),
+    bgColor: "bg-emerald-100 dark:bg-emerald-900/30",
+    hoverBorder: "hover:border-emerald-300 dark:hover:border-emerald-700",
+    status: "Active",
+    href: "/tools/fingerprint-checker",
   },
   {
     id: "social-previewer",

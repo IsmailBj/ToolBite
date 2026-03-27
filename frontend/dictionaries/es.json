@@ -117,6 +117,35 @@
         ]
       }
     },
+    "fingerprintChecker": {
+      "title": "Comprobador de Huella Digital del Navegador",
+      "description": "Descubre tu huella digital única y mira cómo los sitios web te rastrean sin usar cookies.",
+      "page": {
+        "btnScan": "Iniciar Escaneo de Privacidad",
+        "btnScanning": "Analizando entropía del navegador...",
+        "disclaimer": "100% del lado del cliente. Analizamos Canvas, WebGL y el audio localmente.",
+        "hashTitle": "Tu Hash de Navegador Único",
+        "hardwareTitle": "Entropía de Hardware",
+        "graphicsTitle": "Gráficos y Audio",
+        "cores": "Núcleos de CPU",
+        "memory": "Memoria del Dispositivo",
+        "platform": "Plataforma",
+        "renderer": "Renderizador WebGL",
+        "audio": "Frecuencia de Muestreo de Audio",
+        "hidden": "Oculto",
+        "btnReset": "Ejecutar Nuevo Escaneo"
+      },
+      "seo": {
+        "title": "Test de Huella Digital del Navegador | Privacidad | ToolBite",
+        "description": "Comprueba tu huella digital (fingerprint). Mira cómo los sitios web te rastrean a través de Canvas, WebGL y Audio API sin cookies.",
+        "features": [
+          "Análisis de Canvas y WebGL",
+          "Perfilado de Audio",
+          "Detección de Hardware",
+          "Procesamiento 100% Local"
+        ]
+      }
+    },
     "scrollbar": {
       "title": "Barra de desplazamiento personalizada",
       "description": "Editor visual para estilizar barras de desplazamiento Webkit, incluyendo estados de pista, control y hover.",

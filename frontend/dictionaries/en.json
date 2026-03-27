@@ -246,6 +246,35 @@
         ]
       }
     },
+    "fingerprintChecker": {
+      "title": "Browser Fingerprint Checker",
+      "description": "Discover your unique browser footprint and see how websites track you.",
+      "page": {
+        "btnScan": "Start Privacy Scan",
+        "btnScanning": "Analyzing browser entropy...",
+        "disclaimer": "100% Client-Side. We analyze your Canvas, WebGL, and Audio stack locally.",
+        "hashTitle": "Your Unique Browser Hash",
+        "hardwareTitle": "Hardware Entropy",
+        "graphicsTitle": "Graphics & Audio",
+        "cores": "CPU Cores",
+        "memory": "Device Memory",
+        "platform": "Platform",
+        "renderer": "WebGL Renderer",
+        "audio": "Audio Sample Rate",
+        "hidden": "Hidden",
+        "btnReset": "Run New Scan"
+      },
+      "seo": {
+        "title": "Browser Fingerprint Test | Online Privacy | ToolBite",
+        "description": "Test your browser fingerprint. See how websites track you via Canvas, WebGL, and Audio API without cookies.",
+        "features": [
+          "Canvas & WebGL Analysis",
+          "Audio Stack Profiling",
+          "Hardware Detection",
+          "100% Local Processing"
+        ]
+      }
+    },
     "socialPreviewer": {
       "title": "Social Previewer",
       "description": "Live preview and generate Meta Tags for Twitter, Facebook, and LinkedIn cards.",

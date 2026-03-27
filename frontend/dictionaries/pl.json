@@ -268,6 +268,35 @@
         ]
       }
     },
+    "fingerprintChecker": {
+      "title": "Tester Odcisku Przeglądarki",
+      "description": "Sprawdź swój unikalny odcisk palca przeglądarki i dowiedz się, jak strony śledzą Cię bez użycia ciasteczek.",
+      "page": {
+        "btnScan": "Rozpocznij skanowanie prywatności",
+        "btnScanning": "Analizowanie entropii przeglądarki...",
+        "disclaimer": "100% po stronie klienta. Analizujemy Canvas, WebGL i ustawienia audio lokalnie na Twoim urządzeniu.",
+        "hashTitle": "Twój unikalny Hash Przeglądarki",
+        "hardwareTitle": "Entropia Sprzętowa",
+        "graphicsTitle": "Grafika i Dźwięk",
+        "cores": "Rdzenie CPU",
+        "memory": "Pamięć Urządzenia",
+        "platform": "Platforma",
+        "renderer": "Silnik WebGL",
+        "audio": "Częstotliwość próbkowania audio",
+        "hidden": "Ukryte",
+        "btnReset": "Uruchom Nowy Skan"
+      },
+      "seo": {
+        "title": "Tester Odcisku Przeglądarki | Prywatność Online | ToolBite",
+        "description": "Sprawdź swój unikalny odcisk przeglądarki (fingerprint). Dowiedz się, jak strony śledzą Cię przez Canvas, WebGL i Audio bez ciasteczek.",
+        "features": [
+          "Analiza Canvas i WebGL",
+          "Profilowanie dźwięku",
+          "Wykrywanie sprzętu",
+          "W 100% lokalne przetwarzanie"
+        ]
+      }
+    },
     "uaInspector": {
       "title": "Inspektor UA",
       "description": "Wykrywaj i analizuj ciągi User-Agent, aby zidentyfikować przeglądarki, systemy operacyjne i szczegóły sprzętowe.",

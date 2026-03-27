@@ -173,6 +173,35 @@
         ]
       }
     },
+    "fingerprintChecker": {
+      "title": "Vérificateur d'Empreinte de Navigateur",
+      "description": "Découvrez votre empreinte numérique unique et voyez comment les sites web vous suivent sans cookies.",
+      "page": {
+        "btnScan": "Lancer l'analyse de confidentialité",
+        "btnScanning": "Analyse de l'entropie du navigateur...",
+        "disclaimer": "100% côté client. Nous analysons Canvas, WebGL et l'audio localement.",
+        "hashTitle": "Votre Hash de Navigateur Unique",
+        "hardwareTitle": "Entropie Matérielle",
+        "graphicsTitle": "Graphiques et Audio",
+        "cores": "Cœurs de CPU",
+        "memory": "Mémoire de l'appareil",
+        "platform": "Plateforme",
+        "renderer": "Moteur WebGL",
+        "audio": "Fréquence d'Échantillonnage Audio",
+        "hidden": "Caché",
+        "btnReset": "Lancer une nouvelle analyse"
+      },
+      "seo": {
+        "title": "Test d'Empreinte de Navigateur | Confidentialité | ToolBite",
+        "description": "Testez l'empreinte de votre navigateur. Voyez comment les sites vous pistent via Canvas, WebGL et l'API Audio sans cookies.",
+        "features": [
+          "Analyse Canvas & WebGL",
+          "Profilage Audio",
+          "Détection Matérielle",
+          "Traitement 100% Local"
+        ]
+      }
+    },
     "clipPathMaker": {
       "title": "Créateur de Clip-Path CSS",
       "description": "Faites glisser les points du polygone pour créer des formes personnalisées et générer la propriété CSS clip-path.",

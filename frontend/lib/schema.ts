@@ -8,7 +8,8 @@ interface SchemaProps {
     | "MultimediaApplication"
     | "UtilitiesApplication"
     | "DeveloperApplication"
-    | "WebApplication";
+    | "WebApplication"
+    | "SecurityApplication";
   features?: string[];
   locale?: string;
   image?: string;
