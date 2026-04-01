@@ -12,7 +12,7 @@ export default async function ImageResizerPage({
 }) {
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
-  const ui = dict.tools?.imageResizer?.ui || {};
+  const ui = dict.tools?.imageResizer?.page || {};
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">

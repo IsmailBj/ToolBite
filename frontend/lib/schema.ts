@@ -9,7 +9,8 @@ interface SchemaProps {
     | "UtilitiesApplication"
     | "DeveloperApplication"
     | "WebApplication"
-    | "SecurityApplication";
+    | "SecurityApplication"
+    | "SEOApplication";
   features?: string[];
   locale?: string;
   image?: string;

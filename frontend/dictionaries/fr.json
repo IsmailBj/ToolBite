@@ -58,7 +58,7 @@
     "aiAltText": {
       "title": "IA Texte Alternatif Intelligent",
       "description": "Générez instantanément des descriptions d'images parfaites pour le SEO à l'aide d'un modèle de vision IA local.",
-      "ui": {
+      "page": {
         "dropLabel": "Déposez une image pour l'analyse IA",
         "disclaimer": "100 % côté client. Le modèle d'IA fonctionne directement dans votre navigateur.",
         "loadingModel": "Téléchargement du modèle de vision IA...",
@@ -611,7 +611,7 @@
     "imageResizer": {
       "title": "Redimensionneur d'image",
       "description": "Redimensionnez vos images localement dans votre navigateur sans perte de qualité. Rapide, privé et sécurisé.",
-      "ui": {
+      "page": {
         "dropImageLabel": "Déposez l'image ici pour la redimensionner",
         "dimensionsTitle": "Dimensions (Pixels)",
         "widthLabel": "Largeur",
@@ -634,7 +634,7 @@
     "svgToPng": {
       "title": "Convertisseur SVG en PNG",
       "description": "Convertissez instantanément vos fichiers vectoriels SVG en images PNG transparentes localement.",
-      "ui": {
+      "page": {
         "dropLabel": "Déposez votre SVG ici",
         "disclaimer": "Conversion instantanée côté client. Zéro envoi sur serveur.",
         "dimensionsTitle": "Taille d'exportation (Pixels)",
@@ -662,7 +662,7 @@
     "videoSubtitles": {
       "title": "IA Sous-titres Vidéo",
       "description": "Générez automatiquement des sous-titres (.vtt) pour vos vidéos à l'aide de l'IA locale. Totalement privé.",
-      "ui": {
+      "page": {
         "dropLabel": "Déposez une vidéo pour générer les sous-titres",
         "disclaimer": "100 % côté client. Nous extrayons l'audio et le transcribons dans votre navigateur.",
         "readyTitle": "Sous-titres générés !",
@@ -685,7 +685,7 @@
     "entityExtractor": {
       "title": "IA Extracteur d'entités",
       "description": "Trouvez et anonymisez automatiquement les noms, lieux et organisations dans vos textes localement.",
-      "ui": {
+      "page": {
         "placeholder": "Collez un article, un e-mail ou un document ici pour extraire les noms, lieux et organisations...",
         "btnAnalyze": "Analyser les entités",
         "loadingModel": "Téléchargement du modèle NER...",
