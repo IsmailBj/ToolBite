@@ -16,12 +16,11 @@
       "All": "Wszystkie",
       "Design": "Design",
       "Developer": "Programista",
-      "Video": "Wideo",
       "Security": "Bezpieczeństwo"
     },
     "seo": {
-      "title": "ToolBite | Twój bezpieczny i wszechstronny warsztat narzędziowy",
-      "description": "Dostęp do ponad 20 profesjonalnych narzędzi dla programistów i projektantów. 100% prywatności, działanie w przeglądarce i wysoka szybkość. Bez rejestracji."
+      "title": "ToolBite | Twój bezpieczny i uniwersalny obszar roboczy",
+      "description": "Uzyskaj dostęp do ponad 20 profesjonalnych narzędzi dla programistów i projektantów. 100% prywatne, działające w przeglądarce i szybkie. Nie wymaga rejestracji."
     }
   },
   "tools": {
@@ -53,6 +52,32 @@
           "Eksport PNG w wysokiej rozdzielczości",
           "100% Prywatne i Bezpieczne",
           "Działa z ludźmi i produktami"
+        ]
+      }
+    },
+    "aiAltText": {
+      "title": "AI Inteligentny Alt-Text",
+      "description": "Błyskawicznie generuj idealne, przyjazne dla SEO opisy obrazów za pomocą lokalnego modelu wizyjnego AI.",
+      "ui": {
+        "dropLabel": "Przeciągnij obraz do analizy przez AI",
+        "disclaimer": "100% po stronie klienta. Model AI działa bezpośrednio w Twojej przeglądarce.",
+        "loadingModel": "Pobieranie modelu wizyjnego AI...",
+        "loadingDesc": "Dzieje się to tylko raz i model jest zapisywany w przeglądarce. (~240MB)",
+        "analyzing": "AI analizuje Twój obraz...",
+        "resultTitle": "Wygenerowany Alt-Text",
+        "copyBtn": "Kopiuj do schowka",
+        "copied": "Skopiowano!",
+        "btnReset": "Analizuj inny obraz",
+        "errorNotImage": "Proszę przesłać plik graficzny."
+      },
+      "seo": {
+        "title": "Darmowy generator Alt-Text AI | Lokalny i Prywatny | ToolBite",
+        "description": "Generuj opisy alt zoptymalizowane pod SEO za pomocą AI działającej w przeglądarce. Twoje obrazy nigdy nie opuszczają Twojego komputera.",
+        "features": [
+          "Lokalne przetwarzanie AI",
+          "Opisy zoptymalizowane pod SEO",
+          "Brak przesyłania na serwer",
+          "Zasilane przez WebGPU"
         ]
       }
     },
@@ -98,8 +123,8 @@
         "delimiters": {
           "comma": "Przecinek (,)",
           "semicolon": "Średnik (;)",
-          "tab": "Tabulator",
-          "pipe": "Pionowa kreska (|)"
+          "tab": "Tab",
+          "pipe": "Pipe (|)"
         },
         "firstRowHeadersLabel": "Pierwszy wiersz zawiera nagłówki",
         "rawInputLabel": "Wprowadzanie surowych danych",
@@ -246,6 +271,35 @@
         ]
       }
     },
+    "fingerprintChecker": {
+      "title": "Sprawdzanie odcisku przeglądarki",
+      "description": "Odkryj swój unikalny odcisk przeglądarki i sprawdź, jak witryny Cię śledzą.",
+      "page": {
+        "btnScan": "Uruchom skanowanie prywatności",
+        "btnScanning": "Analiza entropii przeglądarki...",
+        "disclaimer": "100% po stronie klienta. Analizujemy Twój stos Canvas, WebGL i Audio lokalnie.",
+        "hashTitle": "Twój unikalny skrót (hash) przeglądarki",
+        "hardwareTitle": "Entropia sprzętowa",
+        "graphicsTitle": "Grafika i Audio",
+        "cores": "Rdzenie CPU",
+        "memory": "Pamięć urządzenia",
+        "platform": "Platforma",
+        "renderer": "Renderer WebGL",
+        "audio": "Częstotliwość próbkowania dźwięku",
+        "hidden": "Ukryte",
+        "btnReset": "Uruchom nowy skan"
+      },
+      "seo": {
+        "title": "Test odcisku przeglądarki | Prywatność online | ToolBite",
+        "description": "Przetestuj odcisk swojej przeglądarki. Zobacz, jak witryny śledzą Cię przez Canvas, WebGL i Audio API bez użycia plików cookie.",
+        "features": [
+          "Analiza Canvas i WebGL",
+          "Profilowanie stosu audio",
+          "Wykrywanie sprzętu",
+          "100% lokalne przetwarzanie"
+        ]
+      }
+    },
     "socialPreviewer": {
       "title": "Podgląd społecznościowy",
       "description": "Podgląd na żywo i generowanie Meta Tagów dla kart Twitter, Facebook i LinkedIn.",
@@ -265,35 +319,6 @@
           "Generowanie meta Open Graph",
           "Obsługa podglądu lokalnych obrazów",
           "Walidacja tagów SEO"
-        ]
-      }
-    },
-    "fingerprintChecker": {
-      "title": "Tester Odcisku Przeglądarki",
-      "description": "Sprawdź swój unikalny odcisk palca przeglądarki i dowiedz się, jak strony śledzą Cię bez użycia ciasteczek.",
-      "page": {
-        "btnScan": "Rozpocznij skanowanie prywatności",
-        "btnScanning": "Analizowanie entropii przeglądarki...",
-        "disclaimer": "100% po stronie klienta. Analizujemy Canvas, WebGL i ustawienia audio lokalnie na Twoim urządzeniu.",
-        "hashTitle": "Twój unikalny Hash Przeglądarki",
-        "hardwareTitle": "Entropia Sprzętowa",
-        "graphicsTitle": "Grafika i Dźwięk",
-        "cores": "Rdzenie CPU",
-        "memory": "Pamięć Urządzenia",
-        "platform": "Platforma",
-        "renderer": "Silnik WebGL",
-        "audio": "Częstotliwość próbkowania audio",
-        "hidden": "Ukryte",
-        "btnReset": "Uruchom Nowy Skan"
-      },
-      "seo": {
-        "title": "Tester Odcisku Przeglądarki | Prywatność Online | ToolBite",
-        "description": "Sprawdź swój unikalny odcisk przeglądarki (fingerprint). Dowiedz się, jak strony śledzą Cię przez Canvas, WebGL i Audio bez ciasteczek.",
-        "features": [
-          "Analiza Canvas i WebGL",
-          "Profilowanie dźwięku",
-          "Wykrywanie sprzętu",
-          "W 100% lokalne przetwarzanie"
         ]
       }
     },
@@ -580,6 +605,110 @@
           "Walidacja cron w czasie rzeczywistym",
           "Wizualny podgląd harmonogramu",
           "Obsługa składni cron"
+        ]
+      }
+    },
+    "imageResizer": {
+      "title": "Zmiana rozmiaru obrazu",
+      "description": "Zmieniaj rozmiar obrazów lokalnie w przeglądarce bez utraty jakości. Szybko i bezpiecznie.",
+      "ui": {
+        "dropImageLabel": "Przeciągnij obraz tutaj, aby zmienić rozmiar",
+        "dimensionsTitle": "Wymiary (Piksele)",
+        "widthLabel": "Szerokość",
+        "heightLabel": "Wysokość",
+        "lockRatio": "Zablokuj proporcje",
+        "btnDownload": "Pobierz obraz",
+        "btnReset": "Wgraj nowy obraz"
+      },
+      "seo": {
+        "title": "Darmowy Resizer Obrazów Online | Prywatnie i Bezpiecznie | ToolBite",
+        "description": "Szybko zmieniaj rozmiar JPG, PNG i WebP bezpośrednio w przeglądarce. 100% prywatne, bez wysyłania na serwer.",
+        "features": [
+          "Lokalne przetwarzanie",
+          "Blokada proporcji",
+          "Natychmiastowy pobór PNG",
+          "Brak wysyłki danych"
+        ]
+      }
+    },
+    "svgToPng": {
+      "title": "Konwerter SVG na PNG",
+      "description": "Błyskawicznie konwertuj wektorowe pliki SVG na przezroczyste obrazy PNG lokalnie.",
+      "ui": {
+        "dropLabel": "Przeciągnij tutaj plik SVG",
+        "disclaimer": "Natychmiastowa konwersja w przeglądarce. Zero wysyłek na serwer.",
+        "dimensionsTitle": "Rozmiar eksportu (Piksele)",
+        "widthLabel": "Szerokość",
+        "heightLabel": "Wysokość",
+        "lockRatio": "Zablokuj proporcje",
+        "readyTitle": "Konwersja zakończona!",
+        "readyDesc": "Twój przezroczysty PNG jest gotowy do pobrania.",
+        "btnDownload": "Pobierz PNG",
+        "btnReset": "Konwertuj kolejny SVG",
+        "errorNotSvg": "Proszę wgrać poprawny plik SVG."
+      },
+      "seo": {
+        "title": "Darmowy Konwerter SVG na PNG Online | Prywatnie | ToolBite",
+        "description": "Konwertuj wektory SVG na wysokiej jakości PNG bezpośrednio w przeglądarce. 100% prywatne, szybkie i zachowuje przezroczystość.",
+        "features": [
+          "Lokalna konwersja",
+          "Własny rozmiar eksportu",
+          "Zachowuje przezroczystość",
+          "Natychmiastowa generacja",
+          "Brak wysyłki danych"
+        ]
+      }
+    },
+    "videoSubtitles": {
+      "title": "AI Napisy do Wideo",
+      "description": "Automatycznie generuj napisy (.vtt) do swoich filmów przy użyciu lokalnej sztucznej inteligencji. Całkowicie prywatnie.",
+      "ui": {
+        "dropLabel": "Przeciągnij wideo, aby wygenerować napisy",
+        "disclaimer": "100% po stronie klienta. Wyodrębniamy dźwięk i dokonujemy transkrypcji w Twojej przeglądarce.",
+        "readyTitle": "Napisy wygenerowane!",
+        "readyDesc": "Naciśnij odtwarzanie, aby zobaczyć podgląd.",
+        "btnDownload": "Pobierz plik .VTT",
+        "btnReset": "Dodaj napisy do innego filmu",
+        "errorNotVideo": "Proszę wgrać poprawny plik wideo MP4 lub WebM."
+      },
+      "seo": {
+        "title": "Darmowy Generator Napisów AI | Lokalnie i Prywatnie | ToolBite",
+        "description": "Generuj idealne napisy .vtt do swoich filmów za pomocą AI działającej w przeglądarce. Twoje filmy nigdy nie opuszczają komputera.",
+        "features": [
+          "Lokalna AI głosowa",
+          "Generowanie napisów VTT",
+          "Brak wysyłki wideo",
+          "Podgląd na żywo"
+        ]
+      }
+    },
+    "entityExtractor": {
+      "title": "AI Ekstraktor podmiotów",
+      "description": "Automatycznie znajduj i maskuj imiona, lokalizacje i organizacje w swoim tekście lokalnie.",
+      "ui": {
+        "placeholder": "Wklej artykuł, e-mail lub dokument tutaj, aby wyodrębnić imiona, lokalizacje i organizacje...",
+        "btnAnalyze": "Analizuj podmioty",
+        "loadingModel": "Pobieranie modelu NER...",
+        "analyzingText": "Skanowanie tekstu pod kątem wrażliwych danych...",
+        "foundTitle": "Wyodrębnione podmioty",
+        "noEntities": "Nie wykryto podmiotów w tym tekście.",
+        "labelPerson": "Osoba",
+        "labelLocation": "Lokalizacja",
+        "labelOrganization": "Organizacja",
+        "labelMisc": "Inne",
+        "redactedTitle": "Tekst po anonimizacji",
+        "btnCopy": "Kopiuj tekst",
+        "copied": "Skopiowano do schowka!",
+        "btnReset": "Skanuj nowy tekst"
+      },
+      "seo": {
+        "title": "Darmowy Anonimizator PII i Ekstraktor Podmiotów | ToolBite",
+        "description": "Użyj lokalnej AI, aby natychmiast znaleźć i zamaskować dane osobowe (PII), takie jak imiona i lokalizacje w tekście.",
+        "features": [
+          "AI po stronie klienta",
+          "Anonimizacja PII",
+          "Rozpoznawanie jednostek mianowanych",
+          "Brak śledzenia danych"
         ]
       }
     }

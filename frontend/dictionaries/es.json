@@ -16,11 +16,10 @@
       "All": "Todo",
       "Design": "Diseño",
       "Developer": "Desarrollador",
-      "Video": "Vídeo",
       "Security": "Seguridad"
     },
     "seo": {
-      "title": "ToolBite | Tu espacio de trabajo de utilidades todo en uno",
+      "title": "ToolBite | Tu espacio de utilidades todo en uno y seguro",
       "description": "Accede a más de 20 herramientas profesionales para desarrolladores y diseñadores. 100% privado, nativo del navegador y de alta velocidad. Sin registro."
     }
   },
@@ -53,6 +52,32 @@
           "Exportación PNG de alta resolución",
           "100% privado y seguro",
           "Funciona con personas y productos"
+        ]
+      }
+    },
+    "aiAltText": {
+      "title": "IA Alt-Text Inteligente",
+      "description": "Genera descripciones de imágenes perfectas para SEO al instante usando un modelo de visión de IA local.",
+      "ui": {
+        "dropLabel": "Suelta una imagen para el análisis de IA",
+        "disclaimer": "100% en el lado del cliente. El modelo de IA se ejecuta directamente en tu navegador.",
+        "loadingModel": "Descargando modelo de visión de IA...",
+        "loadingDesc": "Esto sucede una vez y se guarda en la caché de tu navegador. (~240MB)",
+        "analyzing": "La IA está analizando tu imagen...",
+        "resultTitle": "Texto alternativo generado",
+        "copyBtn": "Copiar al portapapeles",
+        "copied": "¡Copiado!",
+        "btnReset": "Analizar otra imagen",
+        "errorNotImage": "Por favor, sube un archivo de imagen."
+      },
+      "seo": {
+        "title": "Generador de texto alternativo con IA gratis | Local y Privado | ToolBite",
+        "description": "Genera texto alternativo optimizado para SEO usando IA en el navegador. Tus imágenes nunca salen de tu ordenador.",
+        "features": [
+          "Procesamiento de IA local",
+          "Descripciones optimizadas para SEO",
+          "Sin subidas al servidor",
+          "Potenciado por WebGPU"
         ]
       }
     },
@@ -117,40 +142,11 @@
         ]
       }
     },
-    "fingerprintChecker": {
-      "title": "Comprobador de Huella Digital del Navegador",
-      "description": "Descubre tu huella digital única y mira cómo los sitios web te rastrean sin usar cookies.",
-      "page": {
-        "btnScan": "Iniciar Escaneo de Privacidad",
-        "btnScanning": "Analizando entropía del navegador...",
-        "disclaimer": "100% del lado del cliente. Analizamos Canvas, WebGL y el audio localmente.",
-        "hashTitle": "Tu Hash de Navegador Único",
-        "hardwareTitle": "Entropía de Hardware",
-        "graphicsTitle": "Gráficos y Audio",
-        "cores": "Núcleos de CPU",
-        "memory": "Memoria del Dispositivo",
-        "platform": "Plataforma",
-        "renderer": "Renderizador WebGL",
-        "audio": "Frecuencia de Muestreo de Audio",
-        "hidden": "Oculto",
-        "btnReset": "Ejecutar Nuevo Escaneo"
-      },
-      "seo": {
-        "title": "Test de Huella Digital del Navegador | Privacidad | ToolBite",
-        "description": "Comprueba tu huella digital (fingerprint). Mira cómo los sitios web te rastrean a través de Canvas, WebGL y Audio API sin cookies.",
-        "features": [
-          "Análisis de Canvas y WebGL",
-          "Perfilado de Audio",
-          "Detección de Hardware",
-          "Procesamiento 100% Local"
-        ]
-      }
-    },
     "scrollbar": {
-      "title": "Barra de desplazamiento personalizada",
+      "title": "Barra personalizada",
       "description": "Editor visual para estilizar barras de desplazamiento Webkit, incluyendo estados de pista, control y hover.",
       "page": {
-        "title": "Barra de desplazamiento personalizada",
+        "title": "Barra personalizada",
         "subtitle": "Editor visual multiplataforma para barras de desplazamiento Webkit y Firefox.",
         "dimensionsLabel": "Ancho / Alto",
         "paddingLabel": "Relleno (Efecto flotante)",
@@ -197,7 +193,7 @@
         "features": [
           "Conversión local sin subidas",
           "Exportación de GIF de alta calidad",
-          "Soporta MP4, WEBM, MOV",
+          "Soportes MP4, WEBM, MOV",
           "Sin marcas de agua"
         ]
       }
@@ -272,6 +268,35 @@
           "Controles de complejidad y crecimiento",
           "Exportación instantánea de código SVG",
           "Formas de diseño fluido"
+        ]
+      }
+    },
+    "fingerprintChecker": {
+      "title": "Verificador de Huella Digital",
+      "description": "Descubre tu huella de navegador única y mira cómo te rastrean los sitios web.",
+      "page": {
+        "btnScan": "Iniciar escaneo de privacidad",
+        "btnScanning": "Analizando entropía del navegador...",
+        "disclaimer": "100% en el lado del cliente. Analizamos tu stack de Canvas, WebGL y Audio localmente.",
+        "hashTitle": "Tu Hash de navegador único",
+        "hardwareTitle": "Entropía de Hardware",
+        "graphicsTitle": "Gráficos y Audio",
+        "cores": "Núcleos de CPU",
+        "memory": "Memoria del dispositivo",
+        "platform": "Plataforma",
+        "renderer": "Renderizador WebGL",
+        "audio": "Frecuencia de muestreo de audio",
+        "hidden": "Oculto",
+        "btnReset": "Nuevo escaneo"
+      },
+      "seo": {
+        "title": "Test de huella digital del navegador | Privacidad en línea | ToolBite",
+        "description": "Prueba tu huella digital. Mira cómo los sitios te rastrean mediante Canvas, WebGL y Audio API sin cookies.",
+        "features": [
+          "Análisis de Canvas y WebGL",
+          "Perfilado del stack de audio",
+          "Detección de hardware",
+          "Procesamiento 100% local"
         ]
       }
     },
@@ -427,7 +452,7 @@
         "features": [
           "Compresión solo local",
           "Soporta JPG, PNG, WEBP",
-          "Procesamiento listo para lotes",
+          "Procesamiento por lotes",
           "Cero subidas de datos"
         ]
       }
@@ -580,6 +605,110 @@
           "Validación de cron en tiempo real",
           "Vista previa visual de horario",
           "Soporte para sintaxis cron"
+        ]
+      }
+    },
+    "imageResizer": {
+      "title": "Redimensionador",
+      "description": "Cambia el tamaño de tus imágenes localmente sin pérdida de calidad. Rápido, privado y seguro.",
+      "ui": {
+        "dropImageLabel": "Suelta la imagen aquí para redimensionar",
+        "dimensionsTitle": "Dimensiones (Píxeles)",
+        "widthLabel": "Ancho",
+        "heightLabel": "Alto",
+        "lockRatio": "Bloquear relación de aspecto",
+        "btnDownload": "Descargar imagen redimensionada",
+        "btnReset": "Subir nueva imagen"
+      },
+      "seo": {
+        "title": "Redimensionador de imágenes gratis | Privado y Seguro | ToolBite",
+        "description": "Cambia el tamaño de tus fotos JPG, PNG y WebP directamente en el navegador. 100% privado, sin subidas al servidor.",
+        "features": [
+          "Procesamiento local",
+          "Bloqueo de relación de aspecto",
+          "Descarga PNG instantánea",
+          "Sin transferencia de datos"
+        ]
+      }
+    },
+    "svgToPng": {
+      "title": "Convertidor SVG a PNG",
+      "description": "Convierte archivos vectoriales SVG en imágenes PNG transparentes al instante y de forma local.",
+      "ui": {
+        "dropLabel": "Suelta tu SVG aquí",
+        "disclaimer": "Conversión instantánea en el cliente. Sin subidas.",
+        "dimensionsTitle": "Tamaño de exportación (Píxeles)",
+        "widthLabel": "Ancho",
+        "heightLabel": "Alto",
+        "lockRatio": "Mantener relación de aspecto",
+        "readyTitle": "¡Conversión completada!",
+        "readyDesc": "Tu PNG transparente está listo.",
+        "btnDownload": "Descargar PNG",
+        "btnReset": "Convertir otro SVG",
+        "errorNotSvg": "Por favor, sube un archivo SVG válido."
+      },
+      "seo": {
+        "title": "Convertidor SVG a PNG gratis | Privado y Seguro | ToolBite",
+        "description": "Convierte tus vectores SVG en imágenes PNG de alta calidad. 100% privado, rápido y mantiene la transparencia.",
+        "features": [
+          "Conversión en navegador local",
+          "Tamaño de exportación personalizado",
+          "Mantiene transparencias",
+          "Generación instantánea",
+          "Sin transferencia de datos"
+        ]
+      }
+    },
+    "videoSubtitles": {
+      "title": "IA Subtítulos de Vídeo",
+      "description": "Genera automáticamente subtítulos (.vtt) para tus vídeos usando IA local. Totalmente privado.",
+      "ui": {
+        "dropLabel": "Suelta un vídeo para generar subtítulos",
+        "disclaimer": "100% en el lado del cliente. Extraemos el audio y lo transcribimos en tu navegador.",
+        "readyTitle": "¡Subtítulos generados!",
+        "readyDesc": "Pulsa reproducir en el vídeo para ver la vista previa.",
+        "btnDownload": "Descargar archivo .VTT",
+        "btnReset": "Subtitular otro vídeo",
+        "errorNotVideo": "Por favor, sube un archivo de vídeo MP4 o WebM válido."
+      },
+      "seo": {
+        "title": "Generador de subtítulos con IA gratis | Local y Privado | ToolBite",
+        "description": "Genera subtítulos .vtt perfectos para tus vídeos usando IA en el navegador. Tus vídeos nunca salen de tu PC.",
+        "features": [
+          "IA de voz local",
+          "Generación de subtítulos VTT",
+          "Sin subidas de vídeo",
+          "Reproductor con vista previa"
+        ]
+      }
+    },
+    "entityExtractor": {
+      "title": "IA Extractor de entidades",
+      "description": "Encuentra y anonimiza automáticamente nombres, lugares y organizaciones en tu texto localmente.",
+      "ui": {
+        "placeholder": "Pega un artículo, correo o documento para extraer nombres, lugares y organizaciones...",
+        "btnAnalyze": "Analizar entidades",
+        "loadingModel": "Descargando modelo NER...",
+        "analyzingText": "Escaneando texto en busca de datos sensibles...",
+        "foundTitle": "Entidades extraídas",
+        "noEntities": "No se detectaron entidades.",
+        "labelPerson": "Persona",
+        "labelLocation": "Ubicación",
+        "labelOrganization": "Organización",
+        "labelMisc": "Otros",
+        "redactedTitle": "Texto anonimizado",
+        "btnCopy": "Copiar texto anonimizado",
+        "copied": "¡Copiado al portapapeles!",
+        "btnReset": "Analizar nuevo texto"
+      },
+      "seo": {
+        "title": "Anonimizador de datos PII y Extractor de entidades gratis | ToolBite",
+        "description": "Usa IA local para encontrar y anonimizar información personal (PII) como nombres y lugares en tus textos.",
+        "features": [
+          "IA en el lado del cliente",
+          "Anonimización de PII",
+          "Reconocimiento de entidades",
+          "Sin rastreo de datos"
         ]
       }
     }

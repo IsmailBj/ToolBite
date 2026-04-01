@@ -16,12 +16,11 @@
       "All": "Tous",
       "Design": "Design",
       "Developer": "Développeur",
-      "Video": "Vidéo",
       "Security": "Sécurité"
     },
     "seo": {
-      "title": "ToolBite | Votre espace de travail utilitaire tout-en-un",
-      "description": "Accédez à plus de 20 outils professionnels pour développeurs et designers. 100% privé, natif du navigateur et ultra-rapide. Sans inscription."
+      "title": "ToolBite | Votre espace utilitaire tout-en-un sécurisé",
+      "description": "Accédez à plus de 20 outils professionnels pour développeurs et designers. 100 % privé, natif du navigateur et haute vitesse. Aucune inscription requise."
     }
   },
   "tools": {
@@ -53,6 +52,32 @@
           "Exportation PNG haute résolution",
           "100 % privé et sécurisé",
           "Fonctionne avec les personnes et les produits"
+        ]
+      }
+    },
+    "aiAltText": {
+      "title": "IA Texte Alternatif Intelligent",
+      "description": "Générez instantanément des descriptions d'images parfaites pour le SEO à l'aide d'un modèle de vision IA local.",
+      "ui": {
+        "dropLabel": "Déposez une image pour l'analyse IA",
+        "disclaimer": "100 % côté client. Le modèle d'IA fonctionne directement dans votre navigateur.",
+        "loadingModel": "Téléchargement du modèle de vision IA...",
+        "loadingDesc": "Cela se produit une fois et est mis en cache dans votre navigateur. (~240 Mo)",
+        "analyzing": "L'IA analyse votre image...",
+        "resultTitle": "Texte alternatif généré",
+        "copyBtn": "Copier dans le presse-papiers",
+        "copied": "Copié !",
+        "btnReset": "Analyser une autre image",
+        "errorNotImage": "Veuillez télécharger un fichier image."
+      },
+      "seo": {
+        "title": "Générateur gratuit de texte alternatif IA | Local & Privé | ToolBite",
+        "description": "Générez du texte alternatif optimisé pour le SEO à l'aide de l'IA côté client. Vos images ne quittent jamais votre ordinateur.",
+        "features": [
+          "Traitement IA local",
+          "Descriptions optimisées pour le SEO",
+          "Zéro téléchargement sur serveur",
+          "Propulsé par WebGPU"
         ]
       }
     },
@@ -98,8 +123,8 @@
         "delimiters": {
           "comma": "Virgule (,)",
           "semicolon": "Point-virgule (;)",
-          "tab": "Tabulation",
-          "pipe": "Barre verticale (|)"
+          "tab": "Tab",
+          "pipe": "Barre (|)"
         },
         "firstRowHeadersLabel": "La première ligne contient les en-têtes",
         "rawInputLabel": "Saisie des données brutes",
@@ -170,35 +195,6 @@
           "Export GIF haute qualité",
           "Supporte MP4, WEBM, MOV",
           "Zéro filigrane"
-        ]
-      }
-    },
-    "fingerprintChecker": {
-      "title": "Vérificateur d'Empreinte de Navigateur",
-      "description": "Découvrez votre empreinte numérique unique et voyez comment les sites web vous suivent sans cookies.",
-      "page": {
-        "btnScan": "Lancer l'analyse de confidentialité",
-        "btnScanning": "Analyse de l'entropie du navigateur...",
-        "disclaimer": "100% côté client. Nous analysons Canvas, WebGL et l'audio localement.",
-        "hashTitle": "Votre Hash de Navigateur Unique",
-        "hardwareTitle": "Entropie Matérielle",
-        "graphicsTitle": "Graphiques et Audio",
-        "cores": "Cœurs de CPU",
-        "memory": "Mémoire de l'appareil",
-        "platform": "Plateforme",
-        "renderer": "Moteur WebGL",
-        "audio": "Fréquence d'Échantillonnage Audio",
-        "hidden": "Caché",
-        "btnReset": "Lancer une nouvelle analyse"
-      },
-      "seo": {
-        "title": "Test d'Empreinte de Navigateur | Confidentialité | ToolBite",
-        "description": "Testez l'empreinte de votre navigateur. Voyez comment les sites vous pistent via Canvas, WebGL et l'API Audio sans cookies.",
-        "features": [
-          "Analyse Canvas & WebGL",
-          "Profilage Audio",
-          "Détection Matérielle",
-          "Traitement 100% Local"
         ]
       }
     },
@@ -275,6 +271,35 @@
         ]
       }
     },
+    "fingerprintChecker": {
+      "title": "Vérificateur d'empreinte numérique",
+      "description": "Découvrez votre empreinte de navigateur unique et voyez comment les sites web vous suivent.",
+      "page": {
+        "btnScan": "Lancer le scan de confidentialité",
+        "btnScanning": "Analyse de l'entropie du navigateur...",
+        "disclaimer": "100 % côté client. Nous analysons localement votre Canvas, WebGL et votre pile audio.",
+        "hashTitle": "Votre identifiant de navigateur unique",
+        "hardwareTitle": "Entropie matérielle",
+        "graphicsTitle": "Graphismes & Audio",
+        "cores": "Cœurs de processeur",
+        "memory": "Mémoire de l'appareil",
+        "platform": "Plateforme",
+        "renderer": "Rendu WebGL",
+        "audio": "Taux d'échantillonnage audio",
+        "hidden": "Masqué",
+        "btnReset": "Lancer un nouveau scan"
+      },
+      "seo": {
+        "title": "Test d'empreinte de navigateur | Confidentialité en ligne | ToolBite",
+        "description": "Testez votre empreinte numérique. Découvrez comment les sites vous suivent via Canvas, WebGL et l'API Audio sans cookies.",
+        "features": [
+          "Analyse Canvas & WebGL",
+          "Profilage de la pile audio",
+          "Détection matérielle",
+          "Traitement 100 % local"
+        ]
+      }
+    },
     "socialPreviewer": {
       "title": "Social Previewer",
       "description": "Aperçu en direct et génération de balises Meta pour les cartes Twitter, Facebook et LinkedIn.",
@@ -309,7 +334,7 @@
       },
       "seo": {
         "title": "Analyseur et Inspecteur de User-Agent | ToolBite",
-        "description": "Identifiez instantanément la version du navigateur, le système d'exploitation et le matériel à partir de n'importe quel User-Agent.",
+        "description": "Identifiez instantanément la version du navigateur, le système officiel et le matériel à partir de n'importe quel User-Agent.",
         "features": [
           "Analyse approfondie de la chaîne",
           "Détection appareil et OS",
@@ -580,6 +605,110 @@
           "Validation cron temps réel",
           "Aperçu visuel du calendrier",
           "Support de la syntaxe cron"
+        ]
+      }
+    },
+    "imageResizer": {
+      "title": "Redimensionneur d'image",
+      "description": "Redimensionnez vos images localement dans votre navigateur sans perte de qualité. Rapide, privé et sécurisé.",
+      "ui": {
+        "dropImageLabel": "Déposez l'image ici pour la redimensionner",
+        "dimensionsTitle": "Dimensions (Pixels)",
+        "widthLabel": "Largeur",
+        "heightLabel": "Hauteur",
+        "lockRatio": "Verrouiller le ratio d'aspect",
+        "btnDownload": "Télécharger l'image redimensionnée",
+        "btnReset": "Télécharger une nouvelle image"
+      },
+      "seo": {
+        "title": "Redimensionneur d'image gratuit | Privé & Sécurisé | ToolBite",
+        "description": "Redimensionnez rapidement vos images JPG, PNG et WebP directement dans votre navigateur. 100 % privé, pas d'envoi sur serveur.",
+        "features": [
+          "Traitement local du navigateur",
+          "Verrouillage du ratio d'aspect",
+          "Téléchargement PNG instantané",
+          "Zéro transfert de données"
+        ]
+      }
+    },
+    "svgToPng": {
+      "title": "Convertisseur SVG en PNG",
+      "description": "Convertissez instantanément vos fichiers vectoriels SVG en images PNG transparentes localement.",
+      "ui": {
+        "dropLabel": "Déposez votre SVG ici",
+        "disclaimer": "Conversion instantanée côté client. Zéro envoi sur serveur.",
+        "dimensionsTitle": "Taille d'exportation (Pixels)",
+        "widthLabel": "Largeur",
+        "heightLabel": "Hauteur",
+        "lockRatio": "Verrouiller le ratio d'aspect",
+        "readyTitle": "Conversion terminée !",
+        "readyDesc": "Votre PNG transparent est prêt à être téléchargé.",
+        "btnDownload": "Télécharger PNG",
+        "btnReset": "Convertir un autre SVG",
+        "errorNotSvg": "Veuillez télécharger un fichier SVG valide."
+      },
+      "seo": {
+        "title": "Convertisseur gratuit SVG en PNG | Privé & Sécurisé | ToolBite",
+        "description": "Convertissez vos vecteurs SVG en images PNG de haute qualité. 100 % privé, rapide et conserve la transparence.",
+        "features": [
+          "Conversion locale du navigateur",
+          "Taille d'exportation personnalisée",
+          "Conserve la transparence",
+          "Génération PNG instantanée",
+          "Zéro transfert de données"
+        ]
+      }
+    },
+    "videoSubtitles": {
+      "title": "IA Sous-titres Vidéo",
+      "description": "Générez automatiquement des sous-titres (.vtt) pour vos vidéos à l'aide de l'IA locale. Totalement privé.",
+      "ui": {
+        "dropLabel": "Déposez une vidéo pour générer les sous-titres",
+        "disclaimer": "100 % côté client. Nous extrayons l'audio et le transcribons dans votre navigateur.",
+        "readyTitle": "Sous-titres générés !",
+        "readyDesc": "Appuyez sur lecture pour prévisualiser les sous-titres.",
+        "btnDownload": "Télécharger le fichier .VTT",
+        "btnReset": "Sous-titrer une autre vidéo",
+        "errorNotVideo": "Veuillez télécharger un fichier vidéo MP4 ou WebM valide."
+      },
+      "seo": {
+        "title": "Générateur gratuit de sous-titres vidéo IA | Local & Privé | ToolBite",
+        "description": "Générez des sous-titres .vtt parfaits pour vos vidéos à l'aide de l'IA côté client. Vos vidéos ne quittent jamais votre ordinateur.",
+        "features": [
+          "IA vocale locale",
+          "Génération de sous-titres VTT",
+          "Zéro envoi de vidéo",
+          "Lecteur de prévisualisation en direct"
+        ]
+      }
+    },
+    "entityExtractor": {
+      "title": "IA Extracteur d'entités",
+      "description": "Trouvez et anonymisez automatiquement les noms, lieux et organisations dans vos textes localement.",
+      "ui": {
+        "placeholder": "Collez un article, un e-mail ou un document ici pour extraire les noms, lieux et organisations...",
+        "btnAnalyze": "Analyser les entités",
+        "loadingModel": "Téléchargement du modèle NER...",
+        "analyzingText": "Analyse du texte pour les données sensibles...",
+        "foundTitle": "Entités extraites",
+        "noEntities": "Aucune entité détectée dans ce texte.",
+        "labelPerson": "Personne",
+        "labelLocation": "Lieu",
+        "labelOrganization": "Organisation",
+        "labelMisc": "Divers",
+        "redactedTitle": "Texte anonymisé",
+        "btnCopy": "Copier le texte anonymisé",
+        "copied": "Copié dans le presse-papiers !",
+        "btnReset": "Analyser un nouveau texte"
+      },
+      "seo": {
+        "title": "Anonymiseur de données PII & Extracteur d'entités gratuit | ToolBite",
+        "description": "Utilisez l'IA locale pour trouver et anonymiser instantanément les informations personnelles (PII) comme les noms et les lieux.",
+        "features": [
+          "IA côté client",
+          "Anonymisation PII",
+          "Reconnaissance d'entités nommées",
+          "Zéro suivi de données"
         ]
       }
     }

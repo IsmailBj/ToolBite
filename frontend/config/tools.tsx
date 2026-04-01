@@ -21,12 +21,16 @@ import {
   SlidersVertical,
   TableProperties,
   Fingerprint,
+  Maximize,
+  Bot,
+  Subtitles,
+  ScanText,
 } from "lucide-react";
 
 export interface Tool {
   id: string;
   title: string;
-  category: "Design" | "Video" | "Security" | "Developer";
+  category: "Design" | "Security" | "Developer";
   description: string;
   icon: React.ReactNode;
   bgColor: string;
@@ -48,6 +52,60 @@ export const getTools = (dict: any): Tool[] => [
     hoverBorder: "hover:border-blue-300 dark:hover:border-blue-700",
     status: "Active",
     href: "/tools/bg-remover",
+  },
+  {
+    id: "video-subtitles",
+    title: dict.tools?.videoSubtitles?.title || "AI Video Subtitles",
+    category: "Design",
+    description:
+      dict.tools?.videoSubtitles?.description ||
+      "Auto-generate subtitles (.vtt) for your videos using local browser AI.",
+    icon: (
+      <Subtitles className="w-7 h-7 text-orange-600 dark:text-orange-400" />
+    ),
+    bgColor: "bg-orange-100 dark:bg-orange-900/30",
+    hoverBorder: "hover:border-orange-300 dark:hover:border-orange-700",
+    status: "Active",
+    href: "/tools/video-subtitles",
+  },
+  {
+    id: "entity-extractor",
+    title: dict.tools?.entityExtractor?.title || "AI Entity Extractor",
+    category: "Security", // Perfect fit for Security or Developer
+    description:
+      dict.tools?.entityExtractor?.description ||
+      "Find and redact names, locations, and organizations in text.",
+    icon: <ScanText className="w-7 h-7 text-cyan-600 dark:text-cyan-400" />,
+    bgColor: "bg-cyan-100 dark:bg-cyan-900/30",
+    hoverBorder: "hover:border-cyan-300 dark:hover:border-cyan-700",
+    status: "Active",
+    href: "/tools/entity-extractor",
+  },
+  {
+    id: "ai-alt-text",
+    title: dict.tools?.aiAltText?.title || "AI Smart Alt-Text",
+    category: "Developer",
+    description:
+      dict.tools?.aiAltText?.description ||
+      "Generate perfect SEO-friendly image descriptions instantly using local AI.",
+    icon: <Bot className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
+    bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
+    hoverBorder: "hover:border-indigo-300 dark:hover:border-indigo-700",
+    status: "Active",
+    href: "/tools/ai-alt-text",
+  },
+  {
+    id: "svg-to-png",
+    title: dict.tools?.svgToPng?.title || "SVG to PNG Converter",
+    category: "Design",
+    description:
+      dict.tools?.svgToPng?.description ||
+      "Instantly convert vector SVG files to transparent PNG images locally.",
+    icon: <Shapes className="w-7 h-7 text-violet-600 dark:text-violet-400" />,
+    bgColor: "bg-violet-100 dark:bg-violet-900/30",
+    hoverBorder: "hover:border-violet-300 dark:hover:border-violet-700",
+    status: "Active",
+    href: "/tools/svg-to-png",
   },
   {
     id: "neumorphism-generator",
@@ -95,7 +153,7 @@ export const getTools = (dict: any): Tool[] => [
   {
     id: "video-to-gif",
     title: dict.tools?.videoToGif?.title || "Video to GIF",
-    category: "Video",
+    category: "Design",
     description:
       dict.tools?.videoToGif?.description ||
       "Convert video clips into high-quality, shareable animated GIFs.",
@@ -159,6 +217,19 @@ export const getTools = (dict: any): Tool[] => [
     hoverBorder: "hover:border-emerald-300 dark:hover:border-emerald-700",
     status: "Active",
     href: "/tools/fingerprint-checker",
+  },
+  {
+    id: "image-resizer",
+    title: dict.tools?.imageResizer?.title || "Image Resizer",
+    category: "Design",
+    description:
+      dict.tools?.imageResizer?.description ||
+      "Resize images locally in your browser without losing quality.",
+    icon: <Maximize className="w-7 h-7 text-blue-600 dark:text-blue-400" />,
+    bgColor: "bg-blue-100 dark:bg-blue-900/30",
+    hoverBorder: "hover:border-blue-300 dark:hover:border-blue-700",
+    status: "Active",
+    href: "/tools/image-resizer",
   },
   {
     id: "social-previewer",

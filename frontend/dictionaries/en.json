@@ -16,7 +16,6 @@
       "All": "All",
       "Design": "Design",
       "Developer": "Developer",
-      "Video": "Video",
       "Security": "Security"
     },
     "seo": {
@@ -53,6 +52,32 @@
           "High-resolution PNG export",
           "100% Private & Secure",
           "Works with People & Products"
+        ]
+      }
+    },
+    "aiAltText": {
+      "title": "AI Smart Alt-Text",
+      "description": "Generate perfect SEO-friendly image descriptions instantly using a local AI vision model.",
+      "ui": {
+        "dropLabel": "Drop an image for AI analysis",
+        "disclaimer": "100% Client-Side. The AI model runs directly in your browser.",
+        "loadingModel": "Downloading AI Vision Model...",
+        "loadingDesc": "This happens once and is cached in your browser. (~240MB)",
+        "analyzing": "AI is looking at your image...",
+        "resultTitle": "Generated Alt-Text",
+        "copyBtn": "Copy to Clipboard",
+        "copied": "Copied!",
+        "btnReset": "Analyze Another Image",
+        "errorNotImage": "Please upload an image file."
+      },
+      "seo": {
+        "title": "Free AI Alt-Text Generator | Local & Private | ToolBite",
+        "description": "Generate SEO-optimized alt-text for your images using client-side AI. Your images never leave your computer.",
+        "features": [
+          "Local AI Processing",
+          "SEO Optimized Descriptions",
+          "Zero Server Uploads",
+          "Powered by WebGPU"
         ]
       }
     },
@@ -580,6 +605,110 @@
           "Real-time cron validation",
           "Visual schedule preview",
           "Cron syntax support"
+        ]
+      }
+    },
+    "imageResizer": {
+      "title": "Image Resizer",
+      "description": "Resize images locally in your browser without losing quality. Fast, private, and secure.",
+      "ui": {
+        "dropImageLabel": "Drop image here to resize",
+        "dimensionsTitle": "Dimensions (Pixels)",
+        "widthLabel": "Width",
+        "heightLabel": "Height",
+        "lockRatio": "Toggle Aspect Ratio Lock",
+        "btnDownload": "Download Resized Image",
+        "btnReset": "Upload New Image"
+      },
+      "seo": {
+        "title": "Free Online Image Resizer | Private & Secure | ToolBite",
+        "description": "Quickly resize your JPG, PNG, and WebP images directly in your browser. 100% private, no server uploads, maintains aspect ratio.",
+        "features": [
+          "Local Browser Processing",
+          "Aspect Ratio Lock",
+          "Instant PNG Download",
+          "No Data Upload"
+        ]
+      }
+    },
+    "svgToPng": {
+      "title": "SVG to PNG Converter",
+      "description": "Instantly convert vector SVG files to transparent PNG images locally.",
+      "ui": {
+        "dropLabel": "Drop your SVG here",
+        "disclaimer": "Instant client-side conversion. Zero uploads.",
+        "dimensionsTitle": "Export Size (Pixels)",
+        "widthLabel": "Width",
+        "heightLabel": "Height",
+        "lockRatio": "Toggle Aspect Ratio",
+        "readyTitle": "Conversion Complete!",
+        "readyDesc": "Your transparent PNG is ready to download.",
+        "btnDownload": "Download PNG",
+        "btnReset": "Convert Another SVG",
+        "errorNotSvg": "Please upload a valid SVG file."
+      },
+      "seo": {
+        "title": "Free Online SVG to PNG Converter | Private & Secure | ToolBite",
+        "description": "Convert your SVG vectors into high-quality PNG images directly in your browser. 100% private, fast, and maintains transparency.",
+        "features": [
+          "Local Browser Conversion",
+          "Custom Export Size",
+          "Maintains Transparency",
+          "Instant PNG Generation",
+          "No Data Upload"
+        ]
+      }
+    },
+    "videoSubtitles": {
+      "title": "AI Video Subtitles",
+      "description": "Auto-generate subtitles (.vtt) for your videos using local browser AI. Completely private.",
+      "ui": {
+        "dropLabel": "Drop a video to generate subtitles",
+        "disclaimer": "100% Client-Side. We extract the audio and transcribe it in your browser.",
+        "readyTitle": "Subtitles Generated!",
+        "readyDesc": "Press play on the video to preview them.",
+        "btnDownload": "Download .VTT File",
+        "btnReset": "Subtitle Another Video",
+        "errorNotVideo": "Please upload a valid MP4 or WebM video file."
+      },
+      "seo": {
+        "title": "Free AI Video Subtitle Generator | Local & Private | ToolBite",
+        "description": "Generate perfect .vtt subtitles for your videos using client-side AI. Your videos never leave your computer.",
+        "features": [
+          "Local Voice AI",
+          "VTT Subtitle Generation",
+          "Zero Video Uploads",
+          "Live Preview Player"
+        ]
+      }
+    },
+    "entityExtractor": {
+      "title": "AI Entity Extractor",
+      "description": "Automatically find and redact names, locations, and organizations in your text locally.",
+      "ui": {
+        "placeholder": "Paste an article, email, or document here to extract names, locations, and organizations...",
+        "btnAnalyze": "Analyze Entities",
+        "loadingModel": "Downloading NER Model...",
+        "analyzingText": "Scanning text for sensitive data...",
+        "foundTitle": "Extracted Entities",
+        "noEntities": "No entities detected in this text.",
+        "labelPerson": "Person",
+        "labelLocation": "Location",
+        "labelOrganization": "Organization",
+        "labelMisc": "Misc",
+        "redactedTitle": "Redacted Safe-Text",
+        "btnCopy": "Copy Redacted Text",
+        "copied": "Copied to Clipboard!",
+        "btnReset": "Scan New Text"
+      },
+      "seo": {
+        "title": "Free PII Redactor & Named Entity Extractor | ToolBite",
+        "description": "Use local AI to instantly find and redact Personally Identifiable Information (PII) like names and locations from your text.",
+        "features": [
+          "Client-Side AI",
+          "PII Redaction",
+          "Named Entity Recognition",
+          "Zero Data Tracking"
         ]
       }
     }

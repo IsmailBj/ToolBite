@@ -9,7 +9,6 @@ import {
   Code,
   Palette,
   Shield,
-  Video,
 } from "lucide-react";
 
 // 1. Import your hook and your new tool function
@@ -42,11 +41,6 @@ export default function Home() {
       name: "Developer",
       label: dict.home?.categories?.Developer || "Developer",
       icon: <Code className="w-4 h-4" />,
-    },
-    {
-      name: "Video",
-      label: dict.home?.categories?.Video || "Video",
-      icon: <Video className="w-4 h-4" />,
     },
     {
       name: "Security",
