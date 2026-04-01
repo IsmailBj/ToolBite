@@ -58,7 +58,7 @@
     "aiAltText": {
       "title": "IA Alt-Text Inteligente",
       "description": "Genera descripciones de imágenes perfectas para SEO al instante usando un modelo de visión de IA local.",
-      "ui": {
+      "page": {
         "dropLabel": "Suelta una imagen para el análisis de IA",
         "disclaimer": "100% en el lado del cliente. El modelo de IA se ejecuta directamente en tu navegador.",
         "loadingModel": "Descargando modelo de visión de IA...",
@@ -611,7 +611,7 @@
     "imageResizer": {
       "title": "Redimensionador",
       "description": "Cambia el tamaño de tus imágenes localmente sin pérdida de calidad. Rápido, privado y seguro.",
-      "ui": {
+      "page": {
         "dropImageLabel": "Suelta la imagen aquí para redimensionar",
         "dimensionsTitle": "Dimensiones (Píxeles)",
         "widthLabel": "Ancho",
@@ -634,7 +634,7 @@
     "svgToPng": {
       "title": "Convertidor SVG a PNG",
       "description": "Convierte archivos vectoriales SVG en imágenes PNG transparentes al instante y de forma local.",
-      "ui": {
+      "page": {
         "dropLabel": "Suelta tu SVG aquí",
         "disclaimer": "Conversión instantánea en el cliente. Sin subidas.",
         "dimensionsTitle": "Tamaño de exportación (Píxeles)",
@@ -662,7 +662,7 @@
     "videoSubtitles": {
       "title": "IA Subtítulos de Vídeo",
       "description": "Genera automáticamente subtítulos (.vtt) para tus vídeos usando IA local. Totalmente privado.",
-      "ui": {
+      "page": {
         "dropLabel": "Suelta un vídeo para generar subtítulos",
         "disclaimer": "100% en el lado del cliente. Extraemos el audio y lo transcribimos en tu navegador.",
         "readyTitle": "¡Subtítulos generados!",
@@ -685,7 +685,7 @@
     "entityExtractor": {
       "title": "IA Extractor de entidades",
       "description": "Encuentra y anonimiza automáticamente nombres, lugares y organizaciones en tu texto localmente.",
-      "ui": {
+      "page": {
         "placeholder": "Pega un artículo, correo o documento para extraer nombres, lugares y organizaciones...",
         "btnAnalyze": "Analizar entidades",
         "loadingModel": "Descargando modelo NER...",

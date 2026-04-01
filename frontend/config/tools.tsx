@@ -30,7 +30,7 @@ import {
 export interface Tool {
   id: string;
   title: string;
-  category: "Design" | "Security" | "Developer";
+  category: "Design" | "Security" | "Developer" | "SEO";
   description: string;
   icon: React.ReactNode;
   bgColor: string;
@@ -54,6 +54,32 @@ export const getTools = (dict: any): Tool[] => [
     href: "/tools/bg-remover",
   },
   {
+    id: "image-redactor",
+    title: dict.tools?.imageRedactor?.title || "Image Redactor",
+    category: "Security",
+    description:
+      dict.tools?.imageRedactor?.description ||
+      "Securely blur or pixelate sensitive information from screenshots. 100% local.",
+    icon: <ShieldCheck className="w-7 h-7 text-cyan-600 dark:text-cyan-400" />,
+    bgColor: "bg-cyan-100 dark:bg-cyan-900/30",
+    hoverBorder: "hover:border-cyan-300 dark:hover:border-cyan-700",
+    status: "Active",
+    href: "/tools/image-redactor",
+  },
+  {
+    id: "meta-generator",
+    title: dict.tools?.metaGenerator?.title || "AI Meta Description",
+    category: "SEO",
+    description:
+      dict.tools?.metaGenerator?.description ||
+      "Instantly summarize long articles into perfect meta descriptions.",
+    icon: <Search className="w-7 h-7 text-emerald-600 dark:text-emerald-400" />,
+    bgColor: "bg-emerald-100 dark:bg-emerald-900/30",
+    hoverBorder: "hover:border-emerald-300 dark:hover:border-emerald-700",
+    status: "Active",
+    href: "/tools/meta-generator",
+  },
+  {
     id: "video-subtitles",
     title: dict.tools?.videoSubtitles?.title || "AI Video Subtitles",
     category: "Design",
@@ -71,7 +97,7 @@ export const getTools = (dict: any): Tool[] => [
   {
     id: "entity-extractor",
     title: dict.tools?.entityExtractor?.title || "AI Entity Extractor",
-    category: "Security", // Perfect fit for Security or Developer
+    category: "Security",
     description:
       dict.tools?.entityExtractor?.description ||
       "Find and redact names, locations, and organizations in text.",
@@ -84,7 +110,7 @@ export const getTools = (dict: any): Tool[] => [
   {
     id: "ai-alt-text",
     title: dict.tools?.aiAltText?.title || "AI Smart Alt-Text",
-    category: "Developer",
+    category: "SEO",
     description:
       dict.tools?.aiAltText?.description ||
       "Generate perfect SEO-friendly image descriptions instantly using local AI.",
@@ -234,7 +260,7 @@ export const getTools = (dict: any): Tool[] => [
   {
     id: "social-previewer",
     title: dict.tools?.socialPreviewer?.title || "Social Previewer",
-    category: "Design",
+    category: "SEO",
     description:
       dict.tools?.socialPreviewer?.description ||
       "Live preview and generate Meta Tags for Twitter, Facebook, and LinkedIn cards.",

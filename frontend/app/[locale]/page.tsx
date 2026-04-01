@@ -2,52 +2,20 @@
 
 import React, { useState } from "react";
 import Link from "@/components/LocalizedLink";
-import {
-  ArrowRight,
-  Search,
-  LayoutGrid,
-  Code,
-  Palette,
-  Shield,
-} from "lucide-react";
+import { ArrowRight, Search } from "lucide-react";
 
-// 1. Import your hook and your new tool function
+import { getCategories } from "@/config/categories";
 import { useDictionary } from "../../components/DictionaryProvider";
 import { getTools } from "../../config/tools";
 
 export default function Home() {
-  // 2. Grab the dictionary from the global provider
   const dict = useDictionary();
-
-  // 3. Generate the translated tools list
   const translatedTools = getTools(dict);
 
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
 
-  // 4. Update categories to use the dictionary (or keep English if you prefer)
-  const categories = [
-    {
-      name: "All",
-      label: dict.home?.categories?.All || "All",
-      icon: <LayoutGrid className="w-4 h-4" />,
-    },
-    {
-      name: "Design",
-      label: dict.home?.categories?.Design || "Design",
-      icon: <Palette className="w-4 h-4" />,
-    },
-    {
-      name: "Developer",
-      label: dict.home?.categories?.Developer || "Developer",
-      icon: <Code className="w-4 h-4" />,
-    },
-    {
-      name: "Security",
-      label: dict.home?.categories?.Security || "Security",
-      icon: <Shield className="w-4 h-4" />,
-    },
-  ];
+  const categories = getCategories(dict);
 
   // 5. Filter the translated tools
   const filteredTools = translatedTools.filter((tool) => {
@@ -107,6 +75,22 @@ export default function Home() {
               {cat.label}
             </button>
           ))}
+        </div>
+      </div>
+
+      <div className="flex items-center justify-between w-full mb-6 px-2">
+        <h2 className="text-lg font-bold text-slate-900 dark:text-white">
+          {activeCategory === "All"
+            ? dict.home?.allTools || "All Tools"
+            : `${dict.home?.categories?.[activeCategory] || activeCategory} ${dict.home?.tools || "Tools"}`}
+        </h2>
+        <div className="flex items-center space-x-2">
+          <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
+            {dict.home?.showing || "Showing"}
+          </span>
+          <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-sm font-bold rounded-full">
+            {filteredTools.length}
+          </span>
         </div>
       </div>
 

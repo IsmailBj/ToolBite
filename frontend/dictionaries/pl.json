@@ -58,7 +58,7 @@
     "aiAltText": {
       "title": "AI Inteligentny Alt-Text",
       "description": "Błyskawicznie generuj idealne, przyjazne dla SEO opisy obrazów za pomocą lokalnego modelu wizyjnego AI.",
-      "ui": {
+      "page": {
         "dropLabel": "Przeciągnij obraz do analizy przez AI",
         "disclaimer": "100% po stronie klienta. Model AI działa bezpośrednio w Twojej przeglądarce.",
         "loadingModel": "Pobieranie modelu wizyjnego AI...",
@@ -611,7 +611,7 @@
     "imageResizer": {
       "title": "Zmiana rozmiaru obrazu",
       "description": "Zmieniaj rozmiar obrazów lokalnie w przeglądarce bez utraty jakości. Szybko i bezpiecznie.",
-      "ui": {
+      "page": {
         "dropImageLabel": "Przeciągnij obraz tutaj, aby zmienić rozmiar",
         "dimensionsTitle": "Wymiary (Piksele)",
         "widthLabel": "Szerokość",
@@ -634,7 +634,7 @@
     "svgToPng": {
       "title": "Konwerter SVG na PNG",
       "description": "Błyskawicznie konwertuj wektorowe pliki SVG na przezroczyste obrazy PNG lokalnie.",
-      "ui": {
+      "page": {
         "dropLabel": "Przeciągnij tutaj plik SVG",
         "disclaimer": "Natychmiastowa konwersja w przeglądarce. Zero wysyłek na serwer.",
         "dimensionsTitle": "Rozmiar eksportu (Piksele)",
@@ -662,7 +662,7 @@
     "videoSubtitles": {
       "title": "AI Napisy do Wideo",
       "description": "Automatycznie generuj napisy (.vtt) do swoich filmów przy użyciu lokalnej sztucznej inteligencji. Całkowicie prywatnie.",
-      "ui": {
+      "page": {
         "dropLabel": "Przeciągnij wideo, aby wygenerować napisy",
         "disclaimer": "100% po stronie klienta. Wyodrębniamy dźwięk i dokonujemy transkrypcji w Twojej przeglądarce.",
         "readyTitle": "Napisy wygenerowane!",
@@ -685,7 +685,7 @@
     "entityExtractor": {
       "title": "AI Ekstraktor podmiotów",
       "description": "Automatycznie znajduj i maskuj imiona, lokalizacje i organizacje w swoim tekście lokalnie.",
-      "ui": {
+      "page": {
         "placeholder": "Wklej artykuł, e-mail lub dokument tutaj, aby wyodrębnić imiona, lokalizacje i organizacje...",
         "btnAnalyze": "Analizuj podmioty",
         "loadingModel": "Pobieranie modelu NER...",

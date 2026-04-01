@@ -58,7 +58,7 @@
     "aiAltText": {
       "title": "AI Smart Alt-Text",
       "description": "Generate perfect SEO-friendly image descriptions instantly using a local AI vision model.",
-      "ui": {
+      "page": {
         "dropLabel": "Drop an image for AI analysis",
         "disclaimer": "100% Client-Side. The AI model runs directly in your browser.",
         "loadingModel": "Downloading AI Vision Model...",
@@ -611,7 +611,7 @@
     "imageResizer": {
       "title": "Image Resizer",
       "description": "Resize images locally in your browser without losing quality. Fast, private, and secure.",
-      "ui": {
+      "page": {
         "dropImageLabel": "Drop image here to resize",
         "dimensionsTitle": "Dimensions (Pixels)",
         "widthLabel": "Width",
@@ -634,7 +634,7 @@
     "svgToPng": {
       "title": "SVG to PNG Converter",
       "description": "Instantly convert vector SVG files to transparent PNG images locally.",
-      "ui": {
+      "page": {
         "dropLabel": "Drop your SVG here",
         "disclaimer": "Instant client-side conversion. Zero uploads.",
         "dimensionsTitle": "Export Size (Pixels)",
@@ -662,7 +662,7 @@
     "videoSubtitles": {
       "title": "AI Video Subtitles",
       "description": "Auto-generate subtitles (.vtt) for your videos using local browser AI. Completely private.",
-      "ui": {
+      "page": {
         "dropLabel": "Drop a video to generate subtitles",
         "disclaimer": "100% Client-Side. We extract the audio and transcribe it in your browser.",
         "readyTitle": "Subtitles Generated!",
@@ -685,7 +685,7 @@
     "entityExtractor": {
       "title": "AI Entity Extractor",
       "description": "Automatically find and redact names, locations, and organizations in your text locally.",
-      "ui": {
+      "page": {
         "placeholder": "Paste an article, email, or document here to extract names, locations, and organizations...",
         "btnAnalyze": "Analyze Entities",
         "loadingModel": "Downloading NER Model...",
