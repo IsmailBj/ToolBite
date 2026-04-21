@@ -25,6 +25,8 @@ import {
   Bot,
   Subtitles,
   ScanText,
+  QrCode,
+  Barcode,
 } from "lucide-react";
 
 export interface Tool {
@@ -52,6 +54,32 @@ export const getTools = (dict: any): Tool[] => [
     hoverBorder: "hover:border-blue-300 dark:hover:border-blue-700",
     status: "Active",
     href: "/tools/bg-remover",
+  },
+  {
+    id: "barcode-generator",
+    title: dict.tools?.barcodeGenerator?.title || "Universal Barcode Generator",
+    category: "Design",
+    description:
+      dict.tools?.barcodeGenerator?.description ||
+      "Generate Code128, UPC, and EAN barcodes locally. Download as crisp PNGs.",
+    icon: <Barcode className="w-7 h-7 text-violet-600 dark:text-violet-400" />,
+    bgColor: "bg-violet-100 dark:bg-violet-900/30",
+    hoverBorder: "hover:border-violet-300 dark:hover:border-violet-700",
+    status: "Active",
+    href: "/tools/barcode-generator",
+  },
+  {
+    id: "qr-generator",
+    title: dict.tools?.qrGenerator?.title || "QR Code Generator",
+    category: "Design",
+    description:
+      dict.tools?.qrGenerator?.description ||
+      "Create custom, high-resolution QR codes instantly. 100% offline.",
+    icon: <QrCode className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />,
+    bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
+    hoverBorder: "hover:border-indigo-300 dark:hover:border-indigo-700",
+    status: "Active",
+    href: "/tools/qr-generator",
   },
   {
     id: "image-redactor",
