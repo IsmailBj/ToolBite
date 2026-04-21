@@ -21,12 +21,14 @@
     "cronstrue": "^3.13.0",
     "docx": "^9.6.0",
     "dompurify": "^3.3.2",
+    "jsbarcode": "^3.12.3",
     "lucide-react": "^0.575.0",
     "marked": "^17.0.4",
     "negotiator": "^1.0.0",
     "next": "16.1.6",
     "onnxruntime-web": "1.16.3",
     "pdf-lib": "^1.17.1",
+    "qrcode.react": "^4.2.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "ua-parser-js": "^2.0.9"
@@ -34,6 +36,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/dompurify": "^3.0.5",
+    "@types/jsbarcode": "^3.11.4",
     "@types/negotiator": "^0.6.4",
     "@types/node": "^20",
     "@types/react": "^19",

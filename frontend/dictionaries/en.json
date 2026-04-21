@@ -69,6 +69,51 @@
         "btnReset": "Summarize Another Article"
       }
     },
+    "barcodeGenerator": {
+      "title": "Universal Barcode Generator",
+      "description": "Generate Code128, UPC, and EAN barcodes locally. Download as crisp PNGs.",
+      "ui": {
+        "dataLabel": "Barcode Data",
+        "formatLabel": "Barcode Format",
+        "lineColorLabel": "Line Color",
+        "bgColorLabel": "Background",
+        "showTextLabel": "Show value below barcode",
+        "errorInvalid": "Invalid data for this barcode format.",
+        "errorHint": "Retail formats (UPC/EAN) strictly require numbers.",
+        "btnDownload": "Download PNG"
+      },
+      "seo": {
+        "title": "Free Barcode Generator | Code128, UPC, EAN | ToolBite",
+        "description": "Instantly generate high-resolution retail and shipping barcodes in your browser. 100% free and offline.",
+        "features": [
+          "Code128 & Code39",
+          "UPC & EAN",
+          "Custom Colors",
+          "Offline Generation"
+        ]
+      }
+    },
+    "qrGenerator": {
+      "title": "QR Code Generator",
+      "description": "Create custom, high-resolution QR codes instantly. 100% offline.",
+      "ui": {
+        "urlLabel": "Enter URL or Text",
+        "fgColorLabel": "QR Color",
+        "bgColorLabel": "Background",
+        "sizeLabel": "Image Size",
+        "btnDownload": "Download PNG"
+      },
+      "seo": {
+        "title": "Free Custom QR Code Generator | Privacy First | ToolBite",
+        "description": "Generate custom QR codes instantly in your browser. Change colors, adjust size, and download as PNG. No tracking, no limits.",
+        "features": [
+          "Custom Colors",
+          "High Resolution PNG",
+          "No Expiration",
+          "Offline Generation"
+        ]
+      }
+    },
     "bgRemover": {
       "title": "Background Remover",
       "description": "Instantly strip backgrounds from any image using high-speed AI.",
