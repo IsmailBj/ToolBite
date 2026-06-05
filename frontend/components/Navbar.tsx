@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "@/components/LocalizedLink";
-import { Settings, User, Zap } from "lucide-react";
+import { Zap } from "lucide-react";
 // 1. Import the LanguageSwitcher
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -24,13 +24,6 @@ export default function Navbar() {
           <div className="flex items-center space-x-4 text-slate-500 dark:text-slate-400">
             {/* 2. Drop the LanguageSwitcher right here */}
             <LanguageSwitcher />
-
-            <button className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
-              <Settings className="w-5 h-5" />
-            </button>
-            <button className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
-              <User className="w-5 h-5" />
-            </button>
           </div>
         </div>
       </div>
